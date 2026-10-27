@@ -18,7 +18,7 @@ La disponibilidad de skills, voz y acceso a archivos depende de la plataforma. L
 
 ## Soporte y privacidad
 
-El canal previsto para ayuda técnica es el apartado de incidencias de este repositorio. No publiques credenciales, datos personales ni código confidencial. La información de privacidad y las condiciones están en preparación y aún no son políticas publicadas.
+Para solicitar ayuda, consulta la [página de soporte](docs/support.md). No publiques credenciales, datos personales ni código confidencial. Consulta la [política de privacidad](docs/privacy.md) y las [condiciones de uso](docs/terms.md).
 
 ## Licencia y autor
 
