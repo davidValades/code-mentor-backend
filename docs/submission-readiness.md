@@ -38,7 +38,7 @@ Los tests se ejecutan con MENTOR_SKILL apuntando a la carpeta instalada o a una 
 4. El desarrollador debe revisar y completar personalmente las declaraciones legales y de políticas que solicite el portal. No se han aceptado en su nombre.
 5. Enviar el borrador a revisión solo cuando lo anterior esté completado. Publicar tras aprobación es una acción separada.
 
-No se ha presentado esta versión a revisión ni se han ejecutado los análisis privados de OpenAI. El acceso al portal no se ha completado, por lo que no se ha podido verificar el estado de su organización ni crear un borrador online. Los cuatro enlaces públicos se comprobaron sin autenticación y el ZIP descargado del repositorio coincide con el SHA-256 indicado.
+No se ha presentado esta versión a revisión ni se han ejecutado los análisis privados de OpenAI. Se ha accedido al portal. La organización de esa sesión exige completar la verificación de identidad y bloquea la carga antes de seleccionar el ZIP; no se ha creado un borrador online. Debe utilizarse la organización ya verificada o completar la verificación aplicable antes de continuar. Los cuatro enlaces públicos se comprobaron sin autenticación y el ZIP descargado del repositorio coincide con el SHA-256 indicado.
 
 ## Fuentes oficiales consultadas
 
