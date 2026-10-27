@@ -1,75 +1,76 @@
-# Cierre de aprendizaje
+# Learning session wrap-up
 
-## Identidad y persistencia
+## Identity and persistence
 
-- ID del lote / revisión del paquete:
-- Fecha con zona:
-- Sesiones incluidas, abiertas/completas y procedencia:
-- Ámbito autorizado:
-- Destino e identidad verificable (o sin configurar):
-- Última revisión leída (o desconocida):
-- Estado: pendiente de guardar.
+- Batch ID / package revision:
+- Date with timezone:
+- Included sessions, open/complete status, and provenance:
+- Authorized scope:
+- Destination and verifiable identity (or not configured):
+- Last revision read (or unknown):
+- Status: pending save.
 
-## Objetivo y alcance
+## Goal and scope
 
-Objetivo, límites y fuentes disponibles.
+Goal, limits, and available sources.
 
-## Trabajo realizado
+## Work completed
 
-Bloques, lectura, ejercicios, cambios, decisiones y depuración. Separar ejecutado de propuesto. Contexto laboral únicamente en ámbito autorizado.
+Blocks, reading, exercises, changes, decisions, and debugging. Distinguish completed work from proposals. Include workplace context only within the authorized scope.
 
-## Aprendizaje y evidencias
+## Learning and evidence
 
-| Concepto | Respuesta/acción y procedencia | Ayuda/modalidad | Estado sustentado | Falta comprobar |
+| Concept | Response/action and provenance | Assistance/modality | Supported status | Still to verify |
 | --- | --- | --- | --- | --- |
 
-Usar IDs de evidencia solo si existen; una observación pendiente no es un evento guardado. No elevar lectura, copia o declaración a autonomía.
+Use evidence IDs only if they exist; a pending observation is not a saved event. Do not treat reading, copying, or self-report as autonomy.
 
-## Cómo se enseñó y qué resultado tuvo
+## Teaching approach and outcome
 
-| Preferencia declarada / estrategia o combinación usada | Concepto y contexto | Respuesta observada, ayuda y comprobación | Qué no funcionó / pendiente | Alcance y evidencia |
+| Stated preference / strategy or combination used | Concept and context | Observed response, assistance, and verification | What did not work / pending | Scope and evidence |
 | --- | --- | --- | --- | --- |
 
-Separar preferencia de eficacia; conservar fracaso e incertidumbre. No clasificar como estilo fijo ni generalizar una tarea a todo el aprendizaje.
+Distinguish preference from effectiveness; retain failures and uncertainty. Do not classify a fixed learning style or generalize from one task to all learning.
 
-- Variante y motivo de elección:
-- Claridad/esfuerzo declarados (o no preguntado/no respondido):
-- Episodio/cobertura en exploracion.md, evidencias enlazadas y guardado real:
-- Próxima comprobación de aplicación o recuperación:
+- Variant and reason for choosing it:
+- Reported clarity/effort (or not asked/not answered):
+- Episode/coverage in exploracion.md, linked evidence, and actual save status:
+- Next application or recall check:
 
-No formular una pregunta nueva por el mero cierre; conservar lo ya observado. Las variantes no son IDs nuevos de la CLI ni eficacia demostrada.
+Do not ask a new question solely to close the session; retain what has already been observed. Variants are neither new CLI IDs nor demonstrated effectiveness.
 
-## Dificultades y correcciones
+## Difficulties and corrections
 
-Errores, términos corregidos, dudas, prerrequisitos y verificaciones pendientes.
+Errors, corrected terms, questions, prerequisites, and pending checks.
 
-## Para retomar
+## Resuming
 
-- Última pregunta pendiente:
-- Siguiente acción pequeña:
-- Práctica diferida y repaso orientativo:
-- Bloqueos:
+- Latest open question:
+- Next small action:
+- Delayed practice and suggested review:
+- Blockers:
 
-## Cambios propuestos para la memoria
+## Proposed memory changes
 
-| Documento o registro | Cambio concreto | Autorización | Estado real de escritura |
+| Document or record | Specific change | Authorization | Actual write status |
 | --- | --- | --- | --- |
 
-Separar notas operativas autorizadas de fichas propuestas. Mostrar contenido exacto de fichas para aceptación; no alterar las instrucciones del profesor.
+Separate authorized operational notes from proposed cards. Show the exact card content for acceptance; do not alter the teacher's instructions.
 
-## Recibo de aplicación
+## Application receipt
 
-Antes de mutar el progreso, conservar el diario del lote en el destino autorizado, fuera de state.json. Preparar cada operación antes de ejecutarla y actualizarla después:
+Before changing progress, preserve the batch journal in the authorized destination, outside state.json. Prepare each operation before executing it and update it afterward:
 
-| Destino / lote / sesión | request_id o identidad remota | expected_revision original o versión remota | operation y payload/contenido exactos | Estado preparada/completada/incierta | Resultado y revisión verificados |
+| Destination / batch / session | request_id or remote identity | Original expected_revision or remote version | Exact operation and payload/content | Prepared/completed/uncertain status | Verified result and revision |
 | --- | --- | --- | --- | --- | --- |
 
-Conservar entradas exactas, incluidas fechas; reintentar las inciertas sin reconstruirlas ni cambiar IDs. Una operación nunca aplicada que requiera conciliación recibe otra entrada enlazada. Si no se puede conservar el diario, dejar la aplicación pendiente.
+Preserve exact entries, including dates; retry uncertain operations without reconstructing them or changing IDs. A previously unapplied operation that requires reconciliation receives another linked entry. If the journal cannot be preserved, leave application pending.
 
-- ID de lote y revisión aplicados:
-- Operaciones completadas y versiones verificadas:
-- Pendientes o inciertas (conservar IDs):
-- Fichas aceptadas / aplazadas:
-- Continuidad disponible en:
+- Applied batch ID and revision:
+- Completed operations and verified versions:
+- Pending or uncertain operations (preserve IDs):
+- Accepted / deferred cards:
+- Continuity available at:
 
-Completar solo con resultados reales; preparar o adjuntar no acredita guardado.
+Complete only with actual results; preparing or attaching does not establish that saving occurred.
+

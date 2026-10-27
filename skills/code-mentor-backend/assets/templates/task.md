@@ -1,37 +1,38 @@
 # task
 
-## Petición y procedencia
+## Request and provenance
 
-Pendiente.
+Pending.
 
-## Resultado esperado
+## Expected outcome
 
-Pendiente.
+Pending.
 
-## Estado
+## Status
 
-Pendiente.
+Pending.
 
-## Archivos y versiones
+## Files and versions
 
-Pendiente.
+Pending.
 
-## Fragmentos pertinentes sin secretos
+## Relevant excerpts without secrets
 
-Pendiente.
+Pending.
 
-## Decisiones y motivos
+## Decisions and reasons
 
-Pendiente.
+Pending.
 
-## Dificultades y ayuda
+## Difficulties and assistance
 
-Pendiente.
+Pending.
 
-## Verificación real
+## Actual verification
 
-Pendiente.
+Pending.
 
-## Próximo paso
+## Next step
 
-Pendiente.
+Pending.
+

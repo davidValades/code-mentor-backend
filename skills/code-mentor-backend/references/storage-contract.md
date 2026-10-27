@@ -1,67 +1,67 @@
-# Contrato de almacenamiento v2
+# Storage contract v2
 
-## Ubicación y límites
+## Location and boundaries
 
-Mantén datos fuera del paquete de la skill. Acuerda una raíz personal para el perfil y otra local para cada proyecto. Comprueba acceso, persistencia y normas de la empresa; evita directorios seguidos por Git empresarial o sincronizados externamente sin autorización. No cambies configuración del repositorio por iniciativa propia. Usa raíces absolutas. Un directorio temporal no garantiza continuidad.
+Keep data outside the skill package. Agree on a personal profile root and separate local root per project. Check access, persistence, and company policies; avoid company-Git-tracked or externally synchronized directories without authorization. Do not change repository configuration on your own initiative. Use absolute roots; temporary directories do not guarantee continuity.
 
-Cada raíz tiene `state.json`: esquema 2, revisión, ámbito general/project, eventos, sesiones, revisiones, casos, intentos, observaciones, mejoras, documentos y recibos. JSON es fuente de evidencias y contadores; Markdown conserva narrativa. Lee la última versión referenciada de cada documento; archivos huérfanos tras interrupciones no son vigentes. No edites versiones directamente.
+Each root has `state.json`: schema 2, revision, general/project scope, events, sessions, reviews, cases, attempts, observations, improvements, documents, and receipts. JSON supplies evidence/counters; Markdown preserves narrative. Read each document's latest referenced version; orphaned files after interruptions are not current. Do not edit versions directly.
 
-La biblioteca opcional conocimientos/ usa fichas e índice escritos con herramientas de archivos según knowledge-library.md. No está gestionada por la CLI: no existe kind=knowledge ni un comando save_knowledge. State.json conserva evidencias y contadores; el índice es derivado y las fichas resumen el aprendizaje. No cambies el esquema 2 para activar esta ampliación.
+The optional conocimientos/ library uses cards/index written with file tools per knowledge-library.md. The CLI does not manage it: no kind=knowledge or save_knowledge command. state.json retains evidence/counters; the index is derived; cards summarize learning. Do not change schema 2 for this extension.
 
-La CLI no usa red ni sincroniza dispositivos. Sin Python o persistencia, prepara un resumen de continuidad e indica el guardado pendiente. No atribuyas las garantías del script a escrituras manuales.
+The CLI neither uses the network nor synchronizes devices. Without Python or persistence, prepare continuity and report saving pending. Do not attribute script guarantees to manual writes.
 
 ## CLI
 
-Para notas en servicios de documentos o sin escritura sigue session-close.md. Las referencias remotas son identidades devueltas por el servicio, no raíces locales para la CLI. Un adjunto de solo lectura no es un registro editable. Reemplazarlo exige la herramienta del servicio y su versión actual, no crear otra copia. Con solo Markdown conserva narrativa y recibos de lotes; no simules state.json ni sus cálculos o gráficos. Si existe una raíz JSON, conserva su autoridad. El paquete de cierre no añade operaciones ni campos a apply; prepararlo no configura almacenamiento.
+For document-service notes or no write access, follow session-close.md. Service-returned remote identities are not local CLI roots. Read-only attachments are not editable records. Replacement requires the service tool and current version, not another copy. With Markdown alone, preserve narrative/batch receipts; do not simulate state.json, calculations, or charts. Preserve any JSON root's authority. Closing packages add no apply operations/fields; preparation does not configure storage.
 
-Ejecuta `python scripts/mentor_store.py --root /ruta/absoluta init --scope general` con Python 3.11+. Otros comandos: read, validate, status, apply, prepare-summary, export-summary. `status` devuelve revisión, review_due, estados derivados por tema, estrategia activa y checkpoint. Entradas JSON por stdin; nunca interpolar contenido o secretos en shell.
+Run `python scripts/mentor_store.py --root /absolute/path init --scope general` with Python 3.11+. Other commands: read, validate, status, apply, prepare-summary, export-summary. `status` returns revision, review_due, derived topic statuses, active strategy, and checkpoint. Supply JSON via stdin; never interpolate content or secrets into shell.
 
-`apply` recibe request_id, expected_revision, operation y payload; devuelve revision, record_id y replayed. Reintentar exige ID y contenido idénticos. Ante conflicto vuelve a leer y reconcilia. No rompas bloqueos sin investigar otro escritor.
+`apply` receives request_id, expected_revision, operation, and payload; returns revision, record_id, and replayed. Retry with identical ID/content. On conflict, reread and reconcile. Do not break locks without investigating another writer.
 
-Operaciones: record_evidence, save_checkpoint, complete_session, record_review, save_case, record_case_attempt, record_observation, confirm_convention, propose_improvement, record_evaluation, set_trial, decide_improvement, save_document. Consulta los campos exactos y ejemplos siguientes. Un user_confirmed=true se envía solo tras aceptación explícita; el script no verifica la conversación.
+Operations: record_evidence, save_checkpoint, complete_session, record_review, save_case, record_case_attempt, record_observation, confirm_convention, propose_improvement, record_evaluation, set_trial, decide_improvement, save_document. Exact fields/examples follow. Send user_confirmed=true only after explicit acceptance; the script does not verify conversation.
 
-## Evidencias y privacidad
+## Evidence and privacy
 
-Evento general: id, session_id, recorded_at ISO con zona, topic, activity (declared/explain/predict/implement/debug/retrieve), modality (oral/text/ide), assistance (none/hint/guided/solution), outcome (correct/partial/incorrect/unverified), evidence_summary, review_due (fecha con zona o null). Evento de proyecto añade task_id y source_refs.
+General event: id, session_id, recorded_at in ISO format with a time zone, topic, activity (declared/explain/predict/implement/debug/retrieve), modality (oral/text/ide), assistance (none/hint/guided/solution), outcome (correct/partial/incorrect/unverified), evidence_summary, review_due (date with a time zone or null). Project events add task_id and source_refs.
 
-Referencia: path relativa, commit completo o null, branch, dirty booleano, observed_at. Un commit no representa cambios locales: dirty=true cuando corresponda. Nunca guardar remoto autenticado.
+Reference: relative path, full commit or null, branch, boolean dirty, observed_at. Commits do not represent local changes: use dirty=true when appropriate. Never save authenticated remote URLs.
 
-El esquema rechaza campos laborales adicionales en eventos generales, pero no anonimiza texto libre. Revisar el contenido antes de guardar: conceptos genéricos y dificultades transferibles sí; nombres, rutas, código, peticiones y decisiones empresariales no. Compartir contexto laboral exige aprobación del resumen exacto.
+The schema rejects additional work fields in general events but does not anonymize free text. Review before saving: generic concepts/transferable difficulties are allowed; company names, paths, code, requests, and decisions are not. Sharing work context requires exact-summary approval.
 
-save_document recibe id, kind (profile/project/task/checkpoint/improvement), title, content Markdown y recorded_at. Solo profile en ámbito general; los demás en proyecto. Conserva versiones inmutables. El script no identifica todos los secretos: revisar el texto antes de persistir.
+save_document receives id, kind (profile/project/task/checkpoint/improvement), title, Markdown content, and recorded_at. General scope allows only profile; others belong in project scope. Versions are immutable. The script cannot identify every secret: review text before persistence.
 
-No sobrescribir esquemas desconocidos ni migrar v1 automáticamente. Preparar y confirmar una migración conserva procedencia y evidencias.
+Do not overwrite unknown schemas or automatically migrate v1. Prepare and confirm migrations, preserving provenance and evidence.
 
-## Entradas concretas de la CLI
+## Exact CLI inputs
 
-`apply` recibe en stdin un objeto `{"request_id":"identificador-estable", "expected_revision":0, "operation":"...", "payload":{...}}`. Obtén siempre la revisión de `read` o de una escritura real. El identificador del evento y el de la solicitud son distintos. Si el guardado falla, conserva la entrada exacta para reintentar.
+`apply` receives a stdin object: `{"request_id":"identificador-estable", "expected_revision":0, "operation":"...", "payload":{...}}`. Obtain revision from `read` or an actual write. Event and request IDs differ. On save failure, retain exact input for retry.
 
-| Operación | Campos exactos de payload |
+| Operation | Exact payload fields |
 | --- | --- |
-| record_evidence | Los campos del evento definidos arriba; añade task_id y source_refs solo para project. |
-| save_checkpoint | session_id, topic, evidence_id (string o null), pending_question, next_step, recorded_at. |
-| complete_session | id, recorded_at. Un id repetido no crea una sesión nueva. |
-| record_review | id, recorded_at, reason, result. El script captura automáticamente las sesiones y evidencias revisadas. |
-| save_case | id, topic, prompt, hints (lista), solution, criteria (lista), validation (draft/reviewed/executed), validation_evidence (texto), mode (oral/ide). |
+| record_evidence | The event fields defined above; add task_id and source_refs only for project. |
+| save_checkpoint | session_id, topic, evidence_id (string or null), pending_question, next_step, recorded_at. |
+| complete_session | id, recorded_at. A repeated id does not create a new session. |
+| record_review | id, recorded_at, reason, result. The script automatically captures the sessions and evidence reviewed. |
+| save_case | id, topic, prompt, hints (list), solution, criteria (list), validation (draft/reviewed/executed), validation_evidence (text), mode (oral/ide). |
 | record_case_attempt | id, case_id, session_id, response, assistance, outcome, recorded_at. |
-| record_observation | id, task_id, statement, source, recorded_at; solo project. |
-| confirm_convention | id de la observación, user_confirmed=true, scope, reason; solo tras confirmación real. |
-| save_document | id lógico, kind, title, content Markdown, recorded_at. |
-| propose_improvement | id, reason, evidence_ids (lista no vacía), baseline, candidate. candidate admite únicamente explanation_words (40–250), example_lines (1–20), analogies (booleano) y diagrams (when_interaction/on_request/frequent). |
-| record_evaluation | id, improvement_id, kind (deterministic/model/manual), results, cases, checks. cases contiene al menos un design y un heldout, cada uno con id, split, baseline_response y candidate_response. checks contiene al menos tres booleanos, incluyendo accuracy y permissions. |
-| set_trial | id de mejora, action (start/complete/decline), user_confirmed=true y summary. Solo cuando la elección real exista; complete describe el resultado observado. |
-| decide_improvement | id de mejora, decision (accept/reject/revert), user_confirmed=true, reason. Para accept debe haber evaluación favorable y prueba completada o explícitamente rechazada. |
+| record_observation | id, task_id, statement, source, recorded_at; project only. |
+| confirm_convention | Observation id, user_confirmed=true, scope, reason; only after actual confirmation. |
+| save_document | Logical id, kind, title, Markdown content, recorded_at. |
+| propose_improvement | id, reason, evidence_ids (nonempty list), baseline, candidate. candidate accepts only explanation_words (40–250), example_lines (1–20), analogies (boolean), and diagrams (when_interaction/on_request/frequent). |
+| record_evaluation | id, improvement_id, kind (deterministic/model/manual), results, cases, checks. cases contains at least one design and one heldout, each with id, split, baseline_response, and candidate_response. checks contains at least three booleans, including accuracy and permissions. |
+| set_trial | Improvement id, action (start/complete/decline), user_confirmed=true, and summary. Only after that choice has actually been made; complete describes the observed outcome. |
+| decide_improvement | Improvement id, decision (accept/reject/revert), user_confirmed=true, reason. accept requires a favorable evaluation and a completed or explicitly declined trial. |
 
-Ejemplo autocontenido de evidencia **hipotética** (no guardar como si fuera una respuesta del alumno):
+**Hypothetical** evidence example; do not save as a student's response:
 
 ```json
-{"request_id":"req-001","expected_revision":0,"operation":"record_evidence","payload":{"id":"e-001","session_id":"s-001","recorded_at":"2026-10-26T18:00:00+01:00","topic":"methods","activity":"declared","modality":"oral","assistance":"none","outcome":"unverified","evidence_summary":"Dice que entiende el retorno; falta comprobarlo.","review_due":null}}
+{"request_id":"req-001","expected_revision":0,"operation":"record_evidence","payload":{"id":"e-001","session_id":"s-001","recorded_at":"2026-10-26T18:00:00+01:00","topic":"methods","activity":"declared","modality":"oral","assistance":"none","outcome":"unverified","evidence_summary":"Says they understand what is returned; this still needs to be checked.","review_due":null}}
 ```
 
-Para preparar una exportación ejecuta `prepare-summary` con stdin `{"selected_ids":["e-001"]}`; para ámbito project añade `curated_text` con el resumen mínimo redactado manualmente. La salida contiene `summary`, `digest` y `approval_pending=true`. Presenta ese summary al usuario completo. Una vez acepte ese contenido exacto, llama `export-summary` con stdin `{"summary":<objeto mostrado>,"approved_digest":"<digest recibido>","destination":"/ruta/absoluta/nueva.json"}`. Nunca interpretes el digest como autorización por sí solo. La exportación rehúsa sobrescribir un archivo existente y usa permisos privados POSIX cuando estén disponibles; revisa igualmente las políticas del destino.
+Prepare exports with `prepare-summary` and stdin `{"selected_ids":["e-001"]}`; project scope also requires `curated_text`, a manually written minimal summary. Output contains `summary`, `digest`, and `approval_pending=true`. Show the entire summary. Only after the user accepts that exact content, call `export-summary` with stdin `{"summary":<shown object>,"approved_digest":"<received digest>","destination":"/absolute/path/nueva.json"}`. A digest alone is never authorization. Export refuses existing-file overwrites and uses private POSIX permissions where available; still review destination policies.
 
-Usa `status` para consultar los estados calculados; no llamas directamente funciones Python desde la conversación. El contador de revisión se basa en sesiones completadas nuevas y en evidencias observadas desde la última revisión. El ajuste por dificultad repetida considera dos sesiones distintas.
+Use `status` for calculated statuses; do not call Python functions directly from conversation. The review counter uses newly completed sessions and observed evidence since the last review. Recurring-difficulty adjustment requires two different sessions.
 
-## Utilidad independiente de adaptación
+## Separate adaptation utility
 
-mentor_adaptation.py tiene su propio contrato en adaptation-contract.md, mantiene observaciones referenciadas y produce balance/SVG. No amplía operaciones de apply ni altera schema_version=2. Fichas e índice siguen usando herramientas de archivos.
+mentor_adaptation.py follows adaptation-contract.md, retains referenced observations, and produces assessment/SVG. It neither extends apply operations nor changes schema_version=2. Cards/index still use file tools.

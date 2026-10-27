@@ -1,21 +1,22 @@
 # profile
 
-## Objetivo
+## Goal
 
-Pendiente.
+Pending.
 
-## Preferencias aceptadas
+## Accepted preferences
 
-Pendiente.
+Pending.
 
-## Competencias y evidencias
+## Competencies and evidence
 
-Pendiente.
+Pending.
 
-## Dificultades
+## Difficulties
 
-Pendiente.
+Pending.
 
-## Próximo paso
+## Next step
 
-Pendiente.
+Pending.
+

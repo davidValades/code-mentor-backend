@@ -1,37 +1,38 @@
 # improvement
 
-## Problema y evidencias
+## Problem and evidence
 
-Pendiente.
+Pending.
 
-## Estrategia actual y candidata
+## Current and candidate strategies
 
-Pendiente.
+Pending.
 
-## Casos de diseño y caso reservado
+## Design cases and held-out case
 
-Pendiente.
+Pending.
 
-## Resultados reales y procedencia
+## Actual results and provenance
 
-Pendiente.
+Pending.
 
-## Límites
+## Limits
 
-Pendiente.
+Pending.
 
-## Prueba aceptada y alcance
+## Accepted test and scope
 
-Pendiente.
+Pending.
 
-## Resultado con el alumno
+## Outcome with the learner
 
-Pendiente.
+Pending.
 
-## Decisión definitiva
+## Final decision
 
-Pendiente.
+Pending.
 
-## Versión previa y reversión
+## Previous version and rollback
 
-Pendiente.
+Pending.
+

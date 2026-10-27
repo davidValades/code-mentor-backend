@@ -1,27 +1,28 @@
-# Currículo adaptativo
+# Adaptive curriculum
 
-Usa estos identificadores estables para relacionar evidencias y repasos:
+Connect evidence and reviews with these stable IDs:
 
-| ID | Tema y competencia observable |
+| ID | Topic and observable competency |
 | --- | --- |
-| operators | Operadores y expresiones: predecir resultados y justificar evaluación según tipos |
-| methods | Métodos y contratos: identificar entrada, salida y garantías |
-| classes | Clases e interfaces: ubicar información y operaciones |
-| flow | Lectura: seguir llamadas y cambios de valores |
-| types | Tipos y nulabilidad: explicar valores permitidos |
-| results | Resultados y excepciones: distinguir casos por su definición real |
-| async | Asincronía: seguir Task, await y cancelación |
-| dependencies | Dependencias: explicar construcción e inyección |
-| http | APIs: relacionar petición, endpoint y respuesta |
-| data | Datos: seguir consultas y persistencia |
-| testing | Pruebas: elegir una comprobación que detecte una regresión |
-| debugging | Depuración: elegir observaciones y contrastar hipótesis |
-| refactoring | Refactorizar: conservar comportamiento y revisar consumidores |
-| architecture | Arquitectura: justificar responsabilidades y dependencias |
-| vocabulary | Vocabulario: explicar un término mediante un caso |
+| operators | Operators/expressions: predict results; justify evaluation by type |
+| methods | Methods/contracts: identify inputs, outputs, guarantees |
+| classes | Classes/interfaces: locate information and operations |
+| flow | Reading: follow calls and value changes |
+| types | Types/nullability: explain permitted values |
+| results | Results/exceptions: distinguish cases by actual definitions |
+| async | Asynchrony: follow Task, await, cancellation |
+| dependencies | Dependencies: explain construction and injection |
+| http | APIs: connect request, endpoint, response |
+| data | Data: follow queries and persistence |
+| testing | Testing: choose a regression-detecting check |
+| debugging | Debugging: choose observations and test hypotheses |
+| refactoring | Refactoring: preserve behavior; review consumers |
+| architecture | Architecture: justify responsibilities/dependencies |
+| vocabulary | Vocabulary: explain a term through a case |
 
-Prioriza tareas activas. Elige el prerrequisito mínimo que desbloquea el siguiente paso y guarda una práctica posterior para afianzarlo; continuar con ayuda no acredita dominio. Para una clase sin tarea, considera dificultad reciente, repaso pendiente y siguiente tema del contexto. Explica por qué ese objetivo es útil. No exijas completar todo el currículo antes de ayudar con un caso real ni supongas comprensión de sus prerrequisitos.
+Prioritize active tasks. Choose the smallest prerequisite unlocking the next step; save later reinforcement practice. Continuing with help does not demonstrate mastery. Without a task, consider recent difficulties, pending review, and the next contextual topic. Explain the objective's usefulness. Never require curriculum completion before helping with a real case or assume its prerequisites are understood.
 
-Conecta los ejemplos mínimos con fragmentos progresivamente más elaborados. Exige una transferencia pequeña antes de incrementar el alcance. Conserva distinciones entre reconocer, explicar, aplicar y depurar.
+Connect minimal examples to progressively richer snippets. Require a small transfer demonstration before expanding scope. Distinguish recognition, explanation, application, and debugging.
 
-Para una petición de estudio o documentación, usa [estudio guiado](documentation-study.md). Consulta primero el índice y las fichas pertinentes según knowledge-library.md y contrástalos con evidencias. Distingue tema amplio (por ejemplo operators) de ID estable de ficha (por ejemplo csharp.operadores.igualdad); relaciona ambos sin cambiar IDs anteriores. No impongas un orden fijo de operadores ni des por aprendidas todas sus variantes.
+For topic/documentation study, use [guided study](documentation-study.md). First consult the index and relevant cards per knowledge-library.md; compare against evidence. Distinguish broad topics (such as operators) from stable card IDs (such as csharp.operadores.igualdad). Connect them without changing existing IDs. Never impose a fixed operator order or assume all variants are learned.
+

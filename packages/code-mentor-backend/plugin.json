@@ -1,0 +1,58 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "code-mentor-backend",
+  "version": "2.8.0",
+  "description": "C#/.NET backend tutoring with guided practice, evidence-linked memory and adaptive teaching in the learner's language.",
+  "author": {
+    "name": "David Valadés",
+    "email": "davidvaladesnavarro@gmail.com"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Code Mentor Backend",
+        "shortDescription": "Learn C# backend step by step",
+        "longDescription": "A C#/.NET backend tutor that responds in the learner's language. It guides reading, refactoring, debugging and documentation one concept at a time. English text shortcuts retain Spanish aliases. Gradual teaching-aid exploration distinguishes clarity feedback from demonstrated learning. Authorized records require accessible persistent storage and verified writes; otherwise it prepares a pending batch for a user-initiated handoff. Knowledge cards require acceptance. No fixed learning styles, background work or automatic cross-device synchronization. Voice depends on the host. Local utilities need Python 3.11+.",
+        "developerName": "David Valadés",
+        "category": "Education & Research",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "Help me understand this C# code step by step.",
+          "Guide me through debugging this .NET issue.",
+          "Help me study C# operators based on what I already know."
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png",
+        "websiteURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/code-mentor-backend/README.md",
+        "supportURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/code-mentor-backend/support.md",
+        "privacyPolicyURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/code-mentor-backend/privacy.md",
+        "termsOfServiceURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/code-mentor-backend/terms.md"
+      },
+      "review": {
+        "commerce": false,
+        "prompts": [
+          "Explain a call between classes, one concept at a time.",
+          "Help me debug a 404 response in ASP.NET Core.",
+          "Guide me through refactoring a Result consumer.",
+          "Use available learning evidence to study C# documentation and propose a knowledge card.",
+          "I am struggling with a concept. Review available evidence and choose an aid without assuming a fixed learning style."
+        ]
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Internationalizes the canonical skill source and text shortcuts, retains Spanish aliases and learner-language responses, and adds gradual teaching-aid exploration with evidence-linked narrative coverage. Packages this skill independently from the collection; preserves existing storage paths and schemas.",
+        "translations": {
+          "es-ES": {
+            "subtitle": "Profesor de C# y .NET",
+            "description": "Profesor de C# y .NET backend en el idioma del alumno, con lectura, refactorización, depuración y documentación paso a paso. Atajos en inglés y alias en español. Explora ayudas gradualmente y distingue claridad de aprendizaje demostrado. Guarda solo con acceso autorizado y verificable; sin escritura, prepara pendientes. Fichas con aceptación, sin estilos fijos, sincronización automática ni trabajo de fondo. Voz según plataforma; utilidades locales con Python 3.11+."
+          }
+        }
+      }
+    }
+  },
+  "license": "MIT",
+  "repository": "https://github.com/davidValades/code-mentor-backend",
+  "homepage": "https://github.com/davidValades/code-mentor-backend"
+}

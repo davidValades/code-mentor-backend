@@ -1,58 +1,58 @@
-# Exploración gradual de ayudas docentes
+# Gradual exploration of teaching aids
 
-## Elegir una ayuda
+## Choose an aid
 
-Integra variantes desde el inicio en tareas y repasos normales. Lee preferencias y restricciones confirmadas, evidencias vigentes y, si existe, adaptacion/exploracion.md del ámbito autorizado. Sin antecedentes, indica que falta evidencia personal y elige por contenido y entorno; no inventes pruebas anteriores.
+Integrate variants into normal tasks/reviews from the start. Read confirmed preferences/constraints, current evidence, and authorized-scope adaptacion/exploracion.md if present. Without history, disclose missing personal evidence; choose by content/environment, never invent earlier trials.
 
-Usa una ayuda principal por bloque y una acción del alumno. Introduce una variante pertinente aún no probada cuando encaje en el siguiente paso; conserva también las ayudas usadas como apoyo. No presentes todas juntas ni exijas probar el catálogo entero antes de avanzar. Respeta una petición explícita de formato, accesibilidad, conducción, tiempo disponible y aplazamientos. Ante urgencia mantén el modo tutor y ofrece ayuda directa según las reglas existentes; pospón exploraciones que entorpezcan la tarea.
+Use one main aid and one learner action per block. Introduce relevant untried variants when they fit the next step; retain supporting aids. Never present all variants together or require the entire catalog before progress. Respect format requests, accessibility, driving, available time, and deferrals. For urgency, retain tutor mode and offer direct help under existing rules; defer obstructive exploration.
 
-Ante atasco, comprueba primero prerrequisitos, tamaño del paso y claridad. Cambia una ayuda o reduce el paso; un fallo no demuestra que el formato sea inadecuado. Si una ayuda funciona, reduce apoyos y comprueba una variante antes de generalizar.
+For sticking points, first check prerequisites, step size, and clarity. Change one aid or reduce the step; failure does not prove format mismatch. If an aid works, reduce support and check a variant before generalizing.
 
-## Catálogo de variantes
+## Variant catalog
 
-Conserva los ocho IDs de adaptive-teaching.md. La variante describe qué se hizo; no es un nuevo ID de la CLI.
+Keep adaptive-teaching.md's eight IDs. Variants describe actions; they are not new CLI IDs.
 
-| Variante | ID existente | Uso y límite |
+| Variant | Existing ID | Use and limitation |
 | --- | --- | --- |
-| Mapa mental de panorama | diagram | Orientar un tema; volver después a una relación concreta. |
-| Mapa conceptual | diagram | Unir conceptos con relaciones etiquetadas; no confundirlos con una jerarquía de clases real. |
-| Secuencia de llamadas | diagram | Mostrar quién llama, dato y respuesta, usando solo relaciones conocidas. |
-| Objetos y referencias | diagram | Representar instancias, referencias y cambios con un dibujo funcional preciso. |
-| Tabla de decisiones | comparison | Contrastar condiciones y resultados verificados sin inventar estados. |
-| Analogía con límites | analogy | Conectar con algo familiar, señalar límites y regresar a símbolos reales. |
-| Traza de valores | trace | Seguir una rama o evaluación paso a paso; distinguir predicción de ejecución. |
-| Ejemplo por subobjetivos | worked-example | Mostrar otro caso, nombrar sus pasos y retirar apoyos progresivamente. |
-| Completar código parcial | worked-example | Resolver una parte omitida y después intentar una variante autónoma. |
-| Ordenar fragmentos (Parsons) | worked-example | Reconstruir lógica sin escribir todo desde cero; reconocer un orden no acredita programar autónomamente. |
-| Ejemplo y contraejemplo | comparison | Identificar la diferencia relevante y los límites de una regla. |
-| Explicación del alumno | self-explanation | Justificar una predicción o reconstruir un esquema con palabras propias. |
-| Recuperación sin consultar | retrieval | Recuperar una idea y comprobar después, sin mostrar antes la respuesta. |
-| Hipótesis y observación | guided-debugging | Elegir una observación que contraste una hipótesis; no fingir ejecución. |
+| Overview mind map | diagram | Orient within a topic; return to a specific relationship. |
+| Concept map | diagram | Link concepts with labeled relationships; do not confuse with an actual class hierarchy. |
+| Call sequence | diagram | Show caller, data, response; use only known relationships. |
+| Objects and references | diagram | Draw instances, references, and changes accurately and functionally. |
+| Decision table | comparison | Contrast verified conditions/outcomes; invent no states. |
+| Analogy with limits | analogy | Connect to something familiar, identify limits, return to real symbols. |
+| Value trace | trace | Follow branch/evaluation stepwise; distinguish prediction from execution. |
+| Example organized by subgoals | worked-example | Show another case, name steps, gradually remove support. |
+| Complete partial code | worked-example | Solve an omitted part, then try a variant independently. |
+| Arrange fragments (Parsons) | worked-example | Reconstruct logic without writing everything; recognizing order proves no independent programming. |
+| Example and counterexample | comparison | Identify the relevant difference and rule limits. |
+| Learner explanation | self-explanation | Justify predictions or reconstruct diagrams in the learner's own words. |
+| Recall without consulting materials | retrieval | Recall, then check; never show the answer first. |
+| Hypothesis and observation | guided-debugging | Choose an observation testing a hypothesis; never pretend execution. |
 
-Registra todas las ayudas realmente usadas. Si el alumno construye un esquema, describe la actividad y registra diagram y self-explanation cuando correspondan. Las combinaciones se conservan juntas; no atribuyas su resultado a cada componente aislado. No generes imágenes para código exacto. En voz durante conducción utiliza una pregunta oral sin pedir pantalla, lectura o escritura; la práctica de IDE queda pendiente.
+Record every actual aid. For learner-built diagrams, describe activity and record diagram and self-explanation where applicable. Preserve combinations; credit no individual component with their result. Generate no images for exact code. During driving/voice, ask orally without screen, reading, or writing; leave IDE practice pending.
 
-## Preguntar por claridad
+## Ask about clarity
 
-Al estrenar una ayuda para ese concepto/contexto o detectar un atasco, formula como máximo una pregunta breve de claridad o esfuerzo. No la repitas por cambiar un ejemplo del mismo tipo, en cada turno ni al cerrar cada sesión por rutina. Si el alumno ya comentó su experiencia, usa esa declaración sin volver a preguntarla. Permite omitirla.
+Ask at most one brief clarity/effort question only for an aid new to that concept/context or a sticking point. Never repeat for same-type example changes, every turn, or routine session closes. Reuse experience feedback already given. Allow skipping.
 
-Ofrece 2–4 opciones con detalles libres mediante el formulario disponible, o una pregunta oral en voz. Ejemplo: «¿Cómo te ha resultado este esquema?»; opciones «Me aclara la idea», «Lo entiendo a medias», «Demasiada información», «Prefiero otra explicación». No diagnostiques la causa desde una opción.
+Offer 2–4 options with free-text details through the available form, or ask orally in voice mode. Example: “How did you find this diagram?”; options “It makes the idea clearer,” “I partly understand it,” “Too much information,” “I prefer another explanation.” Diagnose no cause from an option.
 
-Separa esa pregunta de la comprobación: si preguntas por claridad, espera su respuesta y plantea la actividad de aprendizaje en el siguiente turno. Elegir «me aclara» o decir «entendido» acredita únicamente una declaración, no un acierto ni autonomía.
+Keep clarity and learning checks in separate turns: wait for feedback, then present learning activity next turn. “It makes the idea clearer”/“understood” establishes only a statement, never a correct response or autonomy.
 
-## Comprobar y comparar
+## Check and compare
 
-Observa tres cosas por separado: comprensión inmediata, aplicación a un caso nuevo y recuperación posterior. Conserva modalidad y ayuda de cada intento. Una explicación oral no demuestra implementar en el IDE. El contrato de adaptación exige otra sesión y al menos 24 horas para registrar delayed; un repaso anterior puede ser útil, pero no se etiqueta como tal en la CLI.
+Separate immediate understanding, new-case application, and later retrieval. Preserve each attempt's modality/assistance. Oral explanation proves no IDE implementation. delayed requires another session and at least 24 hours under the adaptation contract; earlier reviews may help but cannot receive that CLI label.
 
-Compara solo episodios razonablemente comparables por concepto, tarea, dificultad, bases previas y ayuda. Considera orden y práctica acumulada: una segunda explicación aprovecha lo ya aprendido. Estos registros orientan decisiones personales; no prueban que un formato causó la mejora. No uses rapidez o satisfacción como medida principal ni porcentajes de estilos.
+Compare reasonably comparable concept, task, difficulty, prior foundations, and assistance. Account for order/accumulated practice: second explanations benefit from earlier learning. Records guide personal decisions, not claims that format caused improvement. Use neither speed/satisfaction as main measures nor learning-style percentages.
 
-## Registro y revisión
+## Records and review
 
-Usa la plantilla assets/templates/teaching-exploration.md para adaptacion/exploracion.md en la misma raíz persistente autorizada, fuera del paquete y del repositorio público. Es un complemento narrativo con vínculos a evidencias; el estado principal sigue siendo la autoridad del progreso. Guarda variante, motivo de elección, ayudas combinadas, contexto, claridad declarada, acción y ayuda observadas, límites y próxima comprobación. Mantén ID, fechas con zona e historial; una corrección conserva la entrada anterior y su procedencia.
+Use assets/templates/teaching-exploration.md for adaptacion/exploracion.md in the same authorized persistent root, outside package/public repository. This narrative supplement links evidence; main state remains progress authority. Save variant, selection reason, combined aids, context, stated clarity, observed action/assistance, limits, and next check. Preserve ID, zoned dates, history; corrections retain previous entry/provenance.
 
-En la cobertura por concepto/contexto utiliza: sin probar; evidencia insuficiente; prometedora en este contexto; necesita revisión. «Prometedora» exige varios intentos evaluados en más de una sesión, revisados por el profesor con resultados razonablemente comparables; una declaración o un solo acierto no basta. No es una validación estadística, una preferencia fija ni un estado calculado por la CLI. Conserva resultados contradictorios y un próximo contraste.
+Coverage by concept/context: untried; insufficient evidence; promising in this context; needs review. “Promising” requires several evaluated attempts across multiple sessions, tutor-reviewed with reasonably comparable results. Statements/single successes are insufficient. This is neither statistical validation, fixed preference, nor CLI-calculated state. Preserve contradictory results and next comparison.
 
-Revisa esta cobertura en la revisión existente cada tres sesiones, antes si hay dificultad en dos sesiones o petición. Prioriza provisionalmente lo prometedor sin abandonar recuperación y transferencia; aprovecha ocasiones pertinentes para explorar lo no probado. No crees otro contador de sesiones.
+Review coverage at the existing review every three sessions; sooner for difficulty in two sessions or request. Provisionally favor promising aids while retaining retrieval/transfer; explore untried variants when suitable. Create no additional session counter.
 
-Los subformatos, valoraciones y estados narrativos no se pasan a record ni a candidate: consulta adaptation-contract.md. report sigue agrupando por los ocho IDs y sus combinaciones; no genera cobertura ni gráficos de variantes. Conserva la valoración narrativa en exploracion.md, separada del balance.md generado, y enlaza las evidencias. No inventes resultados para completar el gráfico.
+Send no subformats, assessments, or narrative states to record/candidate; see adaptation-contract.md. report groups eight IDs/combinations, producing neither coverage nor variant charts. Keep narrative assessment/evidence links in exploracion.md, separate from generated balance.md. Never invent chart results.
 
-Guarda solo con acceso y autorización, lee la última versión, conserva cambios ajenos y verifica la escritura. Sin destino o acceso, incorpora estas notas al único paquete pendiente de session-close.md, usando «evidencia pendiente» sin inventar IDs guardados. No registres sesiones de diseño ni evaluaciones sintéticas como aprendizaje personal. La exploración ocurre durante sesiones activas; no modifica permanentemente la skill ni entrena el modelo.
+Save only with access/authorization: read latest version, preserve others' changes, verify write. Without destination/access, include notes in session-close.md's single pending package as “pending evidence”; invent no saved IDs. Design sessions/synthetic evaluations are not personal learning. Explore during active sessions only; neither permanently modify the skill nor train the model.

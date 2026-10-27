@@ -1,29 +1,30 @@
 # project
 
-## Objetivo
+## Goal
 
-Pendiente.
+Pending.
 
-## Fuentes y verificación
+## Sources and verification
 
-Pendiente.
+Pending.
 
-## Arquitectura observada
+## Observed architecture
 
-Pendiente.
+Pending.
 
-## Convenciones confirmadas
+## Confirmed conventions
 
-Pendiente.
+Pending.
 
-## Observaciones pendientes
+## Pending observations
 
-Pendiente.
+Pending.
 
-## Decisiones e historial
+## Decisions and history
 
-Pendiente.
+Pending.
 
-## Tareas activas
+## Active tasks
 
-Pendiente.
+Pending.
+

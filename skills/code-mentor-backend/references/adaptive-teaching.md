@@ -1,52 +1,52 @@
-# Adaptación docente por evidencias
+# Evidence-informed teaching adaptation
 
-Combina preferencias declaradas, exigencias del concepto y resultados observados. No clasifiques al alumno como visual/auditivo/cinestésico ni atribuyas un resultado a una estrategia por aparecer antes. Una preferencia o satisfacción no demuestra aprendizaje. Las fuentes generales orientan la enseñanza, no validan este profesor individual.
+Combine stated preferences, concept demands, and observed results. Never classify learners as visual/auditory/kinesthetic. Sequence alone proves no strategy effect; preference or satisfaction proves no learning. General research guides teaching; it does not validate this tutor.
 
-Consulta [exploración gradual](teaching-exploration.md) desde el inicio y al retomar: integra variantes en tareas y repasos normales, una ayuda principal por bloque. Pregunta brevemente por claridad al estrenar una ayuda en ese contexto o detectar un atasco, sin repetir comentarios ya ofrecidos. Mantén la comprobación de aprendizaje en otro turno. La cobertura y las variantes se conservan en adaptacion/exploracion.md con la plantilla indicada; no amplían los IDs de la CLI.
+Use [gradual exploration](teaching-exploration.md) from the start and on resumption: variants within normal tasks/reviews, one main aid per block. Ask briefly about clarity only when an aid is new in that context or a sticking point appears. Reuse feedback already given. Check learning in a separate turn. Keep coverage/variants in adaptacion/exploracion.md with the specified template; no new CLI IDs.
 
-## Elegir el siguiente paso
+## Choose the next step
 
-1. Lee preferencias y restricciones accesibles, checkpoint, evidencias recientes, índice y fichas pertinentes. Consulta el balance solo si conoces su fecha y revisión de origen; vuelve al registro si quedó antiguo.
-2. Ante dificultad, comprueba primero prerrequisitos, tamaño del paso y claridad del enunciado. Una explicación distinta no resuelve por sí sola una base ausente.
-3. Elige la ayuda adecuada al contenido y entorno. Con antecedentes comparables, prioriza provisionalmente ayudas prometedoras; sin ellos, explica que falta evidencia personal. Una preferencia de accesibilidad se respeta aunque no haya puntuaciones; no exige diagnóstico.
-4. Usa una idea y una comprobación por turno. Registra ayuda, resultado y límites reales; prepara transferencia a un caso distinto y recuperación posterior. Reduce ayuda progresivamente sin ocultar los errores.
-5. Si no funciona, modifica una ayuda o reduce el paso. No insistas por un supuesto estilo fijo. Conserva recuperación activa y repasos aunque resulte más cómodo releer.
+1. Read accessible preferences/constraints, checkpoint, recent evidence, index, and relevant cards. Use summaries only with known date/source revision; return to the record if stale.
+2. For difficulty, first check prerequisites, step size, and instruction clarity. A different explanation alone cannot supply missing foundations.
+3. Match aids to content/environment. Provisionally prioritize promising aids with comparable prior evidence; otherwise state that personal evidence is missing. Honor accessibility preferences without scores or diagnosis.
+4. Use one idea and one check per turn. Record aid, result, and actual limits; plan new-case transfer and later retrieval. Gradually reduce assistance without hiding errors.
+5. If ineffective, change one aid or reduce the step. Never persist for an assumed fixed style. Retain active retrieval/reviews even when rereading feels easier.
 
-| Ayuda | Uso orientativo y límite |
+| Aid | Suggested use and limitation |
 | --- | --- |
-| diagram | Relaciones y recorrido entre componentes; esquema funcional, sin decoración innecesaria. |
-| analogy | Introducción de una idea con un referente familiar; explicitar dónde deja de servir y regresar al código. |
-| trace | Seguir evaluación, llamadas y valores; no entregar toda la solución del ejercicio. |
-| worked-example | Razonar sobre otro ejemplo y retirar pasos en la práctica posterior. |
-| comparison | Contrastar casos para identificar la diferencia relevante. |
-| self-explanation | Pedir justificar una predicción con palabras propias. |
-| retrieval | Recuperar sin consultar y comprobar después; un fallo puede orientar el repaso. |
-| guided-debugging | Hipótesis, breakpoint/log y experimento verificable; sin inventar ejecución. |
+| diagram | Show component relationships/flow; use functional diagrams without unnecessary decoration. |
+| analogy | Introduce through something familiar; explain limits, then return to code. |
+| trace | Follow evaluation, calls, and values; withhold the full exercise solution. |
+| worked-example | Reason through another example; remove steps in later practice. |
+| comparison | Contrast cases to identify the relevant difference. |
+| self-explanation | Ask learners to justify predictions in their own words. |
+| retrieval | Recall without materials, then check; failures can guide review. |
+| guided-debugging | Use hypotheses, breakpoint/log, and verifiable experiment; never invent execution. |
 
-Estos IDs pueden combinarse en una observación, pero una combinación no se acredita a un componente aislado. El resultado depende también del contenido, dificultad, experiencia previa y orden. No uses velocidad como medida principal.
+Combine IDs when needed; never credit a combination's result to individual components. Content, difficulty, prior experience, and order also affect results. Never use speed as the main measure.
 
-## Registro y preferencias
+## Records and preferences
 
-Utiliza la carpeta adaptacion/ en la raíz persistente autorizada, fuera de la skill y de su repositorio público. preferencias.md, basado en la plantilla, conserva lo que el alumno declara y su alcance; exploracion.md recoge variantes, feedback y cobertura narrativa según teaching-exploration.md; balance.md y graficos/resultados.svg son derivados. observaciones.jsonl vincula las estrategias a IDs de evidencias existentes del mismo ámbito. Lee [el contrato de adaptación](adaptation-contract.md) antes de ejecutar la utilidad.
+Use adaptacion/ in the authorized persistent root, outside the skill/public repository. preferencias.md preserves template-based stated preferences and scope; exploracion.md holds variants, feedback, and narrative coverage per teaching-exploration.md; balance.md and graficos/resultados.svg are derived. observaciones.jsonl links strategies to existing evidence IDs in that scope. Read [the adaptation contract](adaptation-contract.md) before running the utility.
 
-El alumno puede decir que algo le resulta más claro; registra esa preferencia como declaración, no como éxito. La utilidad de observaciones no almacena feedback libre: usa preferencias.md para preferencias confirmadas y exploracion.md del mismo ámbito autorizado para claridad/esfuerzo y variantes. No inventes modalidad o ayuda para completar campos de un evento; si faltan, la observación queda pendiente.
+Record greater clarity as a declaration, never success. The utility stores no free-text feedback: keep confirmed preferences in preferencias.md; clarity/effort and variants in exploracion.md of the same authorized scope. Never invent modality/aid to fill event fields; missing values leave the observation pending.
 
-El balance separa concepto, tema, tipo de tarea, dificultad, modalidad de aprendizaje y de comprobación, actividad, ayuda, tipo de comprobación y combinación de estrategias. Su agrupación no hace idénticos los ejercicios: consulta las evidencias y contexto antes de comparar. Describe aciertos/intentos, parciales, errores, pendientes y demora real. No produzcas rankings globales ni porcentajes de estilos. El umbral de 3 intentos y 2 sesiones con intentos evaluados es una señal conservadora de interfaz, no validación estadística ni prueba de eficacia.
+The summary separates concept, topic, task type, difficulty, learning/check modalities, activity, assistance, check type, and strategy combination. Groups do not make exercises identical; inspect evidence/context before comparing. Show correct responses/attempts, partial responses, errors, pending items, and actual delay. No global rankings or learning-style percentages. The threshold of 3 attempts and 2 sessions with evaluated attempts is a conservative interface signal, not statistical validation or proof of effectiveness.
 
-## Revisión y autonomía
+## Review and autonomy
 
-En cada cierre conserva los episodios reales de enseñanza, incluidas preferencias declaradas, ayudas o combinaciones, contexto, resultados y lo que no funcionó, siguiendo session-close.md. Si falta escritura, inclúyelos en el mismo lote pendiente para Work; no pierdas estas observaciones por guardar solo conceptos. Al retomar una dificultad consulta esos antecedentes antes de elegir la siguiente ayuda. Un resumen manual no sustituye los vínculos y garantías de mentor_adaptation.py.
+At each close, preserve real teaching episodes per session-close.md: stated preferences, aids/combinations, context, results, and failures. Without writing access, include them in the same pending Work batch; saving concepts alone loses observations. Consult this history before choosing aids for recurring difficulty. Manual summaries replace neither mentor_adaptation.py links nor guarantees.
 
-Adapta el siguiente paso dentro del modo tutor y permisos existentes, sin pedir aceptación de cada explicación. Explora variantes pertinentes desde el inicio según teaching-exploration.md, en prácticas normales y gradualmente; no conviertas las clases en experimentos continuos. En voz durante conducción no pidas pantallas, lectura, escritura o manipulación del dispositivo. Una explicación oral no acredita programación autónoma.
+Adapt within tutor mode/current permissions without seeking acceptance of each explanation. Explore relevant variants gradually from the start in normal practice per teaching-exploration.md; avoid continuous experiments. During driving/voice, request no screen, reading, writing, or device interaction. Oral explanation does not demonstrate independent programming.
 
-Revisa con review_due cada tres sesiones, antes ante dificultad repetida en dos sesiones distintas o petición del alumno. Genera el balance/gráfico durante la revisión si hay acceso; con pocos datos muestra la insuficiencia. Con cero observaciones, no rellenes ejemplos como si fueran datos. La observación de una revisión no cuenta como nueva sesión.
+Use review_due every three sessions; review sooner for difficulty in two different sessions or learner request. Generate summary/chart during review when accessible; disclose insufficient data. Never fill zero observations with examples posing as data. A review observation is not a new session.
 
-Los cambios permanentes siguen improvement-loop.md y requieren aceptación explícita. propose_improvement solo admite los cuatro ajustes de su contrato; no añadas IDs de estrategias a candidate. Para modificar reglas del paquete fuera de ellos, prepara un cambio de skill y valídalo tras autorización. Las preferencias y elecciones contextuales no activan mejoras permanentes por sí solas.
+Permanent changes require explicit acceptance per improvement-loop.md. propose_improvement supports only its four adjustments; add no strategy IDs to candidate. For other package-rule changes, prepare a skill change and validate after authorization. Preferences/contextual choices alone trigger no permanent improvement.
 
-Sin acceso a archivos o Python, ofrece un balance manual trazable o un borrador pendiente y declara sus límites; no atribuyas garantías de la utilidad a escrituras manuales. No hay proceso de fondo, entrenamiento del modelo ni sincronización implícita.
+Without files/Python, offer a traceable manual summary or pending draft with limits; manual writes gain no utility guarantees. No background process, model training, or implicit synchronization.
 
-## Base investigadora
+## Research basis
 
-Consulta fuentes cuando una afirmación concreta lo requiera: revisión de estilos de Clinton-Lisell y Litzinger (2024), doi:10.3389/fpsyg.2024.1428732; técnicas de Dunlosky et al. (2013), doi:10.1177/1529100612453266; recuperación de Karpicke y Blunt (2011), doi:10.1126/science.1199327; experiencia previa de Kalyuga et al. (2003), doi:10.1207/S15326985EP3801_4. No extrapoles resultados de tareas experimentales a una garantía de aprender C# con un LLM.
+Consult sources for claims requiring support: learning styles, Clinton-Lisell and Litzinger (2024), doi:10.3389/fpsyg.2024.1428732; techniques, Dunlosky et al. (2013), doi:10.1177/1529100612453266; retrieval, Karpicke and Blunt (2011), doi:10.1126/science.1199327; prior experience, Kalyuga et al. (2003), doi:10.1207/S15326985EP3801_4. Experimental tasks provide no guarantee of learning C# with an LLM.
 
-Para comprobar vigencia contrasta tanto source_revision como observation_digest con read: añadir observaciones no incrementa la revisión de state.json. Si cualquiera difiere, regenera el balance antes de usarlo.
+Check both source_revision and observation_digest against read: adding observations does not increment state.json revision. Regenerate before use if either differs.

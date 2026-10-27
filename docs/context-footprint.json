@@ -1,0 +1,133 @@
+{
+  "unit": "whitespace-separated words and UTF-8 bytes; not tokens",
+  "baseline": "expanded English 2.8 before compacting",
+  "scope": "SKILL.md and all 17 references, including added runtime context instructions",
+  "files": [
+    {
+      "file": "adaptation-contract.md",
+      "before_words": 939,
+      "after_words": 707,
+      "before_bytes": 6368,
+      "after_bytes": 5394
+    },
+    {
+      "file": "adaptive-teaching.md",
+      "before_words": 1046,
+      "after_words": 800,
+      "before_bytes": 7231,
+      "after_bytes": 6123
+    },
+    {
+      "file": "architecture.md",
+      "before_words": 190,
+      "after_words": 140,
+      "before_bytes": 1253,
+      "after_bytes": 1057
+    },
+    {
+      "file": "curriculum.md",
+      "before_words": 356,
+      "after_words": 288,
+      "before_bytes": 2316,
+      "after_bytes": 2074
+    },
+    {
+      "file": "debugging.md",
+      "before_words": 397,
+      "after_words": 337,
+      "before_bytes": 2441,
+      "after_bytes": 2227
+    },
+    {
+      "file": "documentation-study.md",
+      "before_words": 476,
+      "after_words": 357,
+      "before_bytes": 3168,
+      "after_bytes": 2751
+    },
+    {
+      "file": "improvement-loop.md",
+      "before_words": 590,
+      "after_words": 421,
+      "before_bytes": 4049,
+      "after_bytes": 3420
+    },
+    {
+      "file": "knowledge-library.md",
+      "before_words": 900,
+      "after_words": 591,
+      "before_bytes": 5875,
+      "after_bytes": 4652
+    },
+    {
+      "file": "memory.md",
+      "before_words": 1176,
+      "after_words": 952,
+      "before_bytes": 7940,
+      "after_bytes": 6955
+    },
+    {
+      "file": "practical-workflows.md",
+      "before_words": 753,
+      "after_words": 550,
+      "before_bytes": 4805,
+      "after_bytes": 4077
+    },
+    {
+      "file": "project-context.md",
+      "before_words": 410,
+      "after_words": 316,
+      "before_bytes": 2696,
+      "after_bytes": 2360
+    },
+    {
+      "file": "reading-refactoring.md",
+      "before_words": 509,
+      "after_words": 382,
+      "before_bytes": 3324,
+      "after_bytes": 2840
+    },
+    {
+      "file": "session-close.md",
+      "before_words": 1622,
+      "after_words": 1332,
+      "before_bytes": 10915,
+      "after_bytes": 9806
+    },
+    {
+      "file": "storage-contract.md",
+      "before_words": 1044,
+      "after_words": 910,
+      "before_bytes": 8311,
+      "after_bytes": 7794
+    },
+    {
+      "file": "teaching-exploration.md",
+      "before_words": 1140,
+      "after_words": 862,
+      "before_bytes": 7418,
+      "after_bytes": 6343
+    },
+    {
+      "file": "teaching.md",
+      "before_words": 812,
+      "after_words": 599,
+      "before_bytes": 5376,
+      "after_bytes": 4563
+    },
+    {
+      "file": "voice.md",
+      "before_words": 404,
+      "after_words": 260,
+      "before_bytes": 2492,
+      "after_bytes": 1933
+    },
+    {
+      "file": "SKILL.md",
+      "before_words": 1782,
+      "after_words": 1837,
+      "before_bytes": 12870,
+      "after_bytes": 13284
+    }
+  ]
+}

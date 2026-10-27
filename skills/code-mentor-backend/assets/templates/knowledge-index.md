@@ -1,6 +1,7 @@
-# Índice de conocimientos
+# Knowledge index
 
-Catálogo derivado de las fichas vigentes. Las evidencias y contadores permanecen en el registro acordado. No contiene datos del alumno hasta que se configure y utilice fuera del paquete.
+Catalog derived from the current cards. Evidence and counters remain in the agreed record. Contains no learner data until configured and used outside the package.
 
-| ID | Título | Ficha relativa | Revisión | Topics | Prerrequisitos por ID | Actualizado | Repaso pendiente |
+| ID | Title | Relative card path | Revision | Topics | Prerequisites by ID | Updated | Review due |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+

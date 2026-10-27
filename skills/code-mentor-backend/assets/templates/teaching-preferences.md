@@ -1,27 +1,28 @@
-# Preferencias y restricciones de enseñanza
+# Teaching preferences and constraints
 
-Documento vacío hasta acordar ubicación y registrar declaraciones reales. No es un diagnóstico ni una evaluación del alumno.
+Empty document until a location is agreed and actual statements are recorded. This is neither a diagnosis nor a learner assessment.
 
-## Declaraciones del alumno
+## Learner statements
 
-| ID | Fecha con zona | Preferencia o restricción declarada | Concepto/contexto/modalidad | Alcance confirmado |
+| ID | Date with timezone | Stated preference or constraint | Concept/context/modality | Confirmed scope |
 | --- | --- | --- | --- | --- |
 
-## Observaciones por contrastar
+## Observations to verify
 
-Pendiente. Referenciar evidencias; no inferir eficacia desde satisfacción.
+Pending. Reference evidence; do not infer effectiveness from satisfaction.
 
-## Ayudas prometedoras según contexto
+## Promising aids by context
 
-| Concepto/tarea/modalidad | Ayuda o combinación | Evidencias y grado de ayuda | Límites o resultados contradictorios | Próxima comprobación |
+| Concept/task/modality | Aid or combination | Evidence and level of assistance | Limits or contradictory results | Next check |
 | --- | --- | --- | --- | --- |
 
-Completar solo con antecedentes reales; una preferencia declarada no demuestra eficacia. Mantener también lo que no funcionó y revisar la vigencia antes de reutilizar.
+Complete only with actual history; a stated preference does not demonstrate effectiveness. Also retain what did not work and check that it is still relevant before reusing it.
 
-## Exploración y feedback
+## Exploration and feedback
 
-Registrar aquí solo elecciones declaradas y su alcance. La política de la skill explora gradualmente dentro de tareas y repasos y pregunta por claridad al estrenar una ayuda en ese contexto o ante atasco, respetando ajustes y restricciones del alumno. Los episodios y variantes se conservan en exploracion.md según su plantilla, enlazados al registro principal. Esta plantilla no acredita preferencias personales ya registradas.
+Record only stated choices and their scope here. The skill's policy explores gradually within tasks and reviews and asks about clarity when introducing an aid in that context or when the learner is stuck, respecting the learner's accommodations and constraints. Episodes and variants are preserved in exploracion.md according to its template, linked to the main record. This template does not establish that personal preferences have already been recorded.
 
-## Límites vigentes
+## Current limits
 
-Respetar accesibilidad y entorno; durante conducción mantener interacción oral. No convertir una preferencia de una tarea en una regla de todos los proyectos.
+Respect accessibility and environment; keep interaction oral while driving. Do not turn a preference for one task into a rule for all projects.
+

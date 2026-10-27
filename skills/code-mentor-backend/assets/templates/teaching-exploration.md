@@ -1,41 +1,42 @@
-# Exploración de ayudas docentes
+# Exploring teaching aids
 
-Plantilla vacía. Completar únicamente con episodios reales del alumno en un destino autorizado. No guardar esta copia del paquete como si contuviera un historial.
+Empty template. Complete only with actual learner episodes in an authorized destination. Do not save this package copy as though it contained a history.
 
-- Ámbito y destino autorizado:
-- Última actualización con zona:
-- Registro principal e identidad/revisión verificados:
-- Límite de acceso o guardado pendiente:
+- Authorized scope and destination:
+- Last update with timezone:
+- Main record and verified identity/revision:
+- Access limit or pending save:
 
-## Cobertura por concepto y contexto
+## Coverage by concept and context
 
-| Concepto / tarea / dificultad / modalidad | Variante e ID existente | Estado narrativo | Evidencias y fechas consultadas | Límites / contradicciones | Próximo contraste |
+| Concept / task / difficulty / modality | Variant and existing ID | Narrative status | Evidence and dates consulted | Limits / contradictions | Next comparison |
 | --- | --- | --- | --- | --- | --- |
 
-Estados: sin probar; evidencia insuficiente; prometedora en este contexto; necesita revisión. No son estados de la CLI ni un diagnóstico de estilos. No rellenar intentos o valoraciones ausentes.
+Statuses: untried; insufficient evidence; promising in this context; needs review. These are neither CLI states nor a diagnosis of learning styles. Do not fill in missing attempts or ratings.
 
-## Episodios
+## Episodes
 
-### Episodio pendiente de completar
+### Episode pending completion
 
-- ID estable y fecha con zona:
-- Sesión y ámbito:
-- Concepto, objetivo y bases comprobadas:
-- Ayuda principal, variante y motivo:
-- Otras ayudas realmente utilizadas:
-- Acción observada y procedencia:
-- Evidencias existentes o indicación de pendiente:
-- Claridad/esfuerzo: declaración literal o resumen fiel, o no preguntado/no respondido:
-- Comprensión inmediata, ayuda y modalidad:
-- Aplicación a otro caso, ayuda y modalidad, o pendiente:
-- Recuperación posterior, demora real, ayuda y modalidad, o pendiente:
-- Limitaciones y explicaciones alternativas:
-- Próximo paso:
-- Estado real de escritura:
+- Stable ID and date with timezone:
+- Session and scope:
+- Concept, goal, and verified foundations:
+- Main aid, variant, and reason:
+- Other aids actually used:
+- Observed action and provenance:
+- Existing evidence or indication that it is pending:
+- Clarity/effort: verbatim statement or faithful summary, or not asked/not answered:
+- Immediate understanding, assistance, and modality:
+- Application to another case, assistance, and modality, or pending:
+- Later recall, actual delay, assistance, and modality, or pending:
+- Limitations and alternative explanations:
+- Next step:
+- Actual write status:
 
-## Historial de revisión
+## Revision history
 
-| Fecha con zona | Episodio / cobertura afectados | Evidencias consultadas | Conclusión provisional y motivo del cambio |
+| Date with timezone | Affected episode / coverage | Evidence consulted | Provisional conclusion and reason for the change |
 | --- | --- | --- | --- |
 
-Conservar procedencia y correcciones. El progreso cuantitativo se consulta en el registro principal; este documento no crea evidencias ni duplica contadores. Los gráficos existentes no distinguen variantes. Las notas de empresa permanecen en su ámbito autorizado.
+Preserve provenance and corrections. Consult the main record for quantitative progress; this document does not create evidence or duplicate counters. Existing charts do not distinguish variants. Company notes remain within their authorized scope.
+

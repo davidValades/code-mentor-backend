@@ -1,21 +1,22 @@
 # checkpoint
 
-## Tema
+## Topic
 
-Pendiente.
+Pending.
 
-## Última evidencia
+## Latest evidence
 
-Pendiente.
+Pending.
 
-## Pregunta pendiente
+## Open question
 
-Pendiente.
+Pending.
 
-## Siguiente paso
+## Next step
 
-Pendiente.
+Pending.
 
-## Persistencia disponible
+## Available persistence
 
-Pendiente.
+Pending.
+

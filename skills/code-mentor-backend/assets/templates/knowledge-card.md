@@ -1,43 +1,44 @@
 ---
 id: concepto.id-estable
-title: Título del concepto
+title: Concept title
 scope: general
 revision: 1
-created_at: FECHA_ISO_8601_CON_ZONA
-updated_at: FECHA_ISO_8601_CON_ZONA
+created_at: ISO_8601_DATE_WITH_TIMEZONE
+updated_at: ISO_8601_DATE_WITH_TIMEZONE
 topics: []
 prerequisites: []
 related_ids: []
 review_due: null
 ---
 
-## Explicación y alcance técnico
+## Explanation and technical scope
 
-Pendiente de verificar. Indicar versión aplicable y límites.
+Pending verification. State the applicable version and limits.
 
-## Fuentes
+## Sources
 
-- URL o documento/sección, fecha real de consulta y versión aplicable. Pendiente.
+- URL or document/section, actual access date, and applicable version. Pending.
 
-## Ejemplo mínimo
+## Minimal example
 
-Ejemplo sintético pendiente. Indicar si se ha ejecutado o solo revisado.
+Synthetic example pending. State whether it has been executed or only reviewed.
 
-## Evidencias y estado de aprendizaje
+## Evidence and learning status
 
-Sin evaluar. Diferenciar declaración, comprensión conceptual, práctica guiada y autonomía.
+Not assessed. Distinguish self-report, conceptual understanding, guided practice, and autonomy.
 
-| Evidencia o procedencia | Fecha | Actividad/modalidad | Ayuda | Resultado y alcance |
+| Evidence or provenance | Date | Activity/modality | Assistance | Outcome and scope |
 | --- | --- | --- | --- | --- |
 
-## Dudas y errores por reforzar
+## Questions and errors to revisit
 
-Pendiente.
+Pending.
 
-## Próxima práctica y repaso
+## Next practice and review
 
-Pendiente; fecha orientativa, no recordatorio programado.
+Pending; suggested date, not a scheduled reminder.
 
-## Historial de cambios
+## Change history
 
-- Revisión 1: motivo y fecha reales al guardar la ficha aceptada.
+- Revision 1: actual reason and date when saving the accepted card.
+

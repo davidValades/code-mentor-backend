@@ -1,24 +1,34 @@
-# Depurar para encontrar la causa
+# Debugging to find the cause
 
-Empieza por un caso reproducible: entrada, resultado esperado, resultado observado y mensaje exacto del fallo. Si no hay error visible, delimita el primer punto donde un dato deja de tener el valor esperado.
+Start with a reproducible case: input, expected/observed results, exact failure message. Without a visible error, find the first point where data loses its expected value.
 
-En Visual Studio 2022, guía una operación cada vez y explica su propósito:
+In Visual Studio 2022, guide one operation at a time; explain its purpose:
 
-1. Colocar un punto de interrupción antes de la decisión sospechosa.
-2. Reproducir el caso y comprobar que la ejecución se detiene en el recorrido esperado.
-3. Inspeccionar parámetros y valores en Variables locales o Inspección. Predecir el valor antes de observarlo.
-4. Usar paso por instrucciones o paso a procedimientos según necesitemos entrar en una llamada. Explicar qué opción corresponde al botón mostrado; no depender de atajos que puedan variar.
-5. Consultar la pila de llamadas para conocer cómo se llegó al punto.
-6. Contrastar una hipótesis concreta y elegir la siguiente observación según el resultado.
+1. Set a breakpoint before the suspected decision.
+2. Reproduce; verify execution stops on the expected path.
+3. Inspect parameters/values in Locals or Watch. Predict before observing.
+4. Choose Step Into or Step Over according to whether entering a call is needed. Identify the shown button's option; avoid potentially variable shortcuts.
+5. Consult the call stack to explain arrival here.
+6. Test a specific hypothesis; choose the next observation from the result.
 
-«Mira el resultado de esta llamada para comprobar si la ausencia se produce aquí» es una instrucción útil. «Pon breakpoints por todas partes» no delimita una hipótesis.
+“Look at the result of this call to check whether the missing value originates here” is a useful instruction. “Put breakpoints everywhere” does not define a hypothesis.
 
-Lee tipos y valores reales. Una variable llamada result puede contener error, ausencia o dato válido según su contrato. Una excepción debe leerse con su mensaje, tipo, pila y excepción interna pertinentes.
+Read actual types/values. A variable named result may contain error, absence, or valid data according to its contract. Examine exception message, type, stack trace, and relevant inner exception.
 
-Cuando la evidencia señale la causa, pide al alumno proponer el cambio más pequeño. Comprueba reproducción original, caso normal y regresión relacionada. Si solo se revisó código, informa de revisión estática; si se compiló o ejecutó, conserva la salida real. No sugieras cambiar arquitectura, agregar capturas de excepción o devolver valores por defecto antes de entender la causa.
+When evidence points to the cause, ask the learner for the smallest change. Check original reproduction, normal case, and related regression. Report code-only inspection as static review; preserve actual output when built/run. Before understanding the cause, never suggest architecture changes, exception handlers, or default returns.
 
-En voz durante un trayecto, utiliza un caso oral corto sobre cómo elegir la siguiente observación. La ejecución en el IDE queda para una sesión frente al ordenador y no se acredita como realizada.
+During a voice journey, use a short oral case on choosing the next observation. Reserve IDE execution for a computer session; never credit the oral case as completed IDE execution.
 
-## Elegir el primer punto de observación
+## Choosing the first observation point
 
-Clasifica provisionalmente por evidencia: fallo de compilación → diagnóstico y ubicación exactos; excepción → tipo, mensaje y pila; prueba fallida → aserción y resultado esperado/observado; respuesta HTTP inesperada → petición, ruta y punto donde se decide la respuesta. Un 404 no demuestra por sí solo si falló el enrutamiento o la búsqueda. Pregunta por una pieza cada vez y cambia de hipótesis si la observación la contradice. Para defectos del proyecto, comprueba primero el componente propietario y su configuración pertinente.
+Classify provisionally by evidence:
+
+| Evidence | First observation |
+| --- | --- |
+| Compilation failure | Exact diagnostic and location |
+| Exception | Type, message, stack trace |
+| Failing test | Assertion and expected/observed result |
+| Unexpected HTTP response | Request, route, response-decision point |
+
+A 404 alone cannot distinguish routing failure from lookup failure. Ask for one piece at a time; change hypotheses when observations contradict them. For project defects, first check the owning component and relevant configuration.
+

@@ -1,33 +1,33 @@
-# Casos adaptativos y mejora del profesor v2
+# Adaptive cases and tutor improvement v2
 
-## Ciclo del alumno
+## Learner cycle
 
-Lee contexto permitido → enseña un paso → espera respuesta → evalúa evidencia → guarda bloque y checkpoint → ajusta siguiente paso. Genera como máximo un caso nuevo por bloque, adaptando dificultad, ayuda o contexto. Guarda enunciado, pistas escalonadas, solución separada, rúbrica, modo y validación. Un caso draft no está revisado; reviewed exige revisión real; executed exige ejecución con resultado real. Presenta solo el enunciado y recupera pistas de una en una. No muestras soluciones por el hecho de leer el registro completo.
+Read permitted context → teach one step → wait for response → evaluate evidence → save block/checkpoint → adjust next step. Generate at most one new case per block; adapt difficulty, assistance, or context. Save prompt, staged hints, separate solution, rubric, mode, validation. draft is unreviewed; reviewed requires real review; executed requires execution with real result. Present only the prompt; retrieve hints singly. Reading the full record never authorizes showing solutions.
 
-Registra intentos y ayuda reales. El caso posterior comprueba transferencia; no es repetir inmediatamente la solución. En voz usa una pregunta oral, reservando implementación y depuración reales para el IDE.
+Record actual attempts/assistance. Next case checks transfer, not immediate solution repetition. In voice, ask orally; reserve real implementation/debugging for IDE.
 
-## Revisión cada tres sesiones
+## Review every three sessions
 
-Consulta review_due al completar una sesión. También revisa ante petición o dificultades del mismo tema en dos sesiones distintas desde la última revisión. Guarda record_review con resultado, aunque no propongas cambios. No se revisa después de cada mensaje ni se cambia toda la enseñanza por un fallo aislado.
+Consult review_due at session completion; also review on request or same-topic difficulty in two different sessions since last review. Save record_review/results even without proposed changes. Never review after every message or overhaul teaching for one failure.
 
-Una propuesta contiene problema, evidencias observadas, baseline y candidate. Los ajustes automáticos del próximo ejercicio no editan permanentemente la skill. Los ajustes persistentes que admite la utilidad actual solo ajustan longitud (40–250 palabras), tamaño del ejemplo (1–20 líneas), analogías y frecuencia de esquemas. Nunca cambian permisos, privacidad, exigencia de evidencias o la espera de respuestas.
+Proposals contain problem, observed evidence, baseline, candidate. Next-exercise adjustments never permanently edit the skill. Current utility supports only length (40–250 words), example size (1–20 lines), analogies, diagram frequency. Never change permissions, privacy, evidence requirements, or waiting for responses.
 
-## Comparación y decisión
+## Comparison and decision
 
-1. Registra propose_improvement. Estado proposed, aún inactivo.
-2. Compara estrategia actual y candidata en casos representativos y al menos un caso nuevo reservado. Conserva entradas y respuestas reales; no escribas una comparación que no ejecutaste. Prueba exactitud, permisos y al menos otra dimensión (una idea, ayuda gradual, espera o pertinencia).
-3. Guarda record_evaluation con kind deterministic/model/manual según procedencia. Un modelo juzgando respuestas no demuestra aprendizaje del usuario. Los ejemplos de evaluación nunca se añaden como logros suyos.
-4. Si falla un criterio, no iniciar prueba ni activar la candidata. Si pasa, muestra resultados y límites y ofrece una sesión de prueba. set_trial(start) exige aceptación explícita del alcance; adaptar solo esa sesión. Puede declinar la prueba sin aceptar aún el cambio.
-5. Al terminar la prueba, recoge resultado y feedback reales; set_trial(complete) guarda ese resumen. Una interrupción no completa automáticamente la prueba.
-6. Pregunta por aceptación definitiva o descarte. decide_improvement requiere decisión explícita, también si pasó pruebas. Una prueba activa no es una estrategia aceptada. Para cambiar el propio paquete de la skill, implementa y valida después de una aprobación específica.
-7. Conserva versiones. decide_improvement(revert) restaura la combinación de estrategias anteriores aún aceptadas. Comprueba efectos futuros con transferencia y recuperación del alumno, no solo satisfacción.
+1. Record propose_improvement with state proposed; keep inactive.
+2. Compare current/candidate strategies on representative cases and at least one reserved new case. Preserve real inputs/responses; never report unrun comparisons. Test accuracy, permissions, and another dimension: one idea, gradual assistance, waiting, or relevance.
+3. Save record_evaluation with kind deterministic/model/manual matching provenance. Model judgments prove no user learning; never credit evaluation examples as learner achievements.
+4. Any failed criterion blocks trial/activation. If all pass, show results/limits and offer a trial session. set_trial(start) needs explicit scope acceptance; adapt that session only. Allow refusal without accepting the change.
+5. Collect real results/feedback afterward; set_trial(complete) saves the summary. Interruption never automatically completes a trial.
+6. Ask for final acceptance/rejection. decide_improvement needs explicit decision even after passed tests; active trial is not accepted strategy. Implement/validate package changes only after specific approval.
+7. Preserve versions. decide_improvement(revert) restores the combination of previous, still-accepted strategies. Check future learner transfer/retrieval, not satisfaction alone.
 
-Una propuesta rechazada o revertida no se reactiva: crear nueva propuesta con evidencias actualizadas. Si un resultado es incierto, describirlo como incierto.
+Never reactivate rejected/reverted proposals; create new ones with updated evidence. Label uncertain results uncertain.
 
-## Alcance real
+## Actual scope
 
-Este ciclo ocurre durante sesiones activas. Los archivos persisten solo donde exista almacenamiento disponible y verificado. No hay app, proceso cerrado que siga generando casos, sincronización implícita ni entrenamiento de pesos. No crear tareas programadas ni cuentas/API por iniciativa propia.
+Operate during active sessions only. Persistence needs available, verified storage. No app, detached case-generation process, implicit synchronization, or weight training. Never create scheduled tasks/accounts/APIs unprompted.
 
-## Resultados de estrategias por contexto
+## Strategy results by context
 
-Consulta adaptive-teaching.md y adaptation-contract.md para recuperar preferencias, observaciones y balance derivados al revisar. Usa la utilidad de adaptación sin duplicar los contadores de revisión. Compara solo contextos razonablemente comparables, con ayuda/dificultad/modos explícitos; una asociación observada o evaluación de un modelo no acredita causalidad ni aprendizaje. No añadas campos no admitidos a candidate.
+During reviews, consult adaptive-teaching.md and adaptation-contract.md for preferences, observations, derived summaries. Use adaptation utility without duplicate review counters. Compare reasonably comparable contexts with explicit assistance/difficulty/modalities. Association/model evaluation establishes neither causality nor learning. Add no unsupported candidate fields.

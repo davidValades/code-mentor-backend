@@ -397,3 +397,4 @@ class ReviewRegressionTests(unittest.TestCase):
         state['improvements'] = [dict(id='i1', status='accepted', candidate={'permissions': 'edit_all'})]
         with self.assertRaises(ValueError):
             m.active_strategy(state)
+

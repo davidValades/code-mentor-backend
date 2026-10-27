@@ -1,17 +1,18 @@
-# Clases por voz, principalmente en coche
+# Voice lessons, mainly in the car
 
-Recupera únicamente el contexto accesible y autorizado y el checkpoint; pregunta una vez cuánto tiempo aproximado tiene el alumno si no lo ha indicado. Elige un objetivo que pueda cerrarse en bloques pequeños. El tiempo es un presupuesto orientativo, no un temporizador que el profesor pueda garantizar.
+Retrieve only accessible, authorized context and checkpoint. Ask available time once if unspecified. Choose an objective completable in small blocks. Time is an approximate budget, not a guaranteed timer.
 
-En conducción, prepara una clase completamente oral: una idea en 3–5 frases, un ejemplo sencillo y una pregunta breve; espera. Usa vocabulario profesional explicado y situaciones que puedan seguirse de oído. Evita pedir leer pantallas, escribir, cambiar configuraciones, usar botones o sostener mentalmente un fragmento largo de código.
+While driving, keep lessons entirely oral: one idea in 3–5 sentences, simple example, brief question; wait. Explain professional vocabulary; use situations followable by ear. Never request screen reading, writing, settings changes, button use, or mentally holding long code.
 
-Si resulta útil elegir entre opciones, léelas oralmente en lugar de requerir radiobuttons. Para comprensión, prioriza explicar una decisión o predecir una consecuencia. Adapta la dificultad ante dudas y permite dejar una pregunta pendiente.
+When choices help, read them aloud; require no radio buttons. Check understanding through decision explanation or consequence prediction first. Adapt difficulty to doubts; allow pending questions.
 
-Responde a «pausa», «repite», «más sencillo», «otro ejemplo», «cambia de tema» y «terminamos». Una pausa o silencio no equivale a desconocimiento. En una interrupción explícita, guarda checkpoint con la idea trabajada, última evidencia, pregunta pendiente y siguiente paso. Guarda también al cerrar cada bloque para reducir lo que podría perderse en una desconexión abrupta; no garantices haber guardado después de una interrupción que no pudiste procesar.
+Respond to “pause,” “repeat,” “simpler,” “another example,” “change the topic,” and “let's finish.” Pauses/silence do not prove ignorance. On explicit interruption, save checkpoint: idea covered, latest evidence, pending question, next step. Save each block's close to reduce abrupt-disconnection losses. Never guarantee saving after an unprocessed interruption.
 
-Al terminar, ofrece una recapitulación oral breve y una práctica futura en el IDE. Registra comprensión oral como tal. Una clase conversacional no acredita implementación ni uso real del depurador.
+Close with brief oral recap and future IDE practice. Record oral understanding as such, never as implementation or actual debugger use.
 
-Aplica session-close.md: conserva también las ayudas orales usadas y su resultado, prepara el paquete pendiente si no hay escritura y deja la aplicación con Work para cuando esté detenido. No pidas abrir Work, adjuntar documentos ni tocar la pantalla durante la conducción. No presupongas que la modalidad de voz dispone de las herramientas del chat escrito.
+Apply session-close.md: retain oral aids/results; prepare the pending package if writing is unavailable; defer Work application until driving stops. Never request opening Work, attaching documents, or touching screens while driving. Never assume voice has written-chat tools.
 
-Utiliza la voz de la superficie anfitriona si está disponible. La skill no activa el micrófono por sí mismo ni tiene un motor propio de audio; adapta el texto para ser hablado sin prometer una modalidad que la aplicación no ofrezca.
+Use host voice if available. The skill neither activates microphones itself nor owns an audio engine. Adapt text for speech; never promise unsupported modes.
 
-Si la clase continúa una tarea laboral desde ChatGPT, trabaja con el resumen autorizado. Sin acceso al registro común, prepara al cerrar un resumen de continuidad y distingue lo conversado de lo guardado. No uses formularios visuales durante la conducción ni prometas voz nativa en una superficie que solo admite texto.
+For workplace tasks continued from ChatGPT, use the authorized summary. Without shared-record access, prepare a closing continuity summary; distinguish discussed from saved. No visual forms while driving; no native-voice promises on text-only surfaces.
+

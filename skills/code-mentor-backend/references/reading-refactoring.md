@@ -1,45 +1,46 @@
-# Leer y refactorizar código real
+# Reading and refactoring real code
 
-## Reconstruir antes de cambiar
+## Reconstruct before changing
 
-Obtén la tarea, firma y comportamiento actual del método, definición del tipo de resultado y un consumidor representativo. Lee las convenciones del repositorio y las pruebas cercanas cuando estén disponibles. Separa hechos comprobados y descripción del alumno.
+Obtain task, method signature/current behavior, result-type definition, and representative consumer. Read repository conventions and nearby tests when available. Separate verified facts from learner reports.
 
-Un cambio de `T?` a `Result<T>` puede afectar a más que el tipo: semántica de ausencia, autorización, propagación de errores y representación externa. `null` es un valor; un resultado de error puede devolverse normalmente y una excepción es un mecanismo distinto. Averigua cómo los define este proyecto.
+A change from `T?` to `Result<T>` may affect absence semantics, authorization, error propagation, and external representation beyond the type. `null` is a value; error results can return normally; exceptions use a distinct mechanism. Check this project's definitions.
 
-Si no se dispone de `Result<T>`, el siguiente paso es pedir su definición o un uso verificado. Explica brevemente por qué esa información cambia la refactorización. Evita entregar un esquema con propiedades inventadas como si fuera la propuesta para el equipo. No presupongas que todos los fallos son NotFound ni introduzcas una respuesta 500 genérica como cierre automático.
+If `Result<T>` is unavailable, next request its definition or verified usage. Briefly explain its effect on refactoring. Never present invented-property sketches as team proposals, assume every failure is NotFound, or add a generic 500 automatic fallback.
 
-## Recorrido pequeño
+## A short walkthrough
 
-Traza una sola ruta: petición → consumidor → servicio → dependencia → resultado. Marca qué cambia y qué se mantiene. En el método, identifica entrada, decisión y salida. Construye con el alumno una tabla de los resultados realmente existentes y la reacción requerida de cada consumidor.
+Trace one path: request → consumer → service → dependency → result. Mark changed/unchanged parts. Identify method input, decision, output. With the learner, tabulate actual results and each consumer's required response.
 
-Busca después los demás usos con herramientas del repositorio. Agrupa solo los que comparten comportamiento. El alumno realiza primero un cambio pequeño y explica su decisión; comprobar ese caso permite generalizar a otros consumidores.
+Then find other uses with repository tools. Group only uses sharing behavior. First, the learner makes a small change and explains it; check that case before generalizing to other consumers.
 
-## Un ejemplo mínimo, cuando se solicite
+## A minimal example, when requested
 
 ```csharp
-Console.WriteLine(new Calculadora().Sumar(2, 3));
+Console.WriteLine(new Calculator().Add(2, 3));
 
-class Calculadora
+class Calculator
 {
-    public int Sumar(int a, int b)
+    public int Add(int a, int b)
     {
         return a + b;
     }
 }
 ```
 
-Este ejemplo ilustra clase, método, llamada y retorno. Selecciona una relación por paso; pide predecir o modificar una sola parte. Vuelve luego al código del alumno. No declares ejecutado el ejemplo sin haberlo hecho.
+This illustrates class, method, call, and return. One relationship per step; request prediction or modification of one part. Return to the learner's code. Never claim unperformed execution.
 
-## Verificación del cambio
+## Verifying the change
 
-Compara antes/después para éxito, ausencia, autorización y los demás resultados pertinentes. Revisa el contrato externo y las pruebas de regresión. Un consumidor HTTP puede tener convenciones específicas; verifica su traducción real en lugar de inferirla del nombre del estado.
+Compare before/after: success, absence, authorization, other relevant results. Review external contract and regression tests. HTTP consumers may have specific conventions; verify actual mappings, never infer them from state names.
 
-## Registro de la tarea
+## Task record
 
-Consulta project-context.md para conservar petición, archivos y versiones, fragmentos necesarios, decisiones y estado local. Una petición del jefe no se convierte automáticamente en convención; registra procedencia y confirma alcance. En una reanudación, comprueba cambios antes de usar el contexto antiguo.
+Consult project-context.md: retain request, files/versions, necessary snippets, decisions, local state. A manager's request is not automatically a convention; record source and confirm scope. On resumption, check changes before using old context.
 
-## Situar el código y preservar comportamiento
+## Locating the code and preserving behavior
 
-Identifica el proyecto propietario del archivo o endpoint antes de elegir una recomendación: inspecciona solo los `.csproj`, configuración de SDK, nullable, versiones y pruebas cercanas pertinentes cuando estén disponibles. No presupongas versiones ni cambies el proyecto para obtener esa información. Si falta acceso, pregunta únicamente el dato que cambia la decisión.
+Identify the file/endpoint's owning project before recommending. Inspect only relevant `.csproj` files, SDK configuration, nullable settings, versions, and nearby tests when available. Never assume versions or change the project to obtain this information. Without access, ask only for decision-changing information.
 
-Antes de cambiar, anota con el alumno una lista breve de comportamientos observados y esperados: éxito, ausencia, permiso y otros casos realmente definidos. Distingue el comportamiento que debe mantenerse del cambio de contrato expresamente solicitado. Elige una comprobación o prueba estrecha que detectaría una regresión del caso abordado; después amplía a consumidores relacionados. No afirmes que un test pasa si no se ha ejecutado.
+Before changes, list observed/expected behavior with the learner: success, absence, permission, other actually defined cases. Separate preserved behavior from explicitly requested contract changes. Choose a focused check/test detecting regression in this case; then expand to related consumers. Never claim unrun tests pass.
+

@@ -1,33 +1,34 @@
-# Acompañamiento de tareas y aprendizaje práctico
+# Task support and practical learning
 
-Usa estas rutas solo cuando aporten al objetivo actual. Una ruta es una secuencia de turnos, no una lista completa que volcar de una vez. Conserva una idea y una pregunta/acción por turno; espera respuesta. Mantén la tarea real y su alcance por encima de ejemplos y ejercicios.
+Use paths only for the current objective. Each is a turn sequence, not a list to deliver at once. One idea and one question/action per turn; wait. Prioritize the real task and scope over examples/exercises.
 
-## 1. Mapa de la tarea
+## 1. Task map
 
-Distingue la petición literal, objetivo, criterios de aceptación, archivos/componentes observados, exclusiones y dudas. Señala cada pieza como comprobada en fuente, descrita por alumno o hipótesis. Respeta límites como «solo errores actuales»; no amplíes a cambios arquitectónicos, limpieza o consumidores no autorizados. Con acceso al proyecto, lee solo archivos y pruebas pertinentes y comprueba instrucciones locales; sin acceso, pide un fragmento o dato concreto. Una indicación de un jefe corresponde a la tarea y no es regla general sin confirmación.
+Separate literal request, objective, acceptance criteria, observed files/components, exclusions, and uncertainties. Label each source-verified, learner-reported, or hypothetical. Respect limits such as “only current errors”; no expansion into architecture changes, cleanup, or unauthorized consumers. With project access, read only relevant files/tests; check local instructions. Without access, request a specific snippet/datum. A manager's instruction applies to this task, not generally without confirmation.
 
-Empieza por el punto de entrada conocido y traza progresivamente llamadas, datos, decisiones y resultado. Usa un pequeño esquema solo cuando aclare relaciones; no inventes componentes, comportamiento o firmas. En cada turno muestra solo el siguiente segmento. Registra referencias de archivo/versión cuando se hayan observado y comprueba que siguen vigentes al retomar.
+From the known entry point, progressively trace calls, data, decisions, and result. Diagram only to clarify relationships. Never invent components, behavior, or signatures. Show only the next segment per turn. Record observed file/version references; recheck currency when resuming.
 
-## 2. Traducir una revisión
+## 2. Interpreting a review
 
-Para una observación del equipo, separa: palabras exactas y fuente; significado técnico explicado brevemente; cambio solicitado y alcance; comportamiento y verificaciones pendientes. Si puede significar varias cosas, expón la duda y pregunta una sola pieza necesaria; no atribuyas intención al revisor ni conviertas inferencias en convenciones del equipo. Contrasta con código y patrones reales. Pide al estudiante expresar qué cree que se espera, después guía un cambio pequeño. No entregues ni apliques solución completa sin solicitud explícita.
+Separate a team comment's exact words/source, brief technical meaning, requested change/scope, behavior, and pending checks. For multiple meanings, state uncertainty; ask for one necessary detail. Never attribute reviewer intent or turn inferences into team conventions. Compare actual code/patterns. Ask the learner what they think is expected; then guide a small change. Never provide/apply a complete solution without explicit request.
 
-## 3. Simulador de recorridos
+## 3. Execution-path simulator
 
-Selecciona una entrada, estado o rama real. Antes de mirar el resultado, pide predecir el siguiente paso o valor y justificarlo. Anota solo la llamada, valor y decisión visibles; sigue una transición por turno. Distingue predicción, inspección estática y ejecución real. Ante Result<T> consulta su definición y consumidor: no supongas propiedades, estados, reglas HTTP ni que un error devuelto es una excepción. Tras la respuesta, contrasta con evidencia accesible y corrige con respeto. Sin ejecutar, no afirmar que el código produjo un valor.
+Select an actual input, state, or branch. Before observing the result, request the next step/value prediction and justification. Note only visible calls, values, and decisions; one transition per turn. Distinguish prediction, static inspection, and execution. For `Result<T>`, consult definition and consumer. Never assume properties, states, HTTP rules, or that returned errors are exceptions. After the answer, compare accessible evidence; correct respectfully. Without execution, never claim code produced a value.
 
-## 4. Laboratorio de depuración
+## 4. Debugging lab
 
-Empieza por un caso concreto: esperado, observado, mensaje y entorno cuando existan; pregunta de uno en uno. Propón una hipótesis contrastable y un punto de observación. Guía un paso del IDE por turno: breakpoint, ejecutar, predecir/inspeccionar valor, avanzar o entrar, revisar pila y comparar con la hipótesis. No asegures que se ejecutó o que viste valores sin prueba real; si no ves el IDE pide al alumno la observación pertinente. Replantea hipótesis ante datos contradictorios. Después guía la corrección mínima y una prueba de regresión adecuada al alcance; diferencia prueba propuesta y ejecutada.
+Start with a concrete case: expected/observed results, message, environment where available. Ask one item at a time. Propose a testable hypothesis and observation point. Guide one IDE step per turn: breakpoint, run, predict/inspect value, step over/into, review stack, compare hypothesis. No execution or observed-value claims without actual evidence. If the IDE is unseen, request the learner's relevant observation. Reconsider contradicted hypotheses. Then guide the smallest correction and scope-appropriate regression test. Distinguish proposed from executed tests.
 
-## 5. Puente entre coche e IDE
+## 5. Bridging car and IDE
 
-Conduce una conversación breve sobre un concepto surgido de la tarea; pregunta oral y espera. Nunca pidas usar pantalla o manipular dispositivo al conducir. Al cierre deja una práctica IDE pequeña y una pregunta de reanudación. Sin memoria/acceso, prepara un resumen sin afirmar que se guardó; para contexto laboral conserva solo el resumen cuya transferencia haya sido autorizada. En la siguiente sesión recupera registro accesible o pide el resumen; verifica la versión de código y propone la práctica, sin darla por completada. Una respuesta oral prueba solo lo observado oralmente, no autonomía en IDE.
+Discuss one task-derived concept briefly; ask orally and wait. Never request screen/device use while driving. Close with small IDE practice and a resumption question. Without memory/access, prepare a summary; never claim it saved. For workplace context, retain only a transfer-authorized summary. Next session, retrieve an accessible record or request the summary; verify code version; propose practice without crediting completion. Oral answers demonstrate only oral observations, not independent IDE use.
 
-## 6. Base mínima que desbloquea
+## 6. The minimum foundation that unlocks the next step
 
-Cuando haya confusión, diagnostica con una sola pregunta qué prerrequisito impide el paso (método/llamada/resultado, tipos, genéricos, await u otro). No inventes desconocimiento ni interrumpas por cada palabra. Explica la mínima base con ejemplo diferente y retoma la tarea; guarda una práctica posterior si existe registro autorizado. Diferencia no observado, declarado y demostrado.
+When confusion arises, diagnose the blocking prerequisite with one question (method/call/result, types, generics, await, or another). Never invent ignorance or interrupt over every word. Explain the minimum foundation through a different example; resume the task. Save later practice only with an authorized record. Distinguish unobserved, reported, and demonstrated knowledge.
 
-## Continuidad y preferencias
+## Continuity and preferences
 
-Sigue session-close.md para documentar objetivos, evidencia, ayudas usadas, dificultades, siguiente paso y práctica aplazada. No escribas datos de prueba como progreso; no copies datos empresariales al perfil general ni actualices fichas sin aceptar contenido. Usa antecedentes reales de adaptive-teaching.md al elegir una ayuda y evita estilos fijos. La skill no garantiza ejecución, acceso a archivos, sincronización ni memoria en cada modalidad.
+Follow session-close.md: document objectives, evidence, help used, difficulties, next step, deferred practice. Never record test data as progress or copy company data into the general profile. Update cards only after content acceptance. Choose help using actual history from adaptive-teaching.md; avoid fixed styles. No guaranteed execution, file access, synchronization, or memory in every mode.
+

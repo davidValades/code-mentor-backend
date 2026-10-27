@@ -1,39 +1,40 @@
-# Biblioteca personal de conocimientos
+# Personal knowledge library
 
-## Acceso y organización
+## Access and organization
 
-Mantén esta biblioteca fuera del paquete de la skill y de su repositorio público, bajo una ubicación persistente acordada. Si no existe una ubicación acordada, pregunta una sola vez por ella con opciones. No crees fichas reales dentro de assets/templates. Un .md no abre otros archivos: el asistente los consulta con herramientas disponibles.
+Keep outside skill/public repository in agreed persistent storage. If unset, ask once with options. Never create real cards in assets/templates. .md files open nothing themselves; consult other files with available tools.
 
-En cada raíz autorizada utiliza `conocimientos/index.md`, `conocimientos/fichas/<id>.md` y `conocimientos/historial/<id>/r0001.md`, r0002.md, etc. El ámbito general contiene conceptos y ejemplos sintéticos, sin nombres, rutas, código o peticiones de la empresa. El conocimiento específico del equipo permanece en la raíz local del proyecto. Compartirlo exige autorización del resumen exacto.
+Each authorized root uses `conocimientos/index.md`, `conocimientos/fichas/<id>.md`, and `conocimientos/historial/<id>/r0001.md`, r0002.md, etc. General scope: concepts/synthetic examples without company names, paths, code, or requests. Keep team knowledge in local project root; sharing requires authorization for the exact summary.
 
-El índice es un catálogo derivado: ID, título, ruta relativa de ficha, revisión, temas/topic, prerrequisitos por ID, fecha de actualización y repaso pendiente. Consulta primero el índice y después solo las fichas pertinentes y sus prerrequisitos. Las evidencias y los contadores siguen en state.json; las fichas resumen su significado, no crean una segunda fuente de calificaciones. Un plan de estudio se puede resumir en el perfil o tarea vigente; no necesita otro contador.
+Derived index: ID, title, relative card path, revision, topics/topic, prerequisite IDs, update date, pending review. Read index first, then relevant cards/prerequisites only. Evidence/counters remain in state.json; cards summarize, never create another grading source. A study plan may be summarized in profile/current task; no extra counter.
 
-## Identidad y contenido
+## Identity and content
 
-Usa la plantilla assets/templates/knowledge-card.md. El ID es estable, legible y sin datos privados, por ejemplo `csharp.operadores.igualdad`; permite solo letras minúsculas, números, puntos y guiones. Las fechas no forman parte del ID. Antes de crear busca por ID, título y sinónimos en el índice; si existe, actualiza su ficha. Conserva IDs y fecha de creación existentes aunque no sigan la convención nueva; valida cualquier nombre de archivo, no uses un ID inseguro como ruta. Un cambio de título no crea otro concepto.
+Use assets/templates/knowledge-card.md. IDs must be stable, readable, without private data; e.g. `csharp.operadores.igualdad`. Allow lowercase letters, numbers, dots, hyphens; exclude dates. Search index by ID/title/synonyms before creation; update existing cards. Preserve existing IDs/creation dates despite new conventions. Validate filenames; never use unsafe IDs as paths. Renaming titles creates no new concept.
 
-Cada ficha incluye created_at y updated_at ISO 8601 con zona horaria, revisión entera empezando en 1, ámbito, topic(s) del registro, fuentes con URL/sección/fecha de consulta/versión aplicable, relaciones y prerrequisitos, explicación propia breve, ejemplo mínimo sintético, dudas, próxima práctica y repaso orientativo. Las fuentes explican el concepto; no prueban aprendizaje del alumno.
+Include zoned ISO 8601 created_at/updated_at, integer revision starting at 1, scope, record topic(s), sources (URL/section/access date/applicable version), relationships/prerequisites, brief explanation in own words, minimal synthetic example, questions, next practice, suggested review. Sources explain concepts, never prove learning.
 
-Separa contenido técnico verificado, comprensión declarada, comprensión conceptual demostrada, práctica guiada y autonomía práctica. Para cada avance cita IDs de evidencia realmente existentes, fecha, actividad, modalidad y grado de ayuda. Si no hay registro accesible, indica observación conversacional o declaración pendiente de registrar y no inventes IDs. Leer una ficha, elegir una opción o copiar código no acredita dominio. Conserva dudas y resultados incorrectos relevantes; no presentes el historial como una subida obligatoria de nivel.
+Separate verified technical content, stated understanding, demonstrated conceptual understanding, guided practice, practical autonomy. Support each advance with real evidence IDs, date, activity, modality, assistance degree. Without accessible records, label conversational observation/statement pending recording; invent no IDs. Reading cards, choosing options, copying code prove no mastery. Preserve relevant questions/incorrect results; history need not rise in level.
 
-## Cuándo proponer y cuándo guardar
+## When to propose and when to save
 
-Aplica el sistema combinado: al cerrar un tema o tarea con algo útil que conservar; en cada revisión de tres sesiones nuevas desde la última revisión; antes si la misma dificultad aparece en dos sesiones distintas, o a petición del alumno. Usa review_due según memory.md, no cuentes mensajes. Agrupa los motivos que coincidan en una sola propuesta. Sin novedades relevantes, informa «sin cambios» y no generes revisiones vacías.
+Propose at topic/task close with useful material, every review after three new sessions since last review, sooner for the same difficulty in two different sessions, or on request. Use review_due per memory.md; count no messages. Merge coinciding triggers into one proposal. Without relevant additions, report “no changes”; create no empty revisions.
 
-Presenta una propuesta breve con ID, motivo, cambios exactos y estado de aprendizaje sustentado. Para una ficha nueva muestra el contenido completo; para actualizar muestra los cambios, manteniendo accesible el contenido previo. Pide aceptación de esa propuesta antes de escribir la ficha y su índice. Un rechazo o aplazamiento conserva la ficha vigente. Esta autorización específica no sustituye ni interrumpe el guardado ya autorizado de evidencias y checkpoints. Crear fichas no es modificar las instrucciones del profesor.
+Show ID, reason, exact changes, evidence-supported learning status. New card: full content. Update: changes with prior content accessible. Obtain proposal acceptance before writing card/index. Rejection/deferral preserves current card. This consent neither replaces nor interrupts authorized evidence/checkpoint saves. Cards do not change tutor instructions.
 
-Si el alumno pospone, conserva en el checkpoint autorizado los IDs y cambios pendientes, sin guardarlos como ficha aprobada. Una revisión de aprendizaje se registra aunque no se acepten sus fichas; en la siguiente sesión consulta también pendientes, no dependas solo de review_due. No vuelvas a preguntar por una propuesta ya aceptada y aún no guardada; reintenta su contenido exacto tras comprobar versiones.
+On deferral, save pending IDs/changes in authorized checkpoint, never as approved card. Record learning reviews even if cards are refused. Next session, inspect pending items as well as review_due. Never seek renewed acceptance for accepted, unsaved proposals; retry exact content after version checks.
 
-## Escritura y recuperación
+## Writing and recovery
 
-Las fichas y el índice se escriben con herramientas de archivos; mentor_store.py no tiene una operación para guardarlos. No envíes `kind=knowledge` ni cambies el esquema existente. No atribuyas a escrituras manuales sus garantías de bloqueo, recibos o atomicidad.
+Use file tools for cards/index; mentor_store.py has no save operation for them. Send no `kind=knowledge`; change no schema. Manual writes inherit none of its locking, receipt, or atomicity guarantees.
 
-Después de la aceptación:
-1. Relee la ficha y su revisión. Si cambiaron desde la propuesta, reconcilia y presenta los cambios nuevos antes de sobrescribir. Comprueba que rutas y destino están dentro de la raíz acordada y no atraviesan enlaces simbólicos hacia otros ámbitos.
-2. Para una actualización, conserva el contenido vigente exacto en historial/<id>/rNNNN.md antes de reemplazarlo. No sobrescribas un archivo de historial con contenido distinto. Incrementa revision una vez, conserva created_at y registra updated_at real.
-3. Escribe la ficha vigente y después actualiza la fila del índice con su revisión y relaciones. No modifiques fichas ajenas a la propuesta.
-4. Lee los resultados guardados y comprueba ID, revisión, fechas, enlaces relativos e historial antes de afirmar éxito. Si un paso falla, informa qué quedó guardado y qué queda pendiente; un reintento no crea otra revisión si la ficha ya coincide.
+After acceptance:
 
-Si la ficha y el índice discrepan tras una interrupción, comprueba ficha e historial y repara solo la fila derivada tras verificarla; no inventes avances desde el índice. Si hay escritores simultáneos, detén la escritura ante el conflicto y coordina, sin prometer bloqueo seguro con herramientas manuales.
+1. Reread card/revision. If changed since proposal, reconcile and present new changes before overwriting. Verify paths/destination stay within agreed root without symlinks into other scopes.
+2. Before updates, preserve exact current content in historial/<id>/rNNNN.md. Never overwrite history with different content. Increment revision once; preserve created_at; record actual updated_at.
+3. Write card, then its index row with revision/relationships. Touch no cards outside proposal.
+4. Read saved results; verify ID, revision, dates, relative links, history before claiming success. On failure, report saved/pending parts. Matching retries create no extra revision.
 
-Sin acceso o persistencia, entrega la propuesta en conversación como borrador pendiente. No afirmes haber guardado, leído toda la biblioteca o sincronizado entornos. Esta biblioteca se actualiza durante sesiones activas; no se entrena el modelo ni se trabaja en segundo plano.
+After interruption, resolve card/index disagreement by checking card/history; verify and repair only derived index row. Infer no progress from index. With concurrent writers, stop on conflict and coordinate; promise no safe manual locking.
+
+Without access/persistence, present pending draft in conversation. Claim neither saving, reading the whole library, nor cross-environment synchronization. Update during active sessions only; no model training/background work.

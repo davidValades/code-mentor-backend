@@ -16,7 +16,22 @@ STRATEGIES = {'diagram', 'analogy', 'trace', 'worked-example', 'comparison',
 INPUT_FIELDS = {'id', 'evidence_id', 'concept_id', 'task_kind', 'difficulty',
                 'check_kind', 'strategies', 'learned_evidence_id'}
 ROW_FIELDS = INPUT_FIELDS | {'schema_version', 'recorded_at'}
-LABELS = {'diagram':'Esquema', 'analogy':'Analogía', 'trace':'trazado',
+LABELS = {
+    'en': {'diagram':'Diagram', 'analogy':'Analogy', 'trace':'trace',
+          'worked-example':'Worked example', 'comparison':'Comparison',
+          'self-explanation':'Self-explanation', 'retrieval':'Retrieval',
+          'guided-debugging':'Guided debugging', 'read':'reading', 'explain':'explanation',
+          'implement':'implementation', 'debug':'debugging', 'predict':'prediction',
+          'retrieve':'retrieval', 'declared':'declaration', 'introductory':'introductory',
+          'standard':'standard', 'complex':'complex', 'text':'text', 'oral':'voice', 'ide':'IDE',
+          'none':'no assistance', 'hint':'hint', 'guided':'guidance', 'solution':'solution',
+          'immediate':'immediate', 'transfer':'transfer', 'delayed':'delayed',
+          'operators':'Operators', 'types':'Types', 'methods':'Methods', 'classes':'Classes',
+          'flow':'Flow', 'results':'Results', 'async':'Asynchrony',
+          'dependencies':'Dependencies', 'http':'HTTP', 'data':'Data', 'testing':'Testing',
+          'debugging':'Debugging', 'refactoring':'Refactoring', 'architecture':'Architecture',
+          'vocabulary':'Vocabulary'},
+    'es': {'diagram':'Esquema', 'analogy':'Analogía', 'trace':'trazado',
           'worked-example':'Ejemplo resuelto', 'comparison':'Comparación',
           'self-explanation':'Explicación propia', 'retrieval':'Recuperación',
           'guided-debugging':'Depuración guiada', 'read':'lectura', 'explain':'explicación',
@@ -30,6 +45,65 @@ LABELS = {'diagram':'Esquema', 'analogy':'Analogía', 'trace':'trazado',
           'dependencies':'Dependencias', 'http':'HTTP', 'data':'Datos', 'testing':'Pruebas',
           'debugging':'Depuración', 'refactoring':'Refactorización', 'architecture':'Arquitectura',
           'vocabulary':'Vocabulario'}
+}
+REPORT_TEXT = {
+    'en': {
+        'title': 'Results by context and strategy',
+        'generated': 'Generated: {generated_at}; record revision: {source_revision}.',
+        'digest': 'Observation digest: {observation_digest}.',
+        'caveat': 'Observed associations, not causality or a fixed learning style. No overall ranking.',
+        'threshold': 'Suggested threshold: 3 attempts and 2 evaluated sessions; exceeding it does not demonstrate effectiveness.',
+        'attempts': 'Correct outcomes are separated by assistance. Pending observations, declarations, and solutions do not count as evaluated attempts.',
+        'svg_title': 'Observed results by context; no causality or fixed learning style',
+        'svg_generated': 'Revision {source_revision}; generated {generated_at}',
+        'empty': 'No valid observations: no data to compare.',
+        'svg_empty': 'No valid observations. No data to compare.',
+        'insufficient': 'Insufficient evidence',
+        'provisional': 'Provisional observations',
+        'group': 'Group',
+        'strategies': 'Strategies',
+        'counts': 'Correct/attempts: {correct}/{attempts}; partial: {partial}; incorrect: {incorrect}; pending: {pending}.',
+        'observations': 'Observations',
+        'evidence': 'Evidence',
+        'dates': 'Dates',
+        'delay': 'Observed delay in days',
+        'unverified': 'not verified',
+        'svg_counts': '{correct}/{attempts} correct; {pending} pending; {sessions} evaluated sessions',
+        'orphaned': 'Excluded orphaned references',
+        'invalid': 'Excluded incompatible references',
+        'none': 'none',
+    },
+    'es': {
+        'title': 'Resultados por contexto y estrategia',
+        'generated': 'Generado: {generated_at}; revisión del registro: {source_revision}.',
+        'digest': 'Huella de observaciones: {observation_digest}.',
+        'caveat': 'Asociaciones observadas, no causalidad ni estilo fijo. Sin ranking global.',
+        'threshold': 'Umbral orientativo: 3 intentos y 2 sesiones evaluadas; superarlo no demuestra eficacia.',
+        'attempts': 'Aciertos se distinguen por ayuda. Pendientes, declaraciones y soluciones no cuentan como intentos evaluados.',
+        'svg_title': 'Resultados observados por contexto; no causalidad ni estilo fijo',
+        'svg_generated': 'Revisión {source_revision}; generado {generated_at}',
+        'empty': 'Sin observaciones válidas: no hay datos para comparar.',
+        'svg_empty': 'Sin observaciones válidas. No hay datos para comparar.',
+        'insufficient': 'Evidencia insuficiente',
+        'provisional': 'Observaciones provisionales',
+        'group': 'Grupo',
+        'strategies': 'Estrategias',
+        'counts': 'Aciertos/intentos: {correct}/{attempts}; parciales: {partial}; incorrectos: {incorrect}; pendientes: {pending}.',
+        'observations': 'Observaciones',
+        'evidence': 'Evidencias',
+        'dates': 'Fechas',
+        'delay': 'Demora observada en días',
+        'unverified': 'no comprobada',
+        'svg_counts': '{correct}/{attempts} aciertos; {pending} pendientes; {sessions} sesiones evaluadas',
+        'orphaned': 'Referencias huérfanas excluidas',
+        'invalid': 'Referencias incompatibles excluidas',
+        'none': 'ninguna',
+    },
+}
+
+
+def validate_language(language):
+    store.require(isinstance(language, str) and language in REPORT_TEXT, 'unsupported report language')
 
 
 def identifier(value):
@@ -169,57 +243,60 @@ def summarize_locked(root):
                 orphaned_ids=orphaned, invalid_ids=invalid)
 
 
-def render(result, generated_at):
-    lines = ['# Resultados por contexto y estrategia', '',
-             f'Generado: {generated_at}; revisión del registro: {result["source_revision"]}.',
-             f'Huella de observaciones: {result["observation_digest"]}.', '',
-             'Asociaciones observadas, no causalidad ni estilo fijo. Sin ranking global.',
-             'Umbral orientativo: 3 intentos y 2 sesiones evaluadas; superarlo no demuestra eficacia.',
-             'Aciertos se distinguen por ayuda. Pendientes, declaraciones y soluciones no cuentan como intentos evaluados.', '']
+def render(result, generated_at, language='en'):
+    validate_language(language)
+    labels = LABELS[language]
+    text = REPORT_TEXT[language]
+    lines = ['# '+text['title'], '',
+             text['generated'].format(generated_at=generated_at, source_revision=result['source_revision']),
+             text['digest'].format(observation_digest=result['observation_digest']), '',
+             text['caveat'], text['threshold'], text['attempts'], '']
     height = max(220, 150+len(result['groups'])*150)
     width = 1200
     svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
            f'<rect width="{width}" height="{height}" fill="white"/>',
            '<g fill="#172554" font-family="sans-serif" font-size="16">',
-           '<text x="20" y="30">Resultados observados por contexto; no causalidad ni estilo fijo</text>',
-           f'<text x="20" y="58">Revisión {result["source_revision"]}; generado {escape(generated_at)}</text>']
+           f'<text x="20" y="30">{text["svg_title"]}</text>',
+           '<text x="20" y="58">'+text['svg_generated'].format(
+               source_revision=result['source_revision'], generated_at=escape(generated_at))+'</text>']
     if not result['groups']:
-        lines.append('Sin observaciones válidas: no hay datos para comparar.')
-        svg.append('<text x="20" y="110">Sin observaciones válidas. No hay datos para comparar.</text>')
+        lines.append(text['empty'])
+        svg.append(f'<text x="20" y="110">{text["svg_empty"]}</text>')
     for n, g in enumerate(result['groups'], 1):
-        label = ' / '.join([LABELS.get(g[k], g[k]) for k in ['topic', 'task_kind', 'difficulty']]+
-                            [LABELS[g['learning_modality']]+' → '+LABELS[g['modality']]]+
-                            [LABELS[g[k]] for k in ['activity', 'assistance', 'check_kind']])
-        strategy = ' + '.join(LABELS[x] for x in g['strategies'])
-        status = 'Evidencia insuficiente' if g['insufficient'] else 'Observaciones provisionales'
-        lines.extend([f'## Grupo {n}: {g["concept_id"]} / {label}', '', f'Estrategias: {strategy}. {status}.',
-                      f'Aciertos/intentos: {g["correct"]}/{g["attempts"]}; parciales: {g["partial"]}; '
-                      f'incorrectos: {g["incorrect"]}; pendientes: {g["pending"]}.',
-                      'Observaciones: '+', '.join(g['observation_ids'])+'.',
-                      'Evidencias: '+', '.join(g['evidence_ids'])+'.',
-                      'Fechas: '+', '.join(g['dates'])+'.',
-                      'Demora observada en días: '+(', '.join(map(str,g['delays_days'])) or 'no comprobada')+'.', ''])
+        label = ' / '.join([labels.get(g[k], g[k]) for k in ['topic', 'task_kind', 'difficulty']]+
+                            [labels[g['learning_modality']]+' → '+labels[g['modality']]]+
+                            [labels[g[k]] for k in ['activity', 'assistance', 'check_kind']])
+        strategy = ' + '.join(labels[x] for x in g['strategies'])
+        status = text['insufficient'] if g['insufficient'] else text['provisional']
+        lines.extend([f'## {text["group"]} {n}: {g["concept_id"]} / {label}', '',
+                      f'{text["strategies"]}: {strategy}. {status}.', text['counts'].format(**g),
+                      text['observations']+': '+', '.join(g['observation_ids'])+'.',
+                      text['evidence']+': '+', '.join(g['evidence_ids'])+'.',
+                      text['dates']+': '+', '.join(g['dates'])+'.',
+                      text['delay']+': '+(', '.join(map(str,g['delays_days'])) or text['unverified'])+'.', ''])
         y = 95+(n-1)*150
         svg.extend([f'<text x="20" y="{y}">{escape(g["concept_id"])}</text>',
                     f'<text x="20" y="{y+24}">{escape(label)}</text>',
                     f'<text x="20" y="{y+48}">{escape(strategy)}; {status}</text>',
                     f'<rect x="20" y="{y+62}" width="400" height="18" fill="#e2e8f0"/>'])
         width = 400*g['correct']/g['attempts'] if g['attempts'] else 0
+        counts = text['svg_counts'].format(correct=g['correct'], attempts=g['attempts'], pending=g['pending'],
+                                           sessions=len(g['evaluated_sessions']))
         svg.extend([f'<rect x="20" y="{y+62}" width="{width:.1f}" height="18" fill="#7c3aed"/>',
-                    f'<text x="435" y="{y+78}">{g["correct"]}/{g["attempts"]} aciertos; '
-                    f'{g["pending"]} pendientes; {len(g["evaluated_sessions"])} sesiones evaluadas</text>'])
-    lines.extend(['Referencias huérfanas excluidas: '+(', '.join(result['orphaned_ids']) or 'ninguna')+'.',
-                  'Referencias incompatibles excluidas: '+(', '.join(result['invalid_ids']) or 'ninguna')+'.'])
+                    f'<text x="435" y="{y+78}">{counts}</text>'])
+    lines.extend([text['orphaned']+': '+(', '.join(result['orphaned_ids']) or text['none'])+'.',
+                  text['invalid']+': '+(', '.join(result['invalid_ids']) or text['none'])+'.'])
     svg.extend(['</g>', '</svg>'])
     return '\n'.join(lines)+'\n', '\n'.join(svg)+'\n'
 
 
-def report(root):
+def report(root, language='en'):
+    validate_language(language)
     root = store.safe_root(root)
     with store.writer_lock(root):
         result = summarize_locked(root)
         generated_at = datetime.now(timezone.utc).isoformat()
-        md, svg = render(result, generated_at)
+        md, svg = render(result, generated_at, language=language)
         for folder in ['adaptacion', 'adaptacion/graficos']:
             store.safe_file(root, folder).mkdir(exist_ok=True, mode=0o700)
         markdown = store.safe_file(root, 'adaptacion/balance.md')
@@ -233,6 +310,7 @@ def report(root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, required=True)
+    parser.add_argument('--language', choices=['en', 'es'], default='en')
     parser.add_argument('action', choices=['record', 'read', 'report'])
     args = parser.parse_args()
     try:
@@ -241,7 +319,7 @@ def main():
         elif args.action == 'read':
             result = summarize(args.root)
         else:
-            result = report(args.root)
+            result = report(args.root, language=args.language)
         print(store.canonical(result))
         return 0
     except (ValueError, OSError, KeyError, TypeError) as exc:
@@ -251,3 +329,4 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
+

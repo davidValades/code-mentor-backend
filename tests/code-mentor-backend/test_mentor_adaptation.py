@@ -118,11 +118,11 @@ class AdaptationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'LOCKED'): adap.record(self.root,self.observation())
 
     def test_reports_empty_and_sparse_data_without_percentages(self):
-        report = adap.report(self.root)
+        report = adap.report(self.root, language='es')
         svg = Path(report['svg']).read_text()
         self.assertIn('Sin observaciones',svg)
         self.evidence();adap.record(self.root,self.observation())
-        report=adap.report(self.root)
+        report=adap.report(self.root, language='es')
         svg=Path(report['svg']).read_text();md=Path(report['markdown']).read_text()
         self.assertIn('1/1',svg)
         self.assertIn('Evidencia insuficiente',md)
@@ -159,17 +159,73 @@ class AdaptationTests(unittest.TestCase):
     def test_reports_show_topic_even_when_concept_labels_match(self):
         self.evidence(topic='types')
         adap.record(self.root,self.observation())
-        output=adap.report(self.root)
+        output=adap.report(self.root, language='es')
         self.assertIn('Tipos',Path(output['markdown']).read_text())
         self.assertIn('Tipos', ''.join(ET.fromstring(Path(output['svg']).read_text()).itertext()))
 
     def test_graph_uses_readable_labels_for_learning_context(self):
         self.evidence();adap.record(self.root,self.observation())
-        output=adap.report(self.root)
+        output=adap.report(self.root, language='es')
         text=''.join(ET.fromstring(Path(output['svg']).read_text()).itertext())
         self.assertIn('Esquema',text)
         self.assertIn('pista',text)
         self.assertIn('inmediata',text)
+
+    def test_report_language_changes_presentation_without_changing_data(self):
+        for n, changes in enumerate([{}, {'outcome':'partial', 'session_id':'s2'},
+                                     {'outcome':'incorrect', 'session_id':'s2'},
+                                     {'outcome':'unverified', 'session_id':'s3'}], 1):
+            self.evidence('e'+str(n), **changes)
+            adap.record(self.root, self.observation(id='o'+str(n), evidence_id='e'+str(n)))
+        state_before=(self.root/'state.json').read_bytes()
+        observations_before=(self.root/'adaptacion/observaciones.jsonl').read_bytes()
+        summary_before=adap.summarize(self.root)
+
+        english=adap.report(self.root)
+        english_md=Path(english['markdown']).read_text()
+        english_svg=Path(english['svg']).read_text()
+        spanish=adap.report(self.root, language='es')
+        spanish_md=Path(spanish['markdown']).read_text()
+        spanish_svg=Path(spanish['svg']).read_text()
+
+        self.assertIn('# Results by context and strategy', english_md)
+        self.assertIn('Operators / trace / standard', english_md)
+        self.assertIn('Strategies: Diagram. Provisional observations.', english_md)
+        self.assertIn('Correct/attempts: 1/3; partial: 1; incorrect: 1; pending: 1.', english_md)
+        self.assertIn('1/3 correct; 1 pending; 2 evaluated sessions', english_svg)
+        self.assertIn('# Resultados por contexto y estrategia', spanish_md)
+        self.assertIn('Aciertos/intentos: 1/3; parciales: 1; incorrectos: 1; pendientes: 1.', spanish_md)
+        self.assertIn('1/3 aciertos; 1 pendientes; 2 sesiones evaluadas', spanish_svg)
+        for key in ['markdown', 'svg', 'source_revision', 'observation_digest']:
+            self.assertEqual(english[key], spanish[key])
+        self.assertEqual(set(english), {'markdown', 'svg', 'source_revision', 'generated_at', 'observation_digest'})
+        self.assertEqual(set(spanish), set(english))
+        self.assertEqual(Path(english['markdown']).relative_to(self.root), Path('adaptacion/balance.md'))
+        self.assertEqual(Path(english['svg']).relative_to(self.root), Path('adaptacion/graficos/resultados.svg'))
+        self.assertEqual((self.root/'state.json').read_bytes(), state_before)
+        self.assertEqual((self.root/'adaptacion/observaciones.jsonl').read_bytes(), observations_before)
+        self.assertEqual(adap.summarize(self.root), summary_before)
+        english_root=ET.fromstring(english_svg)
+        spanish_root=ET.fromstring(spanish_svg)
+        self.assertEqual([e.attrib for e in english_root.iter()], [e.attrib for e in spanish_root.iter()])
+
+    def test_unsupported_report_language_does_not_write(self):
+        def snapshot():
+            return {str(p.relative_to(self.root)):p.read_bytes()
+                    for p in self.root.rglob('*') if p.is_file()}
+
+        before=snapshot()
+        with self.assertRaisesRegex(ValueError, 'language'):
+            adap.report(self.root, language='fr')
+        self.assertEqual(snapshot(), before)
+        self.assertFalse((self.root/'adaptacion').exists())
+        with self.assertRaisesRegex(ValueError, 'language'):
+            adap.render({}, '2026-10-27T10:00:00+00:00', language='fr')
+        adap.report(self.root)
+        before=snapshot()
+        with self.assertRaisesRegex(ValueError, 'language'):
+            adap.report(self.root, language='fr')
+        self.assertEqual(snapshot(), before)
 
     def test_cli_real_commands(self):
         self.evidence()
@@ -178,7 +234,17 @@ class AdaptationTests(unittest.TestCase):
         self.assertEqual(r.returncode,0,r.stderr)
         r=subprocess.run(command+['report'],text=True,capture_output=True)
         self.assertEqual(r.returncode,0,r.stderr)
-        self.assertTrue(Path(json.loads(r.stdout)['svg']).exists())
+        report=json.loads(r.stdout)
+        self.assertIn('Results by context and strategy', Path(report['markdown']).read_text())
+        r=subprocess.run(command+['--language','es','report'],text=True,capture_output=True)
+        self.assertEqual(r.returncode,0,r.stderr)
+        report=json.loads(r.stdout)
+        self.assertIn('Resultados por contexto y estrategia', Path(report['markdown']).read_text())
+        before=Path(report['markdown']).read_bytes(),Path(report['svg']).read_bytes()
+        r=subprocess.run(command+['--language','fr','report'],text=True,capture_output=True)
+        self.assertNotEqual(r.returncode,0)
+        self.assertEqual((Path(report['markdown']).read_bytes(),Path(report['svg']).read_bytes()), before)
 
 
 if __name__ == '__main__': unittest.main()
+
