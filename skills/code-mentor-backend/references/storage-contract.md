@@ -6,6 +6,8 @@ Mantén datos fuera del paquete de la skill. Acuerda una raíz personal para el 
 
 Cada raíz tiene `state.json`: esquema 2, revisión, ámbito general/project, eventos, sesiones, revisiones, casos, intentos, observaciones, mejoras, documentos y recibos. JSON es fuente de evidencias y contadores; Markdown conserva narrativa. Lee la última versión referenciada de cada documento; archivos huérfanos tras interrupciones no son vigentes. No edites versiones directamente.
 
+La biblioteca opcional conocimientos/ usa fichas e índice escritos con herramientas de archivos según knowledge-library.md. No está gestionada por la CLI: no existe kind=knowledge ni un comando save_knowledge. State.json conserva evidencias y contadores; el índice es derivado y las fichas resumen el aprendizaje. No cambies el esquema 2 para activar esta ampliación.
+
 La CLI no usa red ni sincroniza dispositivos. Sin Python o persistencia, prepara un resumen de continuidad e indica el guardado pendiente. No atribuyas las garantías del script a escrituras manuales.
 
 ## CLI

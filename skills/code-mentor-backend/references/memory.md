@@ -4,6 +4,8 @@
 
 Lee [el contrato](storage-contract.md) antes de la primera escritura. Localiza el registro general y, en el entorno laboral, el del proyecto acordado. Usa read para conocer revisión, documentos vigentes, tareas activas y checkpoint; carga solo lo pertinente. No busques el código empresarial desde ChatGPT si solo se ha autorizado un resumen. Si falta acceso, usa ese resumen y declara su fecha y límites.
 
+Si se ha configurado una biblioteca, consulta su índice y las fichas pertinentes según [biblioteca de conocimientos](knowledge-library.md). Incluye propuestas pendientes del checkpoint, aunque review_due ya sea false.
+
 Mantén dos ámbitos: general (conceptos, dificultades transferibles y logros demostrados) y proyecto (tareas, contexto, archivos/versiones y fragmentos necesarios). No copies contenido laboral al perfil general. En el primer uso sin ubicaciones acordadas, pregunta dónde guardar mediante opciones; no confundas un directorio temporal con persistencia garantizada.
 
 ## Guardado durante el uso
@@ -35,3 +37,9 @@ Al finalizar una tarea, al completar una revisión de tres sesiones, ante una di
 Actualiza el documento de perfil general sin nombres, código o detalles de la empresa, usando save_document kind=profile e ID lógico estable; conserva versiones anteriores y comprueba el resultado. Para una tarea laboral, guarda detalles y referencias únicamente en el registro de proyecto autorizado con kind=task y un ID lógico estable, siguiendo project-context.md. Solo comparte un resumen laboral después de la autorización del texto exacto. No vuelques el contenido profesional al perfil general.
 
 Compara esta nota con la anterior: señala avances con evidencia, conceptos que requieren refuerzo y lo que aún no se ha comprobado. Reutiliza lo pertinente al iniciar la siguiente sesión, y decide con el alumno una práctica breve adaptada. No alteres las instrucciones de la skill por este registro: proponer un cambio docente y aceptarlo sigue otro proceso. Si no hay almacenamiento persistente, ofrece la nota en la conversación como resumen para guardar y aclara que no se ha guardado. Esto se realiza durante sesiones activas, no en segundo plano.
+
+## Fichas y estudio de documentación
+
+Las notas de aprendizaje y las evidencias operativas se guardan dentro del ámbito ya autorizado. Las fichas por concepto y sus actualizaciones requieren aceptación específica de la propuesta según knowledge-library.md; no conviertas una nota automática en ficha aprobada. Propón las novedades al cerrar tema/tarea, en cada revisión de tres sesiones o ante dificultad del mismo tema en dos sesiones distintas. Deduplica motivos y conserva aplazamientos en el checkpoint.
+
+Usa documentation-study.md al preparar una ruta desde una fuente o una petición de estudio. El perfil/tarea puede conservar esa ruta y las relaciones con IDs de fichas, sin duplicar los contadores ni dar dominio por leer.

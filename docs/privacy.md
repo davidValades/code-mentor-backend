@@ -8,7 +8,7 @@ Code Mentor Backend proporciona instrucciones para aprender C# y .NET. Su creado
 
 Si el entorno lo permite y el usuario lo configura, el asistente puede guardar archivos de aprendizaje en una ubicación accesible para él. Su contenido, ubicación, acceso y conservación dependen de la plataforma y de la configuración del usuario. La skill no sincroniza automáticamente los registros entre dispositivos.
 
-No compartas credenciales ni información de tu empresa que no estés autorizado a utilizar o guardar.
+La biblioteca opcional de conocimientos utiliza fichas Markdown, un índice e historial de revisiones en una ubicación acordada. El asistente propone los cambios y solicita aceptación antes de guardarlos. Esos archivos no se publican automáticamente en este repositorio ni se envían al creador.\n\nNo compartas credenciales ni información de tu empresa que no estés autorizado a utilizar o guardar.
 
 ## Soporte
 

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "code-mentor-backend",
+  "version": "2.2.0",
+  "description": "Guided C#/.NET backend learning with documentation study and personal knowledge cards.",
+  "author": {
+    "name": "David Valadés"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Code Mentor Backend",
+        "shortDescription": "Profesor de C# y .NET",
+        "longDescription": "Profesor de C# y .NET backend con explicaciones progresivas, lectura de código, depuración guiada y estudio de documentación adaptado a evidencias previas. Propone fichas personales con ID, fechas e historial al cerrar temas o tareas, cada tres sesiones y ante dificultades repetidas; guardarlas requiere aceptar la propuesta y disponer de almacenamiento accesible. No garantiza sincronización entre dispositivos ni trabaja en segundo plano.",
+        "developerName": "David Valadés",
+        "category": "Education & Research",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "Ayúdame a entender este código C# paso a paso.",
+          "Guíame para depurar este fallo en .NET.",
+          "Ayúdame a estudiar los operadores de C# según lo que ya sé."
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png",
+        "websiteURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/README.md",
+        "supportURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/docs/support.md",
+        "privacyPolicyURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/docs/privacy.md",
+        "termsOfServiceURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/docs/terms.md"
+      },
+      "review": {
+        "commerce": false,
+        "prompts": [
+          "Explícame una llamada entre clases con un concepto cada vez.",
+          "Ayúdame a depurar una respuesta 404 en ASP.NET Core.",
+          "Guíame para refactorizar un consumidor de Result.",
+          "Usa mis evidencias previas para estudiar documentación de C# y propón una ficha de conocimiento."
+        ]
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Estudio guiado de documentación y biblioteca personal de fichas con ID, fechas, historial y guardado tras aceptación. Conserva la memoria y los repasos existentes."
+      }
+    }
+  }
+}
