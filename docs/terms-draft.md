@@ -24,4 +24,4 @@ Los archivos de este repositorio se ofrecen bajo la licencia MIT incluida en LIC
 
 ## Soporte y revisión
 
-El canal previsto para soporte técnico es el apartado de incidencias del repositorio. Las consultas privadas sobre datos pueden dirigirse a codementorbackend.privacy@gmail.com. Antes de publicar: comprobar los canales, revisar el alcance de estas condiciones y validar los enlaces públicos correspondientes.
+El canal previsto para soporte técnico es el apartado de incidencias del repositorio. Las consultas privadas sobre datos pueden dirigirse a davidvaladesnavarro@gmail.com. Antes de publicar: comprobar los canales, revisar el alcance de estas condiciones y validar los enlaces públicos correspondientes.
