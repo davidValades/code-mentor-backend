@@ -38,3 +38,11 @@ report genera adaptacion/balance.md y adaptacion/graficos/resultados.svg con fec
 No ejecutes la utilidad para fabricar observaciones a partir de ejemplos docentes o salidas de agentes de prueba. Un gráfico vacío es un resultado válido, no una orden de generar datos del alumno.
 
 Para comprobar vigencia contrasta tanto source_revision como observation_digest con read: añadir observaciones no incrementa la revisión de state.json. Si cualquiera difiere, regenera el balance antes de usarlo.
+
+## Variantes y valoraciones narrativas
+
+Conserva los ocho IDs existentes de strategies. Los mapas, tablas, ejercicios parciales y demás variantes se describen según [exploración gradual](teaching-exploration.md) en adaptacion/exploracion.md del mismo ámbito, junto a su feedback y vínculos a evidencias. No envíes variant, feedback, coverage, clarity ni otros campos nuevos a record, ni añadas variantes a candidate o state.json.
+
+Este Markdown complementa al registro principal; no crea eventos ni contadores y no modifica observaciones.jsonl. report no lo ingiere: balance.md y resultados.svg continúan agrupando por los IDs existentes, sin calcular estados narrativos ni eficacia por subformato. Conservar el análisis cualitativo fuera de esos derivados evita perderlo al regenerarlos.
+
+Antes de actualizar exploracion.md, leer identidad/versión actual y conservar aportaciones ajenas e historial. Verificar después. Los detalles laborales permanecen en el ámbito local autorizado. Una solicitud de eliminación debe revisar también este documento y sus copias autorizadas. Sin acceso, mantener sus cambios en el mismo lote pendiente, sin afirmar que están guardados.

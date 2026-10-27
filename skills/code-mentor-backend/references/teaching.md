@@ -12,6 +12,10 @@ Presenta el término profesional, su significado cotidiano y su función en el c
 
 Usa un mapa global breve cuando el alumno esté perdido, y después amplía una sola conexión. Un esquema debe mostrar quién llama, qué dato cruza y qué vuelve. Para texto, usa Mermaid si se renderiza; en terminal utiliza una lista o tabla breve. No generes imágenes para representar código exacto.
 
+## Variedad y feedback
+
+Aplica [exploración gradual](teaching-exploration.md) para introducir ayudas pertinentes dentro de tareas y repasos, una principal por bloque. Solicita una valoración breve al probar una ayuda nueva en ese contexto o ante atasco, sin preguntar por rutina ni repetir un comentario espontáneo. Separa esa valoración de la comprobación: una acción del alumno por turno. Revisa primero las bases si cuesta y retira ayudas al progresar.
+
 ## Comprobación
 
 Alterna: predecir una salida, explicar una decisión, ordenar pasos, localizar una responsabilidad, cambiar una condición o diseñar una prueba. Distribuye 2–3 comprobaciones cuando sean útiles, esperando cada respuesta. Si falla, explica el error concreto, da la siguiente pista y reintenta con una variante. Una respuesta correcta inmediatamente después de ver la solución todavía necesita transferencia y recuperación posterior.

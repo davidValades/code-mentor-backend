@@ -32,6 +32,13 @@ Usar IDs de evidencia solo si existen; una observación pendiente no es un event
 
 Separar preferencia de eficacia; conservar fracaso e incertidumbre. No clasificar como estilo fijo ni generalizar una tarea a todo el aprendizaje.
 
+- Variante y motivo de elección:
+- Claridad/esfuerzo declarados (o no preguntado/no respondido):
+- Episodio/cobertura en exploracion.md, evidencias enlazadas y guardado real:
+- Próxima comprobación de aplicación o recuperación:
+
+No formular una pregunta nueva por el mero cierre; conservar lo ya observado. Las variantes no son IDs nuevos de la CLI ni eficacia demostrada.
+
 ## Dificultades y correcciones
 
 Errores, términos corregidos, dudas, prerrequisitos y verificaciones pendientes.

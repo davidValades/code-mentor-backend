@@ -2,6 +2,8 @@
 
 Combina preferencias declaradas, exigencias del concepto y resultados observados. No clasifiques al alumno como visual/auditivo/cinestésico ni atribuyas un resultado a una estrategia por aparecer antes. Una preferencia o satisfacción no demuestra aprendizaje. Las fuentes generales orientan la enseñanza, no validan este profesor individual.
 
+Consulta [exploración gradual](teaching-exploration.md) desde el inicio y al retomar: integra variantes en tareas y repasos normales, una ayuda principal por bloque. Pregunta brevemente por claridad al estrenar una ayuda en ese contexto o detectar un atasco, sin repetir comentarios ya ofrecidos. Mantén la comprobación de aprendizaje en otro turno. La cobertura y las variantes se conservan en adaptacion/exploracion.md con la plantilla indicada; no amplían los IDs de la CLI.
+
 ## Elegir el siguiente paso
 
 1. Lee preferencias y restricciones accesibles, checkpoint, evidencias recientes, índice y fichas pertinentes. Consulta el balance solo si conoces su fecha y revisión de origen; vuelve al registro si quedó antiguo.
@@ -25,9 +27,9 @@ Estos IDs pueden combinarse en una observación, pero una combinación no se acr
 
 ## Registro y preferencias
 
-Utiliza la carpeta adaptacion/ en la raíz persistente autorizada, fuera de la skill y de su repositorio público. preferencias.md, basado en la plantilla, conserva lo que el alumno declara y su alcance; balance.md y graficos/resultados.svg son derivados. observaciones.jsonl vincula las estrategias a IDs de evidencias existentes del mismo ámbito. Lee [el contrato de adaptación](adaptation-contract.md) antes de ejecutar la utilidad.
+Utiliza la carpeta adaptacion/ en la raíz persistente autorizada, fuera de la skill y de su repositorio público. preferencias.md, basado en la plantilla, conserva lo que el alumno declara y su alcance; exploracion.md recoge variantes, feedback y cobertura narrativa según teaching-exploration.md; balance.md y graficos/resultados.svg son derivados. observaciones.jsonl vincula las estrategias a IDs de evidencias existentes del mismo ámbito. Lee [el contrato de adaptación](adaptation-contract.md) antes de ejecutar la utilidad.
 
-El alumno puede decir que algo le resulta más claro; registra esa preferencia como declaración, no como éxito. La utilidad de observaciones no almacena feedback libre: usa el perfil o documento del proyecto autorizado para claridad/esfuerzo/preferencias. No inventes modalidad o ayuda para completar campos de un evento; si faltan, la observación queda pendiente.
+El alumno puede decir que algo le resulta más claro; registra esa preferencia como declaración, no como éxito. La utilidad de observaciones no almacena feedback libre: usa preferencias.md para preferencias confirmadas y exploracion.md del mismo ámbito autorizado para claridad/esfuerzo y variantes. No inventes modalidad o ayuda para completar campos de un evento; si faltan, la observación queda pendiente.
 
 El balance separa concepto, tema, tipo de tarea, dificultad, modalidad de aprendizaje y de comprobación, actividad, ayuda, tipo de comprobación y combinación de estrategias. Su agrupación no hace idénticos los ejercicios: consulta las evidencias y contexto antes de comparar. Describe aciertos/intentos, parciales, errores, pendientes y demora real. No produzcas rankings globales ni porcentajes de estilos. El umbral de 3 intentos y 2 sesiones con intentos evaluados es una señal conservadora de interfaz, no validación estadística ni prueba de eficacia.
 
@@ -35,7 +37,7 @@ El balance separa concepto, tema, tipo de tarea, dificultad, modalidad de aprend
 
 En cada cierre conserva los episodios reales de enseñanza, incluidas preferencias declaradas, ayudas o combinaciones, contexto, resultados y lo que no funcionó, siguiendo session-close.md. Si falta escritura, inclúyelos en el mismo lote pendiente para Work; no pierdas estas observaciones por guardar solo conceptos. Al retomar una dificultad consulta esos antecedentes antes de elegir la siguiente ayuda. Un resumen manual no sustituye los vínculos y garantías de mentor_adaptation.py.
 
-Adapta el siguiente paso dentro del modo tutor y permisos existentes, sin pedir aceptación de cada explicación. Ocasionalmente ofrece una variante en una práctica normal; no conviertas las clases en experimentos continuos. En voz durante conducción no pidas pantallas, lectura, escritura o manipulación del dispositivo. Una explicación oral no acredita programación autónoma.
+Adapta el siguiente paso dentro del modo tutor y permisos existentes, sin pedir aceptación de cada explicación. Explora variantes pertinentes desde el inicio según teaching-exploration.md, en prácticas normales y gradualmente; no conviertas las clases en experimentos continuos. En voz durante conducción no pidas pantallas, lectura, escritura o manipulación del dispositivo. Una explicación oral no acredita programación autónoma.
 
 Revisa con review_due cada tres sesiones, antes ante dificultad repetida en dos sesiones distintas o petición del alumno. Genera el balance/gráfico durante la revisión si hay acceso; con pocos datos muestra la insuficiencia. Con cero observaciones, no rellenes ejemplos como si fueran datos. La observación de una revisión no cuenta como nueva sesión.
 

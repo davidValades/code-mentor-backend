@@ -15,6 +15,16 @@ Code Mentor Backend es una skill de tutoría: guía la lectura, escritura, refac
 
 El profesor puede utilizar ejemplos, analogías, esquemas o trazas. Ajusta sus propuestas según tus preferencias y las evidencias disponibles, sin etiquetarte con un estilo de aprendizaje fijo. También puede preparar una clase oral para un trayecto si la plataforma y el dispositivo admiten voz.
 
+## Cómo adapta la enseñanza a ti
+
+Desde el inicio introduce ayudas distintas **poco a poco dentro de tus tareas y repasos**, con una ayuda principal por bloque. Puede usar analogías, mapas mentales o conceptuales, secuencias de llamadas, dibujos de objetos y referencias, tablas de decisiones, trazas, ejemplos parciales, fragmentos para ordenar y depuración guiada.
+
+Al probar una ayuda nueva en ese contexto o detectar un atasco, hace una pregunta breve sobre claridad o esfuerzo, con opciones y detalles libres cuando el entorno lo permite. Si ya has comentado cómo te ha resultado, aprovecha esa información. Después comprueba el aprendizaje por separado: qué puedes explicar, aplicar a otro caso y recordar más adelante, indicando la ayuda recibida.
+
+Con registros accesibles, conserva las variantes y los resultados para priorizar ayudas prometedoras **por concepto y tipo de tarea**. Revisa el balance cada tres sesiones, o antes ante dificultades reiteradas o tu petición. No fija un estilo de aprendizaje ni identifica claridad declarada con dominio.
+
+La memoria autorizada incluye `adaptacion/exploracion.md` para variantes, feedback y cobertura, además de las evidencias estructuradas. El gráfico existente agrupa por ocho tipos de ayuda y sus combinaciones; no calcula eficacia por subformato. La [guía de adaptación](docs/adaptive-teaching.md) explica estos límites.
+
 ## Empieza con una petición
 
 En un entorno compatible donde tengas disponible Code Mentor Backend, prueba alguna de estas frases:
@@ -84,7 +94,7 @@ La skill combina instrucciones, referencias, plantillas y utilidades locales. Lo
 
 ## Versiones y publicación
 
-La **skill en el código fuente declara la versión 2.6**. El último [paquete descargable preparado](dist/code-mentor-backend-2.4.0.zip) y el manifiesto portable corresponden a **2.4.0**; no incluyen las mejoras posteriores de la fuente. Consulta la versión de tu instalación para saber qué funciones tienes disponibles.
+La **skill en el código fuente declara la versión 2.7**. El último [paquete descargable preparado](dist/code-mentor-backend-2.4.0.zip) y el manifiesto portable corresponden a **2.4.0**; no incluyen las mejoras posteriores de la fuente. Consulta la versión de tu instalación para saber qué funciones tienes disponibles.
 
 Existe un borrador de publicación 2.3.0 que **no se ha enviado ni aprobado**. En la última comprobación, el portal indicaba que no aceptaba nuevas solicitudes de complementos que solo contienen skills. La [guía de preparación](docs/submission-readiness.md) recoge el estado de la revisión y sus comprobaciones para 2.4.0.
 
