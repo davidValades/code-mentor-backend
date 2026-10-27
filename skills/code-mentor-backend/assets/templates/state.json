@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "revision": 0,
+  "scope": "general",
+  "events": [],
+  "sessions": [],
+  "reviews": [],
+  "checkpoint": null,
+  "cases": [],
+  "attempts": [],
+  "observations": [],
+  "improvements": [],
+  "documents": [],
+  "receipts": {}
+}

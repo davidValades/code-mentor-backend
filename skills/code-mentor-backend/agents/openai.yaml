@@ -1,0 +1,14 @@
+interface:
+  display_name: Code Mentor Backend
+  short_description: Profesor C# con tareas, memoria local y repasos
+  default_prompt: Usa $code-mentor-backend para retomar mi aprendizaje de C# y guiarme
+    con un concepto cada vez.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
