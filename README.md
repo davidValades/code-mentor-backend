@@ -16,9 +16,17 @@ La skill está en `skills/code-mentor-backend/`. En una superficie compatible, p
 
 La disponibilidad de skills, voz y acceso a archivos depende de la plataforma. La memoria no se sincroniza automáticamente entre dispositivos ni funciona en segundo plano. El profesor puede cometer errores: revisa los cambios y comprueba el código antes de aplicarlo.
 
-## Biblioteca de conocimientos y estructura\n\nConsulta la [guía de estudio y fichas personales](docs/knowledge-library.md) para conocer cuándo se proponen actualizaciones, cómo se conserva el avance y qué ocurre sin acceso al almacenamiento.\n\nLa skill combina SKILL.md, referencias docentes, plantillas y una utilidad de registro local. Tus fichas y registros reales se mantienen fuera del paquete y de este repositorio público. Las plantillas no son un historial de aprendizaje ya creado.\n\n## Soporte y privacidad
+## Biblioteca de conocimientos y estructura\n\nConsulta la [guía de estudio y fichas personales](docs/knowledge-library.md) para conocer cuándo se proponen actualizaciones, cómo se conserva el avance y qué ocurre sin acceso al almacenamiento.\n\nLa skill combina SKILL.md, referencias docentes, plantillas y una utilidad de registro local. Tus fichas y registros reales se mantienen fuera del paquete y de este repositorio público. Las plantillas no son un historial de aprendizaje ya creado.\n\n## Adaptación de la enseñanza
+
+El profesor combina preferencias y resultados observados para elegir ayudas según el concepto y el contexto. La [guía de adaptación](docs/adaptive-teaching.md) explica el registro privado y sus gráficos, sin estilos fijos ni promesas de eficacia.
+
+## Soporte y privacidad
 
 Para solicitar ayuda, consulta la [página de soporte](docs/support.md). No publiques credenciales, datos personales ni código confidencial. Consulta la [política de privacidad](docs/privacy.md) y las [condiciones de uso](docs/terms.md).
+
+## Paquete y revisión pública
+
+Versión preparada: **2.3.0**. Consulta el [estado de preparación](docs/submission-readiness.md) y el [ZIP para el portal](dist/code-mentor-backend-2.3.0.zip). Publicar este repositorio no constituye una presentación ni aprobación de OpenAI.
 
 ## Licencia y autor
 

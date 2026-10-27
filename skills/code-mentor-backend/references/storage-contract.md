@@ -59,3 +59,7 @@ Ejemplo autocontenido de evidencia **hipotética** (no guardar como si fuera una
 Para preparar una exportación ejecuta `prepare-summary` con stdin `{"selected_ids":["e-001"]}`; para ámbito project añade `curated_text` con el resumen mínimo redactado manualmente. La salida contiene `summary`, `digest` y `approval_pending=true`. Presenta ese summary al usuario completo. Una vez acepte ese contenido exacto, llama `export-summary` con stdin `{"summary":<objeto mostrado>,"approved_digest":"<digest recibido>","destination":"/ruta/absoluta/nueva.json"}`. Nunca interpretes el digest como autorización por sí solo. La exportación rehúsa sobrescribir un archivo existente y usa permisos privados POSIX cuando estén disponibles; revisa igualmente las políticas del destino.
 
 Usa `status` para consultar los estados calculados; no llamas directamente funciones Python desde la conversación. El contador de revisión se basa en sesiones completadas nuevas y en evidencias observadas desde la última revisión. El ajuste por dificultad repetida considera dos sesiones distintas.
+
+## Utilidad independiente de adaptación
+
+mentor_adaptation.py tiene su propio contrato en adaptation-contract.md, mantiene observaciones referenciadas y produce balance/SVG. No amplía operaciones de apply ni altera schema_version=2. Fichas e índice siguen usando herramientas de archivos.

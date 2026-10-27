@@ -10,6 +10,8 @@ Si el entorno lo permite y el usuario lo configura, el asistente puede guardar a
 
 La biblioteca opcional de conocimientos utiliza fichas Markdown, un índice e historial de revisiones en una ubicación acordada. El asistente propone los cambios y solicita aceptación antes de guardarlos. Esos archivos no se publican automáticamente en este repositorio ni se envían al creador.\n\nNo compartas credenciales ni información de tu empresa que no estés autorizado a utilizar o guardar.
 
+El registro opcional de adaptación vincula ayudas docentes con evidencias ya guardadas y genera balances y gráficos locales. Las preferencias declaradas y estos derivados permanecen en la ubicación y ámbito autorizados, sin enviarse automáticamente al creador. Las solicitudes de eliminación deben contemplar también estos archivos y sus copias accesibles.
+
 ## Soporte
 
 Puedes solicitar ayuda mediante las incidencias de este repositorio. Las incidencias públicas y su contenido pueden ser visibles para cualquier persona. No incluyas contraseñas, claves, datos personales, conversaciones privadas ni código confidencial. El creador puede leer y responder lo publicado. GitHub gestiona sus propios servicios y conserva o elimina información conforme a sus políticas y controles.

@@ -1,6 +1,6 @@
 # Diseño propuesto: adaptación docente por evidencias
 
-Estado: propuesta para revisión; todavía no implementada. Fecha: 2026-10-27.
+Estado: implementado en Code Mentor Backend 2.3.0; validación y límites en docs/submission-readiness.md. Fecha: 2026-10-27.
 Enfoque elegido: combinar preferencias del alumno, necesidades del concepto y resultados observados.
 
 ## Objetivo y enfoques considerados

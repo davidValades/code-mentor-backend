@@ -1,17 +1,18 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "code-mentor-backend",
-  "version": "2.2.0",
-  "description": "Guided C#/.NET backend learning with documentation study and personal knowledge cards.",
+  "version": "2.3.0",
+  "description": "Spanish C#/.NET backend tutoring with guided practice, local knowledge cards and evidence-based teaching adaptation.",
   "author": {
-    "name": "David Valadés"
+    "name": "David Valadés",
+    "email": "davidvaladesnavarro@gmail.com"
   },
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Code Mentor Backend",
-        "shortDescription": "Profesor de C# y .NET",
-        "longDescription": "Profesor de C# y .NET backend con explicaciones progresivas, lectura de código, depuración guiada y estudio de documentación adaptado a evidencias previas. Propone fichas personales con ID, fechas e historial al cerrar temas o tareas, cada tres sesiones y ante dificultades repetidas; guardarlas requiere aceptar la propuesta y disponer de almacenamiento accesible. No garantiza sincronización entre dispositivos ni trabaja en segundo plano.",
+        "shortDescription": "Learn C# backend step by step",
+        "longDescription": "A Spanish-language C# and .NET backend tutor for reading code, refactoring, guided debugging and studying documentation. It teaches one concept at a time and checks understanding through practice. Teaching aids can be adapted to the concept, stated preferences and observed results without assigning fixed learning styles or guaranteeing learning outcomes. Knowledge cards retain stable IDs, dates and history after the learner accepts the proposed content. Local records and derived charts require accessible storage; the bundled utilities need Python 3.11+. Voice depends on the host platform. No automatic cross-device sync or background work.",
         "developerName": "David Valadés",
         "category": "Education & Research",
         "capabilities": [
@@ -24,10 +25,10 @@
         ],
         "logo": "./assets/logo.png",
         "composerIcon": "./assets/logo.png",
-        "websiteURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/README.md",
-        "supportURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/docs/support.md",
-        "privacyPolicyURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/docs/privacy.md",
-        "termsOfServiceURL": "https://raw.githubusercontent.com/davidValades/code-mentor-backend/main/docs/terms.md"
+        "websiteURL": "https://github.com/davidValades/code-mentor-backend",
+        "supportURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/support.md",
+        "privacyPolicyURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/privacy.md",
+        "termsOfServiceURL": "https://github.com/davidValades/code-mentor-backend/blob/main/docs/terms.md"
       },
       "review": {
         "commerce": false,
@@ -35,13 +36,23 @@
           "Explícame una llamada entre clases con un concepto cada vez.",
           "Ayúdame a depurar una respuesta 404 en ASP.NET Core.",
           "Guíame para refactorizar un consumidor de Result.",
-          "Usa mis evidencias previas para estudiar documentación de C# y propón una ficha de conocimiento."
+          "Usa mis evidencias previas para estudiar documentación de C# y propón una ficha de conocimiento.",
+          "Me cuesta un concepto. Revisa mis evidencias disponibles y elige una ayuda sin asumir un estilo fijo."
         ]
       },
       "publication": {
         "countries": [],
-        "release_notes": "Estudio guiado de documentación y biblioteca personal de fichas con ID, fechas, historial y guardado tras aceptación. Conserva la memoria y los repasos existentes."
+        "release_notes": "Adds evidence-linked teaching observations and local Markdown/SVG reports. Keeps guided tutoring, documentation study and versioned knowledge cards. No MCP server or external data collection.",
+        "translations": {
+          "es-ES": {
+            "subtitle": "Profesor de C# y .NET",
+            "description": "Profesor de C# y .NET backend en español: explicaciones breves, lectura y refactorización de código, depuración guiada y estudio de documentación. Adapta las ayudas al concepto, a preferencias y a resultados observados, sin estilos fijos ni garantías de aprendizaje. Propone fichas con ID, fechas e historial tras aceptar su contenido. El registro y sus gráficos requieren almacenamiento accesible; las utilidades incluidas usan Python 3.11+. La voz depende de la plataforma anfitriona. No hay sincronización automática ni trabajo en segundo plano."
+          }
+        }
       }
     }
-  }
+  },
+  "license": "MIT",
+  "repository": "https://github.com/davidValades/code-mentor-backend",
+  "homepage": "https://github.com/davidValades/code-mentor-backend"
 }

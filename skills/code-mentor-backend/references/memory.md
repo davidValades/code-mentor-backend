@@ -43,3 +43,7 @@ Compara esta nota con la anterior: señala avances con evidencia, conceptos que 
 Las notas de aprendizaje y las evidencias operativas se guardan dentro del ámbito ya autorizado. Las fichas por concepto y sus actualizaciones requieren aceptación específica de la propuesta según knowledge-library.md; no conviertas una nota automática en ficha aprobada. Propón las novedades al cerrar tema/tarea, en cada revisión de tres sesiones o ante dificultad del mismo tema en dos sesiones distintas. Deduplica motivos y conserva aplazamientos en el checkpoint.
 
 Usa documentation-study.md al preparar una ruta desde una fuente o una petición de estudio. El perfil/tarea puede conservar esa ruta y las relaciones con IDs de fichas, sin duplicar los contadores ni dar dominio por leer.
+
+## Observaciones de enseñanza
+
+Si existe autorización de registro operativo, vincula las ayudas usadas a las evidencias reales según adaptation-contract.md, sin convertir declaraciones en aciertos. Recupera preferencias.md y solo el balance pertinente para adaptar el siguiente paso. En la revisión de tres sesiones puedes generar balance/gráfico, conservando datos pendientes y referencias. Si el registro cambia, revalida los derivados. Los registros de adaptación y sus copias también se revisan en correcciones o solicitudes de eliminación.

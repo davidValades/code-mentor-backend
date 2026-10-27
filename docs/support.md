@@ -1,6 +1,6 @@
 # Soporte de Code Mentor Backend
 
-Para comunicar un problema, solicitar ayuda o proponer una mejora, abre una incidencia en el apartado **Issues** de este repositorio.
+Para comunicar un problema, solicitar ayuda o proponer una mejora, abre una [incidencia en GitHub](https://github.com/davidValades/code-mentor-backend/issues).
 
 Describe qué estabas intentando hacer, qué esperabas, qué ocurrió y, si puedes, los pasos mínimos para reproducirlo. Indica la versión de la skill y el entorno donde la utilizas, si los conoces. Usa ejemplos sintéticos o anonimizados.
 

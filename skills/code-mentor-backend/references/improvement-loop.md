@@ -10,7 +10,7 @@ Registra intentos y ayuda reales. El caso posterior comprueba transferencia; no 
 
 Consulta review_due al completar una sesión. También revisa ante petición o dificultades del mismo tema en dos sesiones distintas desde la última revisión. Guarda record_review con resultado, aunque no propongas cambios. No se revisa después de cada mensaje ni se cambia toda la enseñanza por un fallo aislado.
 
-Una propuesta contiene problema, evidencias observadas, baseline y candidate. Los ajustes automáticos del próximo ejercicio no editan permanentemente la skill. Las estrategias persistentes solo ajustan longitud (40–250 palabras), tamaño del ejemplo (1–20 líneas), analogías y frecuencia de esquemas. Nunca cambian permisos, privacidad, exigencia de evidencias o la espera de respuestas.
+Una propuesta contiene problema, evidencias observadas, baseline y candidate. Los ajustes automáticos del próximo ejercicio no editan permanentemente la skill. Los ajustes persistentes que admite la utilidad actual solo ajustan longitud (40–250 palabras), tamaño del ejemplo (1–20 líneas), analogías y frecuencia de esquemas. Nunca cambian permisos, privacidad, exigencia de evidencias o la espera de respuestas.
 
 ## Comparación y decisión
 
@@ -27,3 +27,7 @@ Una propuesta rechazada o revertida no se reactiva: crear nueva propuesta con ev
 ## Alcance real
 
 Este ciclo ocurre durante sesiones activas. Los archivos persisten solo donde exista almacenamiento disponible y verificado. No hay app, proceso cerrado que siga generando casos, sincronización implícita ni entrenamiento de pesos. No crear tareas programadas ni cuentas/API por iniciativa propia.
+
+## Resultados de estrategias por contexto
+
+Consulta adaptive-teaching.md y adaptation-contract.md para recuperar preferencias, observaciones y balance derivados al revisar. Usa la utilidad de adaptación sin duplicar los contadores de revisión. Compara solo contextos razonablemente comparables, con ayuda/dificultad/modos explícitos; una asociación observada o evaluación de un modelo no acredita causalidad ni aprendizaje. No añadas campos no admitidos a candidate.
