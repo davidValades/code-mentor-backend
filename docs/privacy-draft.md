@@ -16,9 +16,11 @@ Si el usuario abre una incidencia en GitHub, los datos que incluya serán tratad
 
 Las conversaciones, los archivos y el uso de la skill pueden estar sujetos a las condiciones y políticas de la plataforma que el usuario utilice, como ChatGPT, Codex o GitHub. El presente borrador no sustituye la información de privacidad de esas plataformas ni afirma que sus tratamientos sean idénticos.
 
-## Pendiente
+## Contacto para privacidad
 
-- Precisar el contacto apropiado para solicitudes de privacidad y cómo gestionarlas.
+Para consultas privadas relacionadas con los datos de los usuarios, la dirección prevista es **codementorbackend.privacy@gmail.com**. Antes de publicar esta política, queda pendiente comprobar que el buzón recibe mensajes y concretar cómo se gestionarán las solicitudes.
+
+## Pendiente
 - Concretar qué control tendrá el creador sobre las incidencias y su conservación o eliminación; distinguirlo de los controles propios de GitHub y de la plataforma anfitriona.
 - Confirmar la publicación y dirección accesible de la versión final.
 - Revisar la redacción y su adecuación antes de publicarla como política definitiva.
