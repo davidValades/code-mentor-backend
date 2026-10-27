@@ -31,6 +31,22 @@ En un entorno compatible donde tengas disponible Code Mentor Backend, prueba alg
 
 Puedes pedir ayuda directa cuando la necesites. Revisa las explicaciones y los cambios antes de aplicarlos: el profesor puede equivocarse y debe basarse en el código y las evidencias disponibles.
 
+## Atajos del profesor
+
+Cuando Code Mentor Backend esté activa, puedes escribir estos atajos como texto, seguidos de los detalles que quieras. También puedes hablar con el profesor con normalidad. No son comandos nativos de ChatGPT o Codex y no activan la skill por sí solos.
+
+| Atajo | Para qué sirve |
+| --- | --- |
+| `/instrucciones` | Ver los atajos más usados; pide la lista completa cuando la necesites. |
+| `/aprender` · `/estudiar` · `/repaso` | Aprender un concepto, estudiar documentación o practicar lo ya visto. |
+| `/tarea` · `/leer` · `/refactorizar` | Organizar una tarea, comprender código o guiar una refactorización. |
+| `/depurar` · `/corregir` | Investigar un fallo o revisar tu explicación o código. |
+| `/pista` · `/solución` · `/vocabulario` | Pedir una ayuda breve, una solución directa o una definición. |
+| `/progreso` · `/guardar` · `/continuar` | Consultar evidencias, guardar lo autorizado o retomar donde sea posible. |
+| `/voz` | Preparar una clase oral adaptada al tiempo disponible. |
+
+Ejemplo: `/estudiar operadores de C#`. El guardado sigue dependiendo de un destino accesible, permisos y aceptación cuando corresponda.
+
 ## Usar la skill en ChatGPT o Codex
 
 El código de la skill está en [skills/code-mentor-backend](skills/code-mentor-backend/). Para utilizarla, necesitas que esté instalada o disponible en una superficie compatible y que la conversación pueda acceder a sus instrucciones y recursos. La disponibilidad de skills, voz y herramientas de archivos depende del entorno.
@@ -68,7 +84,7 @@ La skill combina instrucciones, referencias, plantillas y utilidades locales. Lo
 
 ## Versiones y publicación
 
-La **skill en el código fuente declara la versión 2.5**. El último [paquete descargable preparado](dist/code-mentor-backend-2.4.0.zip) y el manifiesto portable corresponden a **2.4.0**; no incluyen las mejoras posteriores de la fuente. Consulta la versión de tu instalación para saber qué funciones tienes disponibles.
+La **skill en el código fuente declara la versión 2.6**. El último [paquete descargable preparado](dist/code-mentor-backend-2.4.0.zip) y el manifiesto portable corresponden a **2.4.0**; no incluyen las mejoras posteriores de la fuente. Consulta la versión de tu instalación para saber qué funciones tienes disponibles.
 
 Existe un borrador de publicación 2.3.0 que **no se ha enviado ni aprobado**. En la última comprobación, el portal indicaba que no aceptaba nuevas solicitudes de complementos que solo contienen skills. La [guía de preparación](docs/submission-readiness.md) recoge el estado de la revisión y sus comprobaciones para 2.4.0.
 
