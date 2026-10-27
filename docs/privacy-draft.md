@@ -18,7 +18,7 @@ Las conversaciones, los archivos y el uso de la skill pueden estar sujetos a las
 
 ## Contacto para privacidad
 
-Para consultas privadas relacionadas con los datos de los usuarios, la dirección prevista es **codementorbackend.privacy@gmail.com**. Antes de publicar esta política, queda pendiente comprobar que el buzón recibe mensajes y concretar cómo se gestionarán las solicitudes.
+Para consultas privadas relacionadas con los datos de los usuarios, la dirección prevista es **codementorbackend.privacy@gmail.com**. Las consultas se conservarán hasta resolverlas y, después, durante un máximo de 90 días. Esta decisión requiere que el responsable revise y elimine los mensajes; no hay un borrado automático configurado. Antes de publicar esta política, queda pendiente comprobar que el buzón recibe mensajes y concretar cómo se gestionarán las solicitudes.
 
 ## Pendiente
 - Concretar qué control tendrá el creador sobre las incidencias y su conservación o eliminación; distinguirlo de los controles propios de GitHub y de la plataforma anfitriona.
