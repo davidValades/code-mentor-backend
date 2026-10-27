@@ -22,4 +22,4 @@ Escasez de datos; evidencias ausentes/corregidas; combinación de estrategias; p
 - [x] Actualizar guía, plantillas, memoria y ciclo de mejora; probar escenarios y revisar de forma independiente.
 - [x] Validar almacenamiento anterior, nueva utilidad, paquete y privacidad de su contenido; publicar fuentes y registrar comprobaciones.
 - [x] Verificar enlaces públicos y metadatos, comprobar guía oficial actual y preparar ZIP 2.3.0.
-- [ ] Inspeccionar el portal si hay acceso; distinguir borrador, escaneos y declaraciones pendientes de una presentación a revisión.
+- [x] Inspeccionar el acceso al portal; acceso no completado. Borrador, escaneos y declaraciones permanecen pendientes y no se presentan como envío realizado.
