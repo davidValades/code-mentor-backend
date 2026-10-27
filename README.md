@@ -37,7 +37,7 @@ Para solicitar ayuda, consulta la [página de soporte](docs/support.md). No publ
 
 ## Paquete y revisión pública
 
-Versión: **2.4.0**. Consulta el [estado de preparación](docs/submission-readiness.md) y el [paquete](dist/code-mentor-backend-2.4.0.zip). El borrador público 2.3.0 no está enviado a revisión: el portal muestra que no acepta más solicitudes de complementos solo de skills. La copia privada y este repositorio son vías distintas de la publicación pública; disponer del código no instala la skill en una conversación.
+Versión de la skill: **2.5**. El último paquete público preparado sigue siendo **2.4.0**. Consulta el [estado de preparación](docs/submission-readiness.md) y el [paquete](dist/code-mentor-backend-2.4.0.zip). El borrador público 2.3.0 no está enviado a revisión: el portal muestra que no acepta más solicitudes de complementos solo de skills. La copia privada y este repositorio son vías distintas de la publicación pública; disponer del código no instala la skill en una conversación.
 
 ## Licencia y autor
 
