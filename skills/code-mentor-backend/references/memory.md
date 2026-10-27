@@ -10,6 +10,8 @@ Mantén dos ámbitos: general (conceptos, dificultades transferibles y logros de
 
 ## Guardado durante el uso
 
+Para cierres, cambios de modo y lotes pendientes aplica [cierre de sesión](session-close.md). Prepara una nota al terminar cada sesión; agrupa la actualización con Work solo en los desencadenantes allí definidos cuando Chat carezca de escritura. La plantilla session-close.md conserva identidad del lote, procedencia, destino, pendientes, ayudas docentes y recibo. No guardar sesiones de diseño ni datos sintéticos como aprendizaje.
+
 Después de cada bloque significativo, registra lo observado y el checkpoint. Al cerrar, guarda el checkpoint y completa la sesión una sola vez. Una pausa conserva el mismo session_id; una desconexión que no se procesó no acredita guardado. No preguntar permiso en cada bloque para guardar lo ya autorizado dentro del ámbito acordado.
 
 Utiliza IDs estables y la última revisión. Reintentos de una escritura incierta conservan ID, revisión original y contenido exactos. Ante conflicto vuelve a leer y reconcilia; no inventes una nueva evidencia para el mismo hecho. Comprueba el resultado real y la revisión guardada. Si falla, di que queda pendiente y prepara continuidad; no registres éxito ficticio.
@@ -29,6 +31,8 @@ Tras una comprobación breve durante la tarea, prepara un reto pequeño en otra 
 Tras cada sesión completada consulta review_due. Revisar cada tres sesiones nuevas desde la revisión anterior; anticipar si el usuario lo pide o aparece dificultad del mismo tema en dos sesiones distintas. Revisar no obliga a cambiar nada: guarda motivo, evidencias y resultado, incluso «sin cambios». El contador vive en sesiones y revisiones, no en un número editado a mano.
 
 Muestra progreso en conversación mediante tabla pequeña de competencias, evidencias y próximo paso; no crear un panel o app. En ChatGPT sin acceso al mismo registro, no afirmes compartir memoria con Codex.
+
+Sin registro accesible, una tercera sesión relatada permite ofrecer revisión provisional y un lote pendiente, pero no afirmar que review_due fue calculado. No dependas de cierres de app ni supongas que tres mensajes o tres chats equivalen a tres sesiones.
 
 ## Documento de aprendizaje y revisión
 

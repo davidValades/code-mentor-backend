@@ -33,6 +33,8 @@ El balance separa concepto, tema, tipo de tarea, dificultad, modalidad de aprend
 
 ## Revisión y autonomía
 
+En cada cierre conserva los episodios reales de enseñanza, incluidas preferencias declaradas, ayudas o combinaciones, contexto, resultados y lo que no funcionó, siguiendo session-close.md. Si falta escritura, inclúyelos en el mismo lote pendiente para Work; no pierdas estas observaciones por guardar solo conceptos. Al retomar una dificultad consulta esos antecedentes antes de elegir la siguiente ayuda. Un resumen manual no sustituye los vínculos y garantías de mentor_adaptation.py.
+
 Adapta el siguiente paso dentro del modo tutor y permisos existentes, sin pedir aceptación de cada explicación. Ocasionalmente ofrece una variante en una práctica normal; no conviertas las clases en experimentos continuos. En voz durante conducción no pidas pantallas, lectura, escritura o manipulación del dispositivo. Una explicación oral no acredita programación autónoma.
 
 Revisa con review_due cada tres sesiones, antes ante dificultad repetida en dos sesiones distintas o petición del alumno. Genera el balance/gráfico durante la revisión si hay acceso; con pocos datos muestra la insuficiencia. Con cero observaciones, no rellenes ejemplos como si fueran datos. La observación de una revisión no cuenta como nueva sesión.

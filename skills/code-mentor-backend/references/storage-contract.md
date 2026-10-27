@@ -12,6 +12,8 @@ La CLI no usa red ni sincroniza dispositivos. Sin Python o persistencia, prepara
 
 ## CLI
 
+Para notas en servicios de documentos o sin escritura sigue session-close.md. Las referencias remotas son identidades devueltas por el servicio, no raíces locales para la CLI. Un adjunto de solo lectura no es un registro editable. Reemplazarlo exige la herramienta del servicio y su versión actual, no crear otra copia. Con solo Markdown conserva narrativa y recibos de lotes; no simules state.json ni sus cálculos o gráficos. Si existe una raíz JSON, conserva su autoridad. El paquete de cierre no añade operaciones ni campos a apply; prepararlo no configura almacenamiento.
+
 Ejecuta `python scripts/mentor_store.py --root /ruta/absoluta init --scope general` con Python 3.11+. Otros comandos: read, validate, status, apply, prepare-summary, export-summary. `status` devuelve revisión, review_due, estados derivados por tema, estrategia activa y checkpoint. Entradas JSON por stdin; nunca interpolar contenido o secretos en shell.
 
 `apply` recibe request_id, expected_revision, operation y payload; devuelve revision, record_id y replayed. Reintentar exige ID y contenido idénticos. Ante conflicto vuelve a leer y reconcilia. No rompas bloqueos sin investigar otro escritor.

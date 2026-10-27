@@ -1,49 +1,57 @@
-# Preparación para revisión de OpenAI — 2.3.0
+# Estado de distribución y revisión — 2.4.0
 
-Comprobaciones del 27 de octubre de 2026. Este documento distingue preparación técnica de presentación y aprobación. No es una certificación de OpenAI ni una garantía de aprobación o eficacia educativa.
+Actualizado el 27 de octubre de 2026. Preparación, instalación privada, envío y publicación son estados distintos. No se garantiza aprobación ni eficacia educativa.
 
-## Material preparado
+## Estado comprobado
+
+- La skill personal declara v2.4 y añade cierre de sesión, preferencias y actualización de memoria por lotes.
+- El complemento privado existente se ha actualizado a 2.4.0, conservando identidad y visibilidad. La lectura posterior confirma las nuevas instrucciones y plantilla.
+- La organización prevista figura verificada y admite acceso desde la cuenta elegida por el autor.
+- Existe un borrador público 2.3.0, no enviado ni publicado. El portal muestra el bloqueo «We are not accepting more skills-only submissions at this time». No se ha comprobado una fecha de reapertura.
+- La ingestión portable descartaba la skill por policy.products incompatible. Se ha eliminado del paquete actualizado; la copia privada reconoce sus archivos. El borrador antiguo no acredita que 2.4.0 haya pasado análisis públicos.
+- Esta versión no se ha subido al portal público. No se han aceptado declaraciones legales en nombre del desarrollador.
+
+## Material y validación
 
 | Elemento | Resultado |
 | --- | --- |
-| Identidad prevista | David Valadés, persona individual; el usuario confirmó que aparece Verified. Pendiente comprobar la identidad importada en el portal. |
 | Nombre y categoría | Code Mentor Backend; Education & Research. |
-| Alcance | Una skill de tutoría C#/.NET en español; sin MCP, servidor propio ni recogida automática por el creador. |
-| Países y pagos | Todos los disponibles; gratuito, sin compras. |
-| Ficha | Campos base en inglés, traducción es-ES incluida y tres prompts de inicio. |
-| Políticas y soporte | Páginas públicas del mismo repositorio; correo de privacidad davidvaladesnavarro@gmail.com, recepción confirmada por el usuario. |
-| Icono | PNG propio de libro y bombilla, sin símbolo C#; cuadrado 1254×1254, menos de 5 MiB. |
-| Licencia | MIT, incluida en el ZIP. |
-| Paquete | Portable plugin.json, skills/ y assets/; sin app bindings, hooks, credenciales ni registros reales del alumno. |
-| Pruebas | 47 pruebas del registro principal + 15 de adaptación = 62 aprobadas. |
-| Formato | Validación contra el esquema portable 1.0.0 y validación básica de SKILL.md aprobadas; límites de ficha, enlaces internos y contenido del ZIP comprobados. |
-| Docencia | Escenarios con ayuda/dificultad diferentes, conducción y registro inaccesible revisados; no se inventaron rankings, aprendizaje ni guardados. |
-| Gráfico | Renderizado e inspeccionado con datos sintéticos de QA; esos datos no se incluyen como progreso del alumno. |
-| Revisión independiente | Detectó tres problemas de frescura/etiquetas/contadores; reproducidos mediante pruebas que fallaban y corregidos con suite completa aprobada. |
-| Vídeo y credenciales de prueba | No aplicables a un complemento solo de skills, según la documentación de envío vigente. |
+| Alcance | Tutor C#/.NET en español; sin MCP, servidor propio ni recogida automática por el creador. |
+| Países, pagos y licencia | Todos los disponibles; sin compras; MIT. |
+| Ficha | Base en inglés, traducción es-ES y tres prompts; límites de persistencia y Work explicados. |
+| Soporte y privacidad | Cuatro enlaces públicos del repositorio; privacidad por davidvaladesnavarro@gmail.com. |
+| Icono | Libro y bombilla propios, sin símbolo C#; PNG cuadrado dentro de límites. |
+| Paquete | Portable plugin.json, skills/ y assets/; sin credenciales, app bindings, hooks ni memoria real. |
+| Utilidades | 62 pruebas aprobadas; scripts existentes sin cambios. |
+| Formato | Skill, esquema portable, versión, política, límites de ficha y enlaces internos validados. |
+| Flujo nuevo | Cierre sin escritura y recuperación tras interrupción probados con escenarios sintéticos. Revisión independiente detectó la necesidad de diario previo por operación; incorporada. |
+| Recuperación | Reintento exacto en raíz temporal sintética conserva la actualización de otro escritor sin nueva versión duplicada. |
+| Archivos reales | En Work se creó, reemplazó y leyó un documento de prueba. En el chat normal del usuario no se logró escritura y se solicitó Work. No demuestra compatibilidad de todos los chats o de voz. |
+| Privacidad | QA no se considera progreso real. Datos laborales no se transfieren por cerrar una sesión. |
 
-## Archivos para preparar el envío
+## Paquete
 
-[Descargar el ZIP 2.3.0](../dist/code-mentor-backend-2.3.0.zip).
+[ZIP 2.4.0](../dist/code-mentor-backend-2.4.0.zip).
 
-SHA-256 del ZIP: 42eced50894f0a710990204ec41404acbf2ff6d884210df550c3430b55bb6b5b.
+SHA-256: de3a994ca59c41c4a5e07bcec3d8d223118cb3cc319540f0cc812ae90c43dce8.
 
-Los tests se ejecutan con MENTOR_SKILL apuntando a la carpeta instalada o a una copia de revisión: python -m unittest discover -s tests -q. Las pruebas de utilidades no demuestran resultados educativos del alumno.
+Pruebas: `MENTOR_SKILL=/ruta/a/la/skill python -m unittest discover -s tests -q`. Las pruebas no garantizan eficacia educativa ni escrituras futuras.
 
-## Comprobaciones del portal aún pendientes
+## Pendientes públicos
 
-1. Acceder a OpenAI Platform con la cuenta y organización verificadas y subir el ZIP como borrador.
-2. Comprobar inventario (una skill, cero MCP), identidad pública, ficha, icono, países, traducciones y versión importada.
-3. Esperar los análisis de metadatos y skills, revisar hallazgos y corregir errores requeridos para esa versión exacta.
-4. El desarrollador debe revisar y completar personalmente las declaraciones legales y de políticas que solicite el portal. No se han aceptado en su nombre.
-5. Enviar el borrador a revisión solo cuando lo anterior esté completado. Publicar tras aprobación es una acción separada.
+1. Confirmar que el portal acepta este tipo de solicitudes o consultar elegibilidad a soporte. No añadir MCP ajeno al objetivo para sortear el bloqueo.
+2. Actualizar el borrador existente con el paquete corregido cuando proceda y revisar inventario y hallazgos reales.
+3. Comprobar nombre público frente a identidad verificada, ficha, icono, países y versión; esperar análisis requeridos.
+4. El desarrollador completa personalmente las declaraciones legales y de políticas.
+5. Enviar a revisión; publicar tras aprobación como acción separada.
 
-No se ha presentado esta versión a revisión ni se han ejecutado los análisis privados de OpenAI. Se ha accedido al portal. La organización de esa sesión exige completar la verificación de identidad y bloquea la carga antes de seleccionar el ZIP; no se ha creado un borrador online. Debe utilizarse la organización ya verificada o completar la verificación aplicable antes de continuar. Los cuatro enlaces públicos se comprobaron sin autenticación y el ZIP descargado del repositorio coincide con el SHA-256 indicado.
+Cada alumno todavía debe acordar destino y comprobar acceso. Actualizar el profesor no configura su carpeta ni habilita escritura en Chat o voz. No hay trabajo de fondo.
 
-## Fuentes oficiales consultadas
+## Referencias oficiales
 
 - https://developers.openai.com/plugins/deploy/submission
-- https://developers.openai.com/plugins/build/plugins
 - https://developers.openai.com/plugins/plugin-guidelines
+- https://learn.chatgpt.com/docs/build-skills
+- https://learn.chatgpt.com/docs/get-started-with-work
 
-Las condiciones del portal prevalecen sobre este listado cuando cambien. El paquete contiene cuatro enlaces públicos aunque la validación de metadatos para skills-only no exige los cuatro.
+La disponibilidad y los requisitos efectivos del portal prevalecen sobre esta lista; no hay plazo prometido.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "code-mentor-backend",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Spanish C#/.NET backend tutoring with guided practice, local knowledge cards and evidence-based teaching adaptation.",
   "author": {
     "name": "David Valadés",
@@ -12,7 +12,7 @@
       "interface": {
         "displayName": "Code Mentor Backend",
         "shortDescription": "Learn C# backend step by step",
-        "longDescription": "A Spanish-language C# and .NET backend tutor for reading code, refactoring, guided debugging and studying documentation. It teaches one concept at a time and checks understanding through practice. Teaching aids can be adapted to the concept, stated preferences and observed results without assigning fixed learning styles or guaranteeing learning outcomes. Knowledge cards retain stable IDs, dates and history after the learner accepts the proposed content. Local records and derived charts require accessible storage; the bundled utilities need Python 3.11+. Voice depends on the host platform. No automatic cross-device sync or background work.",
+        "longDescription": "A Spanish-language C# and .NET backend tutor for reading code, refactoring, guided debugging and studying documentation. It teaches one concept at a time and checks understanding through practice. Session notes preserve observed progress, unresolved questions and the teaching aids used, without fixed learning styles or guaranteed outcomes. Knowledge cards require acceptance before saving. Authorized memory updates use accessible persistent storage; when writing is unavailable, the tutor prepares one pending batch and offers a user-initiated handoff to Work. It cannot switch modes or grant file access. Local utilities need Python 3.11+. Voice depends on the host platform. No automatic cross-device sync or background work.",
         "developerName": "David Valadés",
         "category": "Education & Research",
         "capabilities": [
@@ -42,11 +42,11 @@
       },
       "publication": {
         "countries": [],
-        "release_notes": "Adds evidence-linked teaching observations and local Markdown/SVG reports. Keeps guided tutoring, documentation study and versioned knowledge cards. No MCP server or external data collection.",
+        "release_notes": "Adds session-close notes and deduplicated memory batches with verified writes, teaching-strategy observations and user-initiated Work handoff when Chat cannot write. Removes incompatible skill policy metadata. No MCP server or automatic cross-device synchronization.",
         "translations": {
           "es-ES": {
             "subtitle": "Profesor de C# y .NET",
-            "description": "Profesor de C# y .NET backend en español: explicaciones breves, lectura y refactorización de código, depuración guiada y estudio de documentación. Adapta las ayudas al concepto, a preferencias y a resultados observados, sin estilos fijos ni garantías de aprendizaje. Propone fichas con ID, fechas e historial tras aceptar su contenido. El registro y sus gráficos requieren almacenamiento accesible; las utilidades incluidas usan Python 3.11+. La voz depende de la plataforma anfitriona. No hay sincronización automática ni trabajo en segundo plano."
+            "description": "Profesor de C# y .NET backend en español: lectura de código, refactorización, depuración guiada y documentación, un concepto cada vez. Prepara cierres con avances demostrados, ayudas usadas, dudas y siguiente paso. Guarda en almacenamiento persistente accesible; sin escritura, prepara un lote pendiente para que el usuario lo aplique con Work. Las fichas requieren aceptación. Sin estilos fijos ni garantías de aprendizaje, cambios automáticos de modo, sincronización implícita o trabajo en segundo plano. Utilidades locales: Python 3.11+. Voz según la plataforma."
           }
         }
       }

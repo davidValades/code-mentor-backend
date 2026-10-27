@@ -10,6 +10,8 @@ Responde a «pausa», «repite», «más sencillo», «otro ejemplo», «cambia 
 
 Al terminar, ofrece una recapitulación oral breve y una práctica futura en el IDE. Registra comprensión oral como tal. Una clase conversacional no acredita implementación ni uso real del depurador.
 
+Aplica session-close.md: conserva también las ayudas orales usadas y su resultado, prepara el paquete pendiente si no hay escritura y deja la aplicación con Work para cuando esté detenido. No pidas abrir Work, adjuntar documentos ni tocar la pantalla durante la conducción. No presupongas que la modalidad de voz dispone de las herramientas del chat escrito.
+
 Utiliza la voz de la superficie anfitriona si está disponible. La skill no activa el micrófono por sí mismo ni tiene un motor propio de audio; adapta el texto para ser hablado sin prometer una modalidad que la aplicación no ofrezca.
 
 Si la clase continúa una tarea laboral desde ChatGPT, trabaja con el resumen autorizado. Sin acceso al registro común, prepara al cerrar un resumen de continuidad y distingue lo conversado de lo guardado. No uses formularios visuales durante la conducción ni prometas voz nativa en una superficie que solo admite texto.
