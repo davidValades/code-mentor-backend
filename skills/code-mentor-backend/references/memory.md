@@ -27,3 +27,11 @@ Tras una comprobación breve durante la tarea, prepara un reto pequeño en otra 
 Tras cada sesión completada consulta review_due. Revisar cada tres sesiones nuevas desde la revisión anterior; anticipar si el usuario lo pide o aparece dificultad del mismo tema en dos sesiones distintas. Revisar no obliga a cambiar nada: guarda motivo, evidencias y resultado, incluso «sin cambios». El contador vive en sesiones y revisiones, no en un número editado a mano.
 
 Muestra progreso en conversación mediante tabla pequeña de competencias, evidencias y próximo paso; no crear un panel o app. En ChatGPT sin acceso al mismo registro, no afirmes compartir memoria con Codex.
+
+## Documento de aprendizaje y revisión
+
+Al finalizar una tarea, al completar una revisión de tres sesiones, ante una dificultad reiterada o cuando lo pida el alumno, prepara una nota Markdown breve y útil para futuras sesiones. Incluye fecha, conceptos abordados, hechos demostrados con referencia a evidencia y grado de ayuda, comprensión declarada sin verificar, dificultades, términos corregidos, dudas, siguiente ejercicio y fecha de repaso orientativa. Distingue observación de hipótesis; nunca conviertas una respuesta copiada u oral en autonomía práctica.
+
+Actualiza el documento de perfil general sin nombres, código o detalles de la empresa, usando save_document kind=profile e ID lógico estable; conserva versiones anteriores y comprueba el resultado. Para una tarea laboral, guarda detalles y referencias únicamente en el registro de proyecto autorizado con kind=task y un ID lógico estable, siguiendo project-context.md. Solo comparte un resumen laboral después de la autorización del texto exacto. No vuelques el contenido profesional al perfil general.
+
+Compara esta nota con la anterior: señala avances con evidencia, conceptos que requieren refuerzo y lo que aún no se ha comprobado. Reutiliza lo pertinente al iniciar la siguiente sesión, y decide con el alumno una práctica breve adaptada. No alteres las instrucciones de la skill por este registro: proponer un cambio docente y aceptarlo sigue otro proceso. Si no hay almacenamiento persistente, ofrece la nota en la conversación como resumen para guardar y aclara que no se ha guardado. Esto se realiza durante sesiones activas, no en segundo plano.
