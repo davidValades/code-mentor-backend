@@ -13,7 +13,9 @@ The author selected a single collection named `skills`, created by renaming and 
 
 ## Rollout
 
-Translate and verify the existing skill, rebuild its package, update the existing personal skill and private plugin where authorized, and rename the repository through GitHub settings. Update canonical URLs after the rename is actually verified. Until then the original repository URL remains valid and is used in package metadata.
+Completed October 28, 2026. The canonical repository is [davidValades/skills](https://github.com/davidValades/skills). GitHub repository ID `1435396864`, the `main` branch and the original commit history were preserved. The English source, personal skill and private plugin were updated and verified before the rename. Public support, privacy and terms now use the canonical repository URL.
+
+Release 2.8.0 and its matching package manifest remain unchanged to preserve the published archive and its checksum. Their previous repository URLs are compatibility URLs redirected by GitHub. Use the canonical URL above for new links and the next release's metadata; do not create a new repository at the former name while those links are in use.
 
 The collection currently contains only Code Mentor Backend. Other topics mentioned in conversation were examples, not skills to create.
 

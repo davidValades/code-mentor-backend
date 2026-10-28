@@ -16,7 +16,7 @@ The optional adaptation log links teaching aids to previously saved evidence and
 
 ## Support
 
-You can request help through this repository's [GitHub issues](https://github.com/davidValades/code-mentor-backend/issues). Public issues and their content may be visible to anyone. Do not include passwords, keys, personal data, private conversations, or confidential code. The creator can read and respond to what is posted. GitHub manages its own services and retains or deletes information according to its own policies and controls.
+You can request help through this repository's [GitHub issues](https://github.com/davidValades/skills/issues). Public issues and their content may be visible to anyone. Do not include passwords, keys, personal data, private conversations, or confidential code. The creator can read and respond to what is posted. GitHub manages its own services and retains or deletes information according to its own policies and controls.
 
 ## Private inquiries
 

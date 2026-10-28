@@ -16,7 +16,7 @@ The historical results below concern version 2.4.0 and earlier. They are preserv
 - The existing personal skill was updated, validated and read back after saving; host-managed formatting and metadata normalization were checked separately. This does not prove activation in every conversation.
 - Independent review found no important defects. A synthetic Spanish learner response retained normal teaching style. No synthetic evidence was stored as learner progress.
 - The existing private plugin was updated to 2.8.0 and the saved manifest, instructions, exploration, closure and report source were read back. Its identity and private audience were preserved. This does not verify every host conversation.
-- Repository contents are reorganized; renaming the repository to skills is pending GitHub sign-in. No public submission or approval is claimed.
+- The repository was renamed to [davidValades/skills](https://github.com/davidValades/skills), preserving repository ID `1435396864`, the main branch and commit history. Canonical support links were updated; release 2.8.0 retains its original manifest and checksum, with former GitHub URLs redirected for compatibility. No public submission or approval is claimed.
 
 ## Historical verified state — October 27, 2026, version 2.4.0
 

@@ -1,6 +1,6 @@
 # Code Mentor Backend support
 
-To report a problem, request help, or suggest an improvement, open a [GitHub issue](https://github.com/davidValades/code-mentor-backend/issues).
+To report a problem, request help, or suggest an improvement, open a [GitHub issue](https://github.com/davidValades/skills/issues).
 
 Describe what you were trying to do, what you expected, what happened, and, if possible, the minimum steps needed to reproduce it. Include the skill version and the environment where you use it, if known. Use synthetic or anonymized examples.
 

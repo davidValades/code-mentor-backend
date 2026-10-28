@@ -12,4 +12,4 @@ Responses may be incorrect or incomplete. Review proposals and check the code be
 
 The files in this repository are distributed under the MIT license included in [LICENSE](../../LICENSE). The platforms used may have their own terms.
 
-Support is provided through [GitHub issues](https://github.com/davidValades/code-mentor-backend/issues), with no guaranteed response time. Private inquiries about data can be sent to davidvaladesnavarro@gmail.com. See the [privacy policy](privacy.md).
+Support is provided through [GitHub issues](https://github.com/davidValades/skills/issues), with no guaranteed response time. Private inquiries about data can be sent to davidvaladesnavarro@gmail.com. See the [privacy policy](privacy.md).
