@@ -68,4 +68,6 @@ mentor_adaptation.py follows adaptation-contract.md, retains referenced observat
 
 ## Separate progress utility
 
+`python scripts/mentor_inspect.py --root /absolute/authorized/root status` reports a read-only snapshot; use `audit` for a bounded mechanical review. Follow memory-controls.md for semantic review and host-capability limits. Neither command initializes, locks, repairs or changes this store. No actual-save timestamp is added to schema 2. Knowledge maps are derived file-tool outputs at progress/map.md per knowledge-map.md, not new CLI save operations.
+
 For a clickable practice calendar and topic-filtered historical evidence, use mentor_progress.py per [progress-report.md](progress-report.md). It reads this same schema-2 record and writes only progress/index.html and progress/summary.md. No new state fields, apply operations or record IDs. Saved derivatives are snapshots, never memory authority; without JSON/computation, retain the narrative/pending flow above. Correction/deletion review includes these files and authorized copies.

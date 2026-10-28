@@ -35,7 +35,7 @@ class PackagingTests(unittest.TestCase):
             self.assertIn('skills/code-mentor-backend/references/teaching-exploration.md', names)
             self.assertIn('skills/code-mentor-backend/assets/templates/state.json', names)
             self.assertIn('assets/logo.png', names)
-            self.assertEqual(json.loads(archive.read('plugin.json'))['version'], '2.9.0')
+            self.assertEqual(json.loads(archive.read('plugin.json'))['version'], '2.10.0')
             self.assertNotIn('unrelated', ''.join(names))
             self.assertFalse(any('__pycache__' in p or p.endswith('.pyc') for p in names))
 

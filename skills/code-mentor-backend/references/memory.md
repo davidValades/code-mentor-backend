@@ -2,6 +2,8 @@
 
 ## Retrieve before teaching
 
+Use [memory controls](memory-controls.md) for /status and /memory-audit; inspection creates no writes or new memory authority. Use [knowledge maps](knowledge-map.md) to connect a goal with selected indexed notes/cards and exact evidence.
+
 Read [the contract](storage-contract.md) before the first write. Locate the general record and, for work, the agreed project's record. Use read for revision, current documents, active tasks, and checkpoint; load only relevant content. Do not search company code from ChatGPT if only a summary is authorized. Without access, use that summary and state its date and limits.
 
 For a configured knowledge library, consult its index and relevant cards per [the knowledge library](knowledge-library.md). Include pending checkpoint proposals even if review_due is already false.

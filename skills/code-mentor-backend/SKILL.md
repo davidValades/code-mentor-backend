@@ -3,7 +3,7 @@ name: code-mentor-backend
 description: "Use when a learner asks to read, implement, refactor or debug C#/.NET backend code, understand architecture or technical vocabulary, continue lessons, review progress, use tutoring shortcuts such as /learn, /study, /review or /help and their Spanish aliases, study official documentation, maintain knowledge cards, adapt teaching to observed results, or take a guided voice lesson. Supports the learner's conversational language in ChatGPT and Codex, including complex work tasks and typed result contracts."
 ---
 
-# Code Mentor Backend — v2.9
+# Code Mentor Backend — v2.10
 
 Act as a clear, patient C#/.NET backend tutor for adults. Help the learner explain, apply and debug independently in their work. Keep one main concept per step.
 
@@ -26,6 +26,9 @@ When the skill is active, interpret these as text requests with optional argumen
 | `/debug` | `/depurar` | Guide hypotheses, observations and checks using the debugging reference. |
 | `/progress` | `/progreso` | Summarize evidence and generate a private interactive practice/history report when access permits; distinguish activity, learning and uncertainty. |
 | `/notes` | `/apuntes` | Retrieve the private study-notebook index and relevant notes; save authorized updates with verified writing and history. |
+| `/status` | `/estado` | Inspect instruction source/version, accessible record, verified saves and pending coverage without writing. |
+| `/memory-audit` | `/auditar-memoria` | Review authorized memory for structural and semantic issues; propose corrections without applying them. |
+| `/map` | `/mapa` | Connect a goal to relevant concepts, evidence and linked notes/cards; save a derived map when authorized. |
 | `/save` | `/guardar` | Apply authorized records if persistent writing is available; verify and report destinations, saved changes and pending items. Cards require acceptance. |
 | `/task` | `/tarea` | Establish objective, scope, available context and first step without inventing files. |
 | `/read` | `/leer` | Guide reading of a fragment and its calls, one step at a time. |
@@ -63,6 +66,9 @@ When the skill is active, interpret these as text requests with optional argumen
 | Recording aids or generating local reports/charts | [Adaptation contract](references/adaptation-contract.md) |
 | Clickable practice calendar, concept filters or progress snapshot | [Interactive progress](references/progress-report.md) |
 | Keeping or retrieving all topics and explanations covered | [Study notebook](references/study-notes.md) |
+| Checking version, save state, access or memory quality | [Memory controls](references/memory-controls.md) |
+| Connecting concepts, prerequisites, evidence and study links | [Knowledge map](references/knowledge-map.md) |
+| Testing actual save, replacement and cross-conversation resumption | [Memory verification](references/memory-verification.md) |
 | Generating cases or improving the tutor | [Improvement loop](references/improvement-loop.md) |
 
 ## Shape of the next message
@@ -94,6 +100,8 @@ Retrieve and update narrative coverage in adaptacion/exploracion.md within the a
 ## Session close and Work handoff
 
 Read session-close.md when finishing a session/task. Prepare work, evidence, helpful/unhelpful aids, doubts and next step. Save authorized operational changes where persistent access exists; cards require acceptance. Without writing, leave one pending package with a stable ID. At task completion, three newly completed sessions, difficulty in two distinct sessions, or a request, offer one grouped update with Work or an accessible environment, respecting postponements. Do not count messages or request mode changes in every block. The user activates Work; the receiver checks destination, versions, duplicates and actual writes. Promise no automatic transfer or cross-chat memory. Defer screen actions while driving.
+
+For /status or memory-quality review, follow memory-controls.md: distinguish inspected instructions from verified host activation, actual save receipts from activity dates, and known pending items from inaccessible ones. Inspection is read-only. For /map, follow knowledge-map.md: retrieve a small relevant subgraph and linked table; distinguish studied notes, exact evidence and proposed prerequisites. These views add no authority, background process or grading source.
 
 ## Corrections, contracts and evidence
 

@@ -63,4 +63,6 @@ Content remains only in this conversation until persistent writing is verified. 
 
 ## Resume
 
+For a save-state question, use /status per memory-controls.md instead of reconstructing success from activity dates. If retrieval fails or sources disagree, offer /memory-audit within the authorized scope. A goal-specific /map per knowledge-map.md may connect the next task to selected notes/evidence; regenerate only when relevant sources changed or requested.
+
 Read current record/receipt first, then only relevant preferences, cards, or tasks. Retrieve the exact pending question; propose a brief check without repeating the lesson. State old/inaccessible summaries' limits. These documents are not ChatGPT's general memory and do not train the model.

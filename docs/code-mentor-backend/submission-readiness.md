@@ -1,12 +1,27 @@
-# Distribution and review status — source 2.9
+# Distribution and review status — source 2.10
 
 Updated October 28, 2026. Preparation, private installation, submission, and publication are separate states. Approval and educational efficacy are not guaranteed.
 
 ## Current release boundary
 
+Source 2.10 and portable release 2.10.0 add memory visibility, a read-only bounded audit, goal-specific linked knowledge maps and a guided save/resume check. These extend the schema-2 record; no new memory authority, hosted service or automatic repair is added.
+
+## Current checks — 2.10.0
+
+- 106 tests passed, including 17 inspection cases and a separate-process save/reopen/retry/report continuity case. Skill validation passed.
+- [Portable archive 2.10.0](../../dist/code-mentor-backend/code-mentor-backend-2.10.0.zip): 49 entries, one skill, no actual learner data. SHA-256: `d2a44486ad79da8cec24a705ca8184dcc26359445ea1ee843f775608de1757c2`. Older archives are preserved.
+- The saved personal skill declares 2.10. All 46 remote source files were verified against the edited checkout; portable agent metadata retains its prior invocation policy without copying host-normalized product values.
+- The existing USER/PRIVATE plugin was saved as 2.10.0 with identity, audience, author, default prompts and icon preserved. Its 50-file inventory includes the retained logo; all 49 text files were read back and compared, parsing manifests semantically.
+- Independent review found no Critical issue and four material diagnostic gaps. Regressions reproduced blocked/interrupted writes, empty reports, corrupt-input budget overruns and symlink-resolution loops before fixing them. Common Markdown titles/angle destinations and accurate encoding errors were included in the correction pass. No material review finding remains open.
+- Fresh-agent synthetic checks saved a study note/index and evidence-linked map, then a second fresh context recovered the pending question and updated the same note to revision 2 with revision 1/history preserved. The map reached revision 3. The original schema-2 record remained byte-identical at revision 7; no actual learning, new evidence, completed session or accepted card was added. Final bounded inspection found no mechanical issue in its inspected subset; this is not a full semantic guarantee.
+- The guide and installed skill include a [real-session memory check](memory-check.md). Actual host activation, real learner cross-conversation access, future retention, browser rendering/CSP and mobile layout remain unverified. Prior blocked local-file browser testing was not bypassed.
+- No public OpenAI submission or approval is claimed. Saved source/releases do not establish activation in every conversation.
+
+## Previous verified release — 2.9.0 (October 28, 2026)
+
 Source 2.9 and portable release 2.9.0 add private interactive progress reporting and a comprehensive study notebook to the existing tutor. The [collection README](../../README.md) links the canonical source and guide. Reading repository source does not prove activation in every host conversation.
 
-## Current checks — 2.9.0
+### Checks retained from 2.9.0
 
 - Private interactive practice reporting and the dated study notebook preserve the existing schema-2 evidence, permissions, timestamps and teaching behavior.
 - [Portable archive 2.9.0](../../dist/code-mentor-backend/code-mentor-backend-2.9.0.zip) built and inspected: 44 files, one canonical skill, no actual learner data. SHA-256: `a54e381a18976d90e442df2755e57fd476c8d270dd072a8db73f4f35c460ce69`. Previous archives remain unchanged.

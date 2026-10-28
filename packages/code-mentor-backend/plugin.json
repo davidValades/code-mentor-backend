@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "code-mentor-backend",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "C#/.NET backend tutoring with guided practice, evidence-linked memory and adaptive teaching in the learner's language.",
   "author": {
     "name": "David Valadés",
@@ -12,7 +12,7 @@
       "interface": {
         "displayName": "Code Mentor Backend",
         "shortDescription": "Learn C# backend step by step",
-        "longDescription": "A C#/.NET backend tutor that responds in the learner's language. It guides reading, refactoring, debugging and documentation one concept at a time. English text shortcuts retain Spanish aliases. Gradual teaching-aid exploration distinguishes clarity feedback from demonstrated learning. Authorized records require accessible persistent storage and verified writes; otherwise it prepares a pending batch for a user-initiated handoff. Knowledge cards require acceptance. No fixed learning styles, background work or automatic cross-device synchronization. Voice depends on the host. Local utilities need Python 3.11+. Private offline progress reports add clickable practice days, concept filters and historical evidence; opening HTML depends on the host. A private dated study notebook preserves covered explanations, examples and doubts with a topic/session index.",
+        "longDescription": "A C#/.NET backend tutor that responds in the learner's language. It guides reading, refactoring, debugging and documentation one concept at a time. English text shortcuts retain Spanish aliases. Gradual teaching-aid exploration distinguishes clarity feedback from demonstrated learning. Authorized records require accessible persistent storage and verified writes; otherwise it prepares a pending batch for a user-initiated handoff. Knowledge cards require acceptance. No fixed learning styles, background work or automatic cross-device synchronization. Voice depends on the host. Local utilities need Python 3.11+. Private offline progress reports add clickable practice days, concept filters and historical evidence; opening HTML depends on the host. A private dated study notebook preserves covered explanations, examples and doubts with a topic/session index. Memory status, read-only quality audits and goal-specific linked knowledge maps reuse the same authorized record.",
         "developerName": "David Valadés",
         "category": "Education & Research",
         "capabilities": [
@@ -42,11 +42,11 @@
       },
       "publication": {
         "countries": [],
-        "release_notes": "Adds a private self-contained interactive practice calendar, concept filters and dated historical learning evidence. Reuses schema-2 records and verified session closure; preserves timestamps, retry semantics, teaching behavior and existing identities. HTML viewing and persistent writing depend on the host; no network or background work. Adds a private session study notebook with topic/date index and version history; notes do not award learning achievements.",
+        "release_notes": "Adds /status, /memory-audit and /map with Spanish aliases. Read-only bounded inspection distinguishes source version, activation uncertainty, accessible records, activity dates and actual save receipts. Audits propose corrections without applying them. Goal-specific maps link notes/cards and exact evidence with proposed prerequisite routes kept separate. Adds reproducible end-to-end continuity verification. Preserves schema 2, identities, privacy, teaching behavior and older archives.",
         "translations": {
           "es-ES": {
             "subtitle": "Profesor de C# y .NET",
-            "description": "Profesor de C# y .NET backend en el idioma del alumno, con lectura, refactorización, depuración y documentación paso a paso. Atajos en inglés y alias en español. Explora ayudas gradualmente y distingue claridad de aprendizaje demostrado. Guarda solo con acceso autorizado y verificable; sin escritura, prepara pendientes. Fichas con aceptación, sin estilos fijos, sincronización automática ni trabajo de fondo. Voz según plataforma; utilidades locales con Python 3.11+. Incluye calendario privado pulsable, filtros por concepto y evidencias de logros; la visualización HTML depende del entorno."
+            "description": "Profesor de C# y .NET backend en el idioma del alumno, con lectura, refactorización, depuración y documentación paso a paso. Atajos en inglés y alias en español. Explora ayudas gradualmente y distingue claridad de aprendizaje demostrado. Guarda solo con acceso autorizado y verificable; sin escritura, prepara pendientes. Fichas con aceptación, sin estilos fijos, sincronización automática ni trabajo de fondo. Voz según plataforma; utilidades locales con Python 3.11+. Incluye calendario privado pulsable, filtros por concepto y evidencias de logros; la visualización HTML depende del entorno. Añade estado de memoria, auditoría sin cambios y mapas de conocimientos enlazados al registro autorizado."
           }
         }
       }

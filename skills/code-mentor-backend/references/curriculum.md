@@ -1,5 +1,7 @@
 # Adaptive curriculum
 
+For a navigable goal-specific view, follow [knowledge-map.md](knowledge-map.md). Use explicit card relationships and separately labeled proposed routes; never infer prerequisite mastery or an entire sub-concept from a broad-topic status.
+
 Connect evidence and reviews with these stable IDs:
 
 | ID | Topic and observable competency |

@@ -2,7 +2,7 @@
 
 A step-by-step C#/.NET backend tutor for understanding real code and becoming more independent.
 
-Source version: **2.9**. Portable package version: **2.9.0**. Repository source, built package, installed skill and public approval are separate states.
+Source version: **2.10**. Portable package version: **2.10.0**. Repository source, built package, installed skill and public approval are separate states.
 
 ## What it helps with
 
@@ -33,6 +33,9 @@ These are optional text requests interpreted while the skill is active, not nati
 | `/review` | `/repaso` | Retrieve earlier learning and practice recall. |
 | `/debug` | `/depurar` | Investigate a bug step by step. |
 | `/notes` | `/apuntes` | Find your private dated study notes by topic or session. |
+| `/status` | `/estado` | Inspect instruction source/version, record access, verified saves and known pending items without writing. |
+| `/memory-audit` | `/auditar-memoria` | Review authorized memory quality and propose corrections; apply no changes. |
+| `/map` | `/mapa` | Connect a goal to concepts, evidence and linked notes/cards. |
 | `/progress` | `/progreso` | Summarize evidence and generate a private clickable calendar and concept-history report where supported. |
 | `/save` | `/guardar` | Save authorized records if writing is available; show saved and pending items. |
 | `/task` | `/tarea` | Clarify scope and choose a first step. |
@@ -99,6 +102,27 @@ Teacher explanations, synthetic examples, learner declarations and demonstrated 
 
 No destination is silently configured. Without access, notes remain clearly pending in the closing package. Past sessions can only be reconstructed from accessible sources, with uncertainty stated. See the [notebook contract](../../skills/code-mentor-backend/references/study-notes.md).
 
+## See what is saved
+
+Use `/status` or `/estado` for a concise report of the inspected instruction source/version, actual authorized record, scope/revision, verified write receipts and known pending items. Reading repository files does not prove that version is active in every chat. Reading a folder proves neither write access nor durable storage. If actual save time is unknown, the tutor says so instead of substituting a learning-event date.
+
+Use `/memory-audit` or `/auditar-memoria` to review memory quality. The optional read-only utility checks record structure, referenced files, current note/card indexing and links, duplicate-content candidates and progress-report freshness. Its scan is bounded; skipped files and remaining semantic checks are disclosed. The tutor then reviews relevant contradictions, project/source versions and learning claims. It proposes corrections without automatically merging, deleting, rewriting evidence or changing accepted cards.
+
+```sh
+python skills/code-mentor-backend/scripts/mentor_inspect.py --root /absolute/learning/root status
+python skills/code-mentor-backend/scripts/mentor_inspect.py --root /absolute/learning/root audit
+```
+
+These commands do not modify the learning record or create its locks. No new record destination is configured by running them. With file-service/Markdown storage, the tutor uses actual identities and versions and states which calculated checks are unavailable. See [memory controls](../../skills/code-mentor-backend/references/memory-controls.md).
+
+## Connect your knowledge
+
+Try `/map method return values` or `/mapa contratos Result`. The tutor retrieves a small relevant selection of indexed notes/cards and evidence, shows their relationships and provides a linked table. It distinguishes material studied, conceptual understanding, guided practice, independent IDE work, later recall and unassessed areas. A broad-topic result does not prove every sub-concept.
+
+Explicit accepted-card prerequisites remain separate from proposed teaching routes. Missing notes, source code or evidence are shown as gaps. The map ends with one useful next action, not explanations of every concept. Links use accessible notes/cards; unavailable documents are not invented.
+
+With authorized persistent writing, `progress/map.md` is a verified derived snapshot in the same private root. It does not replace the record or automatically rewrite cards. A linked table works when Mermaid cannot render; voice lessons describe a small relationship orally and defer screen interaction while driving. See the [map contract](../../skills/code-mentor-backend/references/knowledge-map.md).
+
 ## Memory and privacy
 
 The tutor prepares the notes; you do not need to draft the learning record yourself. Durable memory requires an agreed persistent destination, actual write access and authorization.
@@ -115,11 +139,13 @@ Local charts/reports default to English; select `report --language es` for Spani
 
 Ask the agent to read the available skill's SKILL.md, state its version and identify its source. Reading GitHub verifies repository source, not installation in that chat. A saved private plugin is also distinct from host behavior actually tested.
 
+Use the [end-to-end memory check](memory-check.md) to verify a real session's note, revision history, verified save, map links and resumption from another conversation with access to the same record. Automated isolated tests use synthetic data and do not establish real learning, cross-chat access or browser/mobile layout.
+
 The tutor can make mistakes. Check code and proposed changes against the real project, tests and applicable Microsoft documentation.
 
 ## Build, support and distribution
 
-[Portable package 2.9.0](../../dist/code-mentor-backend/code-mentor-backend-2.9.0.zip). Downloading and building remain separate from installation.
+[Portable package 2.10.0](../../dist/code-mentor-backend/code-mentor-backend-2.10.0.zip). Downloading and building remain separate from installation. Earlier archives are retained.
 
 Build from the collection root with `python tools/build_plugin.py code-mentor-backend`. The result contains only this skill and its packaging resources.
 

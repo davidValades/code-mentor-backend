@@ -13,4 +13,4 @@ Protected-content checks compare all reference headings, fenced examples, inline
 
 No upstream Caveman runtime, hooks, provider calls or telemetry were installed. The tutor's output format and permissions remain in force.
 
-These are historical version-2.8 measurements. Version 2.9 adds a routed progress reference and executable/report assets; the percentages above are not a new whole-release or token-cost measurement.
+These are historical version-2.8 measurements. Versions 2.9 and 2.10 add routed progress, notebook, memory-control, map and verification references plus executable/report assets. These resources load only for relevant routes; the percentages above are not a new whole-release or token-cost measurement.
