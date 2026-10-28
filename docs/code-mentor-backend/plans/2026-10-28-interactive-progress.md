@@ -6,7 +6,7 @@
 
 **Architecture:** Read the existing schema-2 root; derive a minimal model; render a self-contained HTML snapshot and a Markdown summary. No record mutations, new service, automatic transfer or background work.
 
-**Tech Stack:** Python 3.11+ standard library, inline HTML/CSS/JavaScript, unittest; real browser interaction checks.
+**Tech Stack:** Python 3.11+ standard library, inline HTML/CSS/JavaScript, unittest and shipped-script in-memory DOM interaction checks; browser/layout verification remains blocked.
 
 **Spec:** ../specs/2026-10-28-interactive-learning-progress-design.md
 
@@ -50,14 +50,15 @@
 - [x] Render inline assets with a restrictive CSP and textContent for record strings. Provide clickable/keyboard-accessible days, dates/topic/activity/help/result filters, reset, filtered totals, day details, a table alternative, all-history concepts and latest-check evidence.
 - [x] Use a 12-month default, a maximum 366-day visible calendar range, and 0/1/2/3/4+ intensity buckets. The input range can move to older dates; model evidence remains full history. Clearly label the snapshot and its actual scope.
 - [x] Generate under the existing root lock, preflight all targets, atomically replace each file, verify both and source identity; restore previous outputs on failure when possible. Never mutate state.
-- [x] Run relevant unit/CLI checks and exercise real day selection, filters/reset, keyboard navigation, empty data, hostile data and narrow layout in a browser with synthetic evidence.
+- [x] Run unit/CLI checks and execute the shipped JavaScript in an in-memory DOM for day selection, filters/reset, keyboard navigation, empty/hostile data and date boundaries. Attempted local-file browser navigation was rejected by policy; no workaround was attempted.
+- [ ] Verify actual browser rendering, CSP enforcement and narrow-screen layout when an authorized test surface is available.
 - [x] Record results and decisions in the ledger.
 
 ## Task 3: Tutor integration, distribution and independent checks
 
 **Files:** Update canonical SKILL.md, memory/session-close/storage references; create references/progress-report.md. Update public root/skill READMEs, package manifest and readiness; add release 2.9.0 archive; preserve old archives.
 
-**Interfaces:** `/progress` and `/progreso` route to the new contract; closing refreshes after verified authorized saves. Hosts without JSON/computation/writing keep an honest narrative/pending request. No new slash command or progress source.
+**Interfaces:** `/progress` and `/progreso` route to the new contract; closing refreshes after verified authorized saves. Hosts without JSON/computation/writing keep an honest narrative/pending request. Progress adds no new shortcut or progress source. The later notebook addition introduces /notes and /apuntes.
 
 - [x] Run a baseline skill scenario before editing instructions; retain only synthetic output.
 - [x] Add concise routing and the report contract: exact CLI/output paths, qualifications, snapshot/date/filter meanings, host/permission boundaries and pending behavior.
