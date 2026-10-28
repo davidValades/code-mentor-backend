@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="@@LANG@@">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-@@SCRIPT_HASH@@'; style-src 'sha256-@@CSS_HASH@@'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+<title>@@TITLE@@</title>
+<style>@@CSS@@</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow" data-label="eyebrow"></p>
+    <div class="title-row"><h1 data-label="title"></h1><span class="pill" data-label="private"></span></div>
+    <p class="intro" data-label="intro"></p>
+    <p id="snapshot-line" class="muted"></p>
+    <p id="demo" class="demo" hidden></p>
+  </header>
+  <section class="card" aria-labelledby="calendar-title">
+    <h2 id="calendar-title" data-label="calendar"></h2>
+    <p class="muted" data-label="calendarNote"></p>
+    <div class="filters">
+      <label><span data-label="topic"></span><select id="topic"></select></label>
+      <label><span data-label="start"></span><input type="date" id="start" required></label>
+      <label><span data-label="end"></span><input type="date" id="end" required></label>
+      <label><span data-label="activity"></span><select id="activity"></select></label>
+      <label><span data-label="assistance"></span><select id="assistance"></select></label>
+      <label><span data-label="outcome"></span><select id="outcome"></select></label>
+    </div>
+    <button id="reset" class="secondary" type="button" data-label="reset"></button>
+    <p id="error" role="alert" hidden></p>
+    <div class="stats" aria-live="polite">
+      <div><strong id="days-count">0</strong><span data-label="days"></span></div>
+      <div><strong id="attempts-count">0</strong><span data-label="attempts"></span></div>
+      <div><strong id="topics-count">0</strong><span data-label="topics"></span></div>
+    </div>
+    <p class="eyebrow small" data-label="filtered"></p>
+    <div class="calendar-scroll"><div id="calendar-wrap">
+      <div id="months" aria-hidden="true"></div>
+      <div class="calendar-body"><div id="weekdays" aria-hidden="true"></div><div id="calendar" role="group" aria-labelledby="calendar-title"></div></div>
+    </div></div>
+    <div class="legend"><span data-label="legend"></span><span class="swatch level-0">0</span><span class="swatch level-1">1</span><span class="swatch level-2">2</span><span class="swatch level-3">3</span><span class="swatch level-4">4+</span></div>
+    <p id="empty" class="empty" hidden data-label="empty"></p>
+    <p class="fine" data-label="noData"></p>
+    <details><summary data-label="table"></summary><div class="table-scroll"><table>
+      <thead><tr><th data-label="date"></th><th data-label="attempts"></th><th data-label="topic"></th><th></th></tr></thead>
+      <tbody id="practice-table"></tbody></table></div></details>
+  </section>
+  <section class="card" aria-labelledby="day-heading">
+    <h2 id="day-heading" data-label="dayTitle"></h2><div id="day-details" aria-live="polite"></div>
+  </section>
+  <section class="card" aria-labelledby="history-heading">
+    <h2 id="history-heading" data-label="history"></h2><p class="muted" data-label="historyNote"></p>
+    <div id="concepts"></div><p class="fine" data-label="statusNote"></p>
+  </section>
+  <footer>
+    <p data-label="snapshot"></p><p class="fine" data-label="datesNote"></p>
+    <details><summary data-label="provenance"></summary><dl id="provenance"></dl></details>
+  </footer>
+</main>
+<noscript><p>JavaScript is required for the interactive report. Read the companion progress/summary.md for a text summary.</p></noscript>
+<script id="progress-data" type="application/json">@@MODEL@@</script>
+<script>@@SCRIPT@@</script>
+</body>
+</html>

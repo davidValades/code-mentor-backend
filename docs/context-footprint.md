@@ -12,3 +12,5 @@ The installed-source total includes the new context-efficiency paragraph. Reposi
 Protected-content checks compare all reference headings, fenced examples, inline code and Markdown links verbatim. Semantic review and a synthetic learner response supplement those checks; none is evidence of student learning.
 
 No upstream Caveman runtime, hooks, provider calls or telemetry were installed. The tutor's output format and permissions remain in force.
+
+These are historical version-2.8 measurements. Version 2.9 adds a routed progress reference and executable/report assets; the percentages above are not a new whole-release or token-cost measurement.

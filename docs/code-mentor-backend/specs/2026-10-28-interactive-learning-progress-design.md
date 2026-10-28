@@ -1,6 +1,6 @@
 # Interactive learning progress
 
-Status: proposed design; implementation not yet approved. Date: 2026-10-28.
+Status: approved by the learner on 2026-10-28; implementation tracked in [the plan](../plans/2026-10-28-interactive-progress.md).
 
 ## Intent and agreed choices
 
@@ -70,3 +70,7 @@ Update the skill references and English public guide. Keep installed source and 
 ## Proposed defaults for review
 
 The 12-month default, five intensity buckets, optional secondary filters, output paths and automatic refresh at verified session close are design proposals, not additional preferences already chosen by the learner. Review resolved three builder choices: use all-history evidence for milestones, show factual latest checks rather than an undefined recency flag, and omit completed-session totals to avoid misleading day/topic attribution. The builder may settle visual styling, internal helper names and other routine implementation details within this contract.
+
+## User-requested notebook addition — 2026-10-28
+
+The learner also requested a folder containing notes of everything covered. Include all relevant explanations, examples, corrections and doubts, not only demonstrated achievements. Implement the private notes/index.md and per-session notes contract with a reusable template, native/immutable version history and /notes (/apuntes) routing. Use existing authorized file tools and memory boundaries; add no evidence fields or unsupported CLI operation. Notes remain separate from accepted cards and progress evidence. Retrieve only indexed relevant sections.

@@ -65,3 +65,7 @@ Use `status` for calculated statuses; do not call Python functions directly from
 ## Separate adaptation utility
 
 mentor_adaptation.py follows adaptation-contract.md, retains referenced observations, and produces assessment/SVG. It neither extends apply operations nor changes schema_version=2. Cards/index still use file tools.
+
+## Separate progress utility
+
+For a clickable practice calendar and topic-filtered historical evidence, use mentor_progress.py per [progress-report.md](progress-report.md). It reads this same schema-2 record and writes only progress/index.html and progress/summary.md. No new state fields, apply operations or record IDs. Saved derivatives are snapshots, never memory authority; without JSON/computation, retain the narrative/pending flow above. Correction/deletion review includes these files and authorized copies.

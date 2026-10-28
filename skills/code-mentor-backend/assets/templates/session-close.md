@@ -70,6 +70,9 @@ Preserve exact entries, including dates; retry uncertain operations without reco
 - Completed operations and verified versions:
 - Pending or uncertain operations (preserve IDs):
 - Accepted / deferred cards:
+- Study notebook: stable note ID, verified path/identity and revision, history and index status (or pending):
+- Interactive progress report: verified HTML/Markdown paths and source revision, or pending with reason:
+- Report generation date/time zone; original event dates preserved:
 - Continuity available at:
 
 Complete only with actual results; preparing or attaching does not establish that saving occurred.

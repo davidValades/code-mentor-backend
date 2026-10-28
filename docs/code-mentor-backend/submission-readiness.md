@@ -1,14 +1,29 @@
-# Distribution and review status — source 2.8
+# Distribution and review status — source 2.9
 
 Updated October 28, 2026. Preparation, private installation, submission, and publication are separate states. Approval and educational efficacy are not guaranteed.
 
 ## Current release boundary
 
-The maintained source version is 2.8, with portable release version 2.8.0. Repository reorganization and English source documentation do not prove that a personal skill, private plugin, or public submission has been updated. The [collection README](../../README.md) records the current package and its verification. An active installation must be checked separately by reading its actual files.
+Source 2.9 and portable release 2.9.0 add private interactive progress reporting and a comprehensive study notebook to the existing tutor. The [collection README](../../README.md) links the canonical source and guide. Reading repository source does not prove activation in every host conversation.
 
-The historical results below concern version 2.4.0 and earlier. They are preserved as a translated, dated record, not as validation of the current package or the present state of the submission portal. Current checks below distinguish the saved personal skill from private plugin and public-review status. No public submission or approval is asserted.
+## Current checks — 2.9.0
 
-## Current checks — October 28, 2026
+- Private interactive practice reporting and the dated study notebook preserve the existing schema-2 evidence, permissions, timestamps and teaching behavior.
+- [Portable archive 2.9.0](../../dist/code-mentor-backend/code-mentor-backend-2.9.0.zip) built and inspected: 44 files, one canonical skill, no actual learner data. SHA-256: `a54e381a18976d90e442df2755e57fd476c8d270dd072a8db73f4f35c460ce69`. Previous archives remain unchanged.
+- 88 tests passed, including actual CLI, safe paths, rollback/stale-source checks, time zones, compact ISO timestamps and shipped JavaScript in an in-memory DOM.
+- Independent code review found no Critical issues. Its Important timestamp-compatibility finding was reproduced with a failing regression and fixed; raw source dates remain unchanged while derived browser timestamps are normalized.
+- The saved personal skill declares 2.9. All 41 saved source files were verified against the portable source, allowing host-managed formatting/agent metadata normalization.
+- The existing USER/PRIVATE plugin was updated to 2.9.0 without changing identity, audience, author or default prompts. Inventory: 45 files including its retained logo and compatibility manifest. Affected manifests, instructions, notebook resources and report code were read back and compared.
+- Synthetic progress scenarios produced 5 own attempts across 3 practice days without changing evidence. A notebook scenario saved/indexed the covered explanations and retrieved return-value notes, distinguishing a prediction from IDE execution. QA is not learner achievement.
+- The cloud browser rejected local-file navigation; no workaround was attempted. DOM checks cover day selection, filters/reset, historical support, keyboard, leap/max dates and hostile/empty data. Actual browser rendering, CSP enforcement and narrow-screen layout remain unverified.
+- Minor deferred: day cards identify session IDs but do not group interleaved sessions under separate headings.
+- No public OpenAI submission or approval is claimed. Saved files/releases do not establish activation in every conversation.
+
+### Implementation decisions
+
+Use the canonical personal-skills checkout to preserve the installed identity; keep public tests/docs in the collection. Execute the already-approved design inline without another authorization round. Browser policy was honored; DOM execution is a limited computational check, not browser proof. Distribution and archive preservation were verified separately because they were outside the code review's diff.
+
+## Previous verified release — 2.8.0 (October 28, 2026)
 
 - Source 2.8 uses English canonical instructions, retained Spanish aliases and learner-language replies.
 - [Portable package 2.8.0](../../dist/code-mentor-backend/code-mentor-backend-2.8.0.zip) built and inspected. SHA-256: `014fc20c8a93591a4c3fd128184bcbe5d750569edf580b28f2e4c849ab2abd9b`.

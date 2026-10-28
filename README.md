@@ -8,7 +8,7 @@ Each skill contains its own instructions, references, templates and optional uti
 
 | Skill | Purpose | Source version | Documentation |
 | --- | --- | --- | --- |
-| [Code Mentor Backend](skills/code-mentor-backend/SKILL.md) | Learn to read, implement, refactor and debug C#/.NET backend code with guided practice. | 2.8 | [Guide and shortcuts](docs/code-mentor-backend/README.md) |
+| [Code Mentor Backend](skills/code-mentor-backend/SKILL.md) | Learn to read, implement, refactor and debug C#/.NET backend code with guided practice. | 2.9 | [Guide and shortcuts](docs/code-mentor-backend/README.md) |
 
 Only existing skills are listed. Example ideas are not installed skills or planned commitments.
 
@@ -17,6 +17,10 @@ Only existing skills are listed. Example ideas are not installed skills or plann
 Open its guide, then make that skill available through a compatible host. Reading this repository or downloading a package does not prove that the skill is installed or active in a conversation. Capabilities such as voice, filesystem access and persistent storage depend on that host and its permissions.
 
 For Code Mentor Backend, try `/help` or `/learn C# methods` after activating the skill. Spanish aliases such as `/instrucciones` and `/aprender` remain supported; an English shortcut does not change the lesson language.
+
+## Track practice with Code Mentor Backend
+
+Use `/progress` or `/progreso` for an evidence-grounded summary and, where supported, a private offline HTML report with clickable practice days and concept filters. Practice includes your own attempts with help or mistakes; historical learning milestones require their supporting evidence. The report uses the existing authorized record. HTML viewing, computation and persistent writing depend on the host. Use `/notes` or `/apuntes` for a private dated notebook of explanations, examples and doubts, indexed by topic/session. See the [guide](docs/code-mentor-backend/README.md#interactive-practice-and-learning-history).
 
 ## Collection layout
 

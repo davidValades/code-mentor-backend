@@ -30,11 +30,13 @@ After a brief task check, prepare a small challenge for another session: oral in
 
 Check review_due after each completed session. Review every three new sessions since the last review; sooner on user request or same-topic difficulty in two different sessions. Reviews need not change anything: save reason, evidence, and outcome, including “no changes.” Base the counter on sessions and reviews, not a manually edited number.
 
-Show progress in conversation with a small competencies/evidence/next-steps table; do not create a dashboard or app. Without the same record, do not claim ChatGPT shares memory with Codex.
+Show a small competencies/evidence/next-steps table in conversation. For a clickable calendar and concept history, follow [interactive progress](progress-report.md): generate private offline HTML/Markdown from the same record, not a hosted application or another memory source. Refresh on request or verified session close when supported. Without the same record, do not claim ChatGPT shares memory with Codex.
 
 Without an accessible record, a reported third session permits a provisional review and pending batch, not a claim that review_due was calculated. Do not rely on app closes or equate three messages or chats with three sessions.
 
 ## Learning and review document
+
+For a durable notebook of all covered explanations and topics, follow [study-notes.md](study-notes.md). Keep dated session notes and a topic/date index under notes/ in the same private scope. Update after significant blocks and at closing; read only relevant indexed sections. Notes include doubts and unfinished topics without becoming progress evidence or accepted cards.
 
 At task completion, three-session review, recurring difficulty, or student request, prepare a brief Markdown note for future sessions. Include date, concepts, demonstrated facts with evidence references and assistance level, declared but unverified understanding, difficulties, corrected terms, open questions, next exercise, and approximate review date. Distinguish observation from hypothesis; never treat copied or oral responses as practical independence.
 
