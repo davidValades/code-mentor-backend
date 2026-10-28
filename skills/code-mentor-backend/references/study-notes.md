@@ -8,6 +8,8 @@ Maintain comprehensive study notes for the topics actually covered, including ex
 - notes/sessions/YYYY-MM-DD-note-ID.md: one continuing note per session, with a stable note ID.
 - notes/history/note-ID/rNNNN.md: prior immutable revisions where native same-document version history is unavailable.
 
+For derived Monday–Sunday blocks, follow [weekly-learning.md](weekly-learning.md): notes/weeks/index.md and one notes/weeks/YYYY-Www.md per relevant week. Session notes remain the detailed sources; do not move or duplicate them.
+
 Choose a safe opaque note ID once and retain it in the checkpoint/index. Use only lowercase ASCII letters, digits and hyphens in path identifiers; preserve the actual session ID in metadata, never interpolate it into a path. Respect root/path and file-service identity/version checks. Index entries and relative links must stay in the agreed notebook root. Existing private paths and schema-2 fields are unchanged.
 
 ## Capture and update

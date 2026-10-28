@@ -12,7 +12,7 @@ This checks storage and continuity, not learning effectiveness or automatic cros
 
 1. Finish a meaningful block and request `/save`. Check the receipt: saved destinations/identities, versions and remaining pending items. Activity dates and actual save times are separate; unknown save time stays unknown.
 2. Request `/notes` and inspect the same session's note, its topic link and provenance. Continue the topic, then save an actual addition. The same note ID must remain; revision/history must advance without creating a duplicate session or achievement.
-3. Request `/status`, `/memory-audit` and `/map [current goal]`. Check that map links open the correct authorized note/card and that studied material is separate from demonstrated evidence. An empty bounded mechanical audit is not a full semantic guarantee.
+3. Request `/status`, `/memory-audit` and `/map [current goal]`. Check that map links open the correct authorized note/card and that studied material is separate from demonstrated evidence. Use `/week` to verify its occurrence-date grouping, source links and weekly coverage without creating a second progress record. An empty bounded mechanical audit is not a full semantic guarantee.
 4. Open another conversation in an environment that can access that same destination. Activate/request Code Mentor Backend and supply the record identity or continuity package; never assume it inherits context. Ask for `/status`, then `/resume`. Compare the retrieved note ID/revision and exact pending next action.
 5. Reapply the identical pending batch only if needed. Existing retry IDs must prevent duplicate operations. A saved derivative failure must not replay already-saved learning evidence.
 

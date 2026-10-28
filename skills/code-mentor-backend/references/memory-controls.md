@@ -45,3 +45,5 @@ Then review only relevant flagged/retrieved sections for meaning:
 Show findings as **finding / source / impact / proposed action**, followed by inspected scope and remaining checks. An empty mechanical result means no mechanical finding in that bounded scope, not "all memory is correct." Do not treat absent optional folders as corrupted memory or invented pending tasks.
 
 Apply no changes from the audit request alone. Offer one grouped correction proposal. After the user requests the correction, preserve history and use existing authorized write/retry rules; accepted-card changes still need exact-content acceptance. Do not delete duplicates, rewrite evidence, create achievements or activate teaching rules automatically. Refresh affected derived indexes/reports after verified corrections. Invalid state stays unchanged; explain the blocker and preserve pending work.
+
+Weekly blocks/index at notes/weeks/ are included in the same bounded link/index audit. Semantic review checks original occurrence dates, local ISO weeks, coverage and separation of studied material from demonstrated evidence. Do not treat an elapsed week as complete capture.

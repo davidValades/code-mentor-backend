@@ -38,6 +38,8 @@ Without an accessible record, a reported third session permits a provisional rev
 
 ## Learning and review document
 
+Follow [weekly-learning.md](weekly-learning.md) for /week and chronological weekly summaries. Update from verified session notes/evidence within the same scope, with source dates, aid observations, coverage and history. Weekly views create no achievements, new review counter or background job.
+
 For a durable notebook of all covered explanations and topics, follow [study-notes.md](study-notes.md). Keep dated session notes and a topic/date index under notes/ in the same private scope. Update after significant blocks and at closing; read only relevant indexed sections. Notes include doubts and unfinished topics without becoming progress evidence or accepted cards.
 
 At task completion, three-session review, recurring difficulty, or student request, prepare a brief Markdown note for future sessions. Include date, concepts, demonstrated facts with evidence references and assistance level, declared but unverified understanding, difficulties, corrected terms, open questions, next exercise, and approximate review date. Distinguish observation from hypothesis; never treat copied or oral responses as practical independence.

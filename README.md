@@ -8,7 +8,7 @@ Each skill contains its own instructions, references, templates and optional uti
 
 | Skill | Purpose | Source version | Documentation |
 | --- | --- | --- | --- |
-| [Code Mentor Backend](skills/code-mentor-backend/SKILL.md) | Learn to read, implement, refactor and debug C#/.NET backend code with guided practice. | 2.10 | [Guide and shortcuts](docs/code-mentor-backend/README.md) |
+| [Code Mentor Backend](skills/code-mentor-backend/SKILL.md) | Learn to read, implement, refactor and debug C#/.NET backend code with guided practice. | 2.11 | [Guide and shortcuts](docs/code-mentor-backend/README.md) |
 
 Only existing skills are listed. Example ideas are not installed skills or planned commitments.
 
@@ -23,6 +23,8 @@ For Code Mentor Backend, try `/help` or `/learn C# methods` after activating the
 Use `/progress` or `/progreso` for an evidence-grounded summary and, where supported, a private offline HTML report with clickable practice days and concept filters. Practice includes your own attempts with help or mistakes; historical learning milestones require their supporting evidence. The report uses the existing authorized record. HTML viewing, computation and persistent writing depend on the host. Use `/notes` or `/apuntes` for a private dated notebook of explanations, examples and doubts, indexed by topic/session. See the [guide](docs/code-mentor-backend/README.md#interactive-practice-and-learning-history).
 
 ## Inspect memory and connect knowledge
+
+Use `/week` or `/semana` for linked Monday–Sunday learning blocks: concepts covered, tasks, demonstrated evidence, difficulties, teaching aids and next practice. They refresh through active-session saves in the same private notebook. See [weekly learning history](docs/code-mentor-backend/weekly-learning.md) for dates, history and coverage limits.
 
 Use `/status` (`/estado`) to inspect the instruction source, accessible learning record, verified saves and pending coverage. `/memory-audit` (`/auditar-memoria`) reviews memory quality without changing it. `/map [goal]` (`/mapa`) connects a small set of concepts to evidence and linked notes/cards, separating observed learning from proposed prerequisites. These use the same private record and depend on actual host access. Follow the [end-to-end memory check](docs/code-mentor-backend/memory-check.md) to verify saving and resuming in your environment.
 

@@ -2,7 +2,7 @@
 
 A step-by-step C#/.NET backend tutor for understanding real code and becoming more independent.
 
-Source version: **2.10**. Portable package version: **2.10.0**. Repository source, built package, installed skill and public approval are separate states.
+Source version: **2.11**. Portable package version: **2.11.0**. Repository source, built package, installed skill and public approval are separate states.
 
 ## What it helps with
 
@@ -36,6 +36,7 @@ These are optional text requests interpreted while the skill is active, not nati
 | `/status` | `/estado` | Inspect instruction source/version, record access, verified saves and known pending items without writing. |
 | `/memory-audit` | `/auditar-memoria` | Review authorized memory quality and propose corrections; apply no changes. |
 | `/map` | `/mapa` | Connect a goal to concepts, evidence and linked notes/cards. |
+| `/week` | `/semana` | Retrieve or refresh a Monday–Sunday learning block with dated sources and next steps. |
 | `/progress` | `/progreso` | Summarize evidence and generate a private clickable calendar and concept-history report where supported. |
 | `/save` | `/guardar` | Save authorized records if writing is available; show saved and pending items. |
 | `/task` | `/tarea` | Clarify scope and choose a first step. |
@@ -102,6 +103,14 @@ Teacher explanations, synthetic examples, learner declarations and demonstrated 
 
 No destination is silently configured. Without access, notes remain clearly pending in the closing package. Past sessions can only be reconstructed from accessible sources, with uncertainty stated. See the [notebook contract](../../skills/code-mentor-backend/references/study-notes.md).
 
+## Weekly learning blocks
+
+Use `/week`, `/week 2026-W44` or `/semana` to consult a linked overview of a Monday–Sunday period. For example, 2026-W44 covers October 26–November 1 and W45 covers November 2–8. Week assignment uses original occurrence dates in your known time zone, not save/import dates.
+
+Private `notes/weeks/index.md` links one `notes/weeks/YYYY-Www.md` per relevant week. Each block includes topics/tasks, evidence with assistance, difficulties, teaching aids, open questions and next practice, plus source coverage and revision history. Session notes remain the detailed sources; weekly blocks award no achievements.
+
+The tutor updates affected weeks after verified session closes or relevant requests and reconciles stale calendar states from the weekly index when you return, including after skipped weeks. It preserves the same week identity/history and leaves undated/future material uncertain. Elapsed calendar weeks are separate from complete capture or completed sessions. This default does not create a scheduled background task. See [weekly learning history](weekly-learning.md).
+
 ## See what is saved
 
 Use `/status` or `/estado` for a concise report of the inspected instruction source/version, actual authorized record, scope/revision, verified write receipts and known pending items. Reading repository files does not prove that version is active in every chat. Reading a folder proves neither write access nor durable storage. If actual save time is unknown, the tutor says so instead of substituting a learning-event date.
@@ -145,7 +154,7 @@ The tutor can make mistakes. Check code and proposed changes against the real pr
 
 ## Build, support and distribution
 
-[Portable package 2.10.0](../../dist/code-mentor-backend/code-mentor-backend-2.10.0.zip). Downloading and building remain separate from installation. Earlier archives are retained.
+[Portable package 2.11.0](../../dist/code-mentor-backend/code-mentor-backend-2.11.0.zip). Downloading and building remain separate from installation. Earlier archives are retained.
 
 Build from the collection root with `python tools/build_plugin.py code-mentor-backend`. The result contains only this skill and its packaging resources.
 

@@ -213,6 +213,22 @@ class InspectionTests(unittest.TestCase):
         self.assertFalse(value['coverage']['complete'])
         self.assertIn('unreadable_file', {f['code'] for f in value['findings']})
 
+    def test_weekly_index_links_are_checked_within_the_same_scope(self):
+        self.write('notes/weeks/index.md', '[Week](2026-W44.md)\n')
+        value = self.run_inspect('audit')
+        self.assertTrue(any(f['code'] == 'broken_link' and f['target'] == 'notes/weeks/2026-W44.md'
+                            for f in value['findings']))
+
+    def test_unindexed_week_is_visible_but_index_and_history_are_not_blocks(self):
+        self.write('notes/weeks/index.md', '# Weeks\n')
+        self.write('notes/weeks/2026-W44.md', '# Synthetic week 44\n')
+        self.write('notes/history/week-2026-w44/r0001.md', '# Old week\n')
+        before = self.contents()
+        value = self.run_inspect('audit')
+        unindexed = [f['path'] for f in value['findings'] if f['code'] == 'unindexed_week']
+        self.assertEqual(unindexed, ['notes/weeks/2026-W44.md'])
+        self.assertEqual(before, self.contents())
+
 
 if __name__ == '__main__':
     unittest.main()

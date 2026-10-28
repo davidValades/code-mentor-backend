@@ -77,7 +77,7 @@ def audit_files(root: Path, state: dict) -> dict:
     coverage = dict(complete=True, checked_files=0, checked_bytes=0,
                     max_files=MAX_FILES, max_bytes=MAX_BYTES, max_file_bytes=MAX_FILE_BYTES,
                     metadata_entries=0, max_metadata_entries=MAX_ENTRIES,
-                    scope='referenced documents, current note/card indexes and files, progress HTML',
+                    scope='referenced documents, current note/card/week indexes and files, progress HTML',
                     anchors_checked=False, semantic_review=False)
 
     def finding(code, path, *, severity='review', **extra):
@@ -179,12 +179,14 @@ def audit_files(root: Path, state: dict) -> dict:
         if path.suffix == '.md' and name not in referenced:
             finding('unreferenced_document', name)
     indexed_groups = [('notes/index.md', 'notes/sessions', 'unindexed_note'),
+                      ('notes/weeks/index.md', 'notes/weeks', 'unindexed_week'),
                       ('conocimientos/index.md', 'conocimientos/fichas', 'unindexed_card')]
     current = set()
     for index, directory, orphan_code in indexed_groups:
         read(index)
         children(str(Path(index).parent))
-        found = [p.relative_to(root).as_posix() for p in children(directory) if p.suffix == '.md']
+        found = [p.relative_to(root).as_posix() for p in children(directory)
+                 if p.suffix == '.md' and p.name != 'index.md']
         candidates.update(found)
         current.update(found)
         if found and index not in contents:

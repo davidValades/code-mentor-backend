@@ -1,12 +1,26 @@
-# Distribution and review status — source 2.10
+# Distribution and review status — source 2.11
 
 Updated October 28, 2026. Preparation, private installation, submission, and publication are separate states. Approval and educational efficacy are not guaranteed.
 
 ## Current release boundary
 
+Source 2.11 and portable release 2.11.0 add linked Monday–Sunday learning blocks to the existing private notebook. The stated default refreshes during active-session saves and relevant requests. No scheduled automation, new storage authority, schema change or learner destination was created.
+
+## Current checks — 2.11.0
+
+- 108 tests passed, including two new weekly-index regressions observed failing before the bounded inspector extension. Installed skill validation passed.
+- [Portable archive 2.11.0](../../dist/code-mentor-backend/code-mentor-backend-2.11.0.zip): 51 entries, one skill, no actual learner data. SHA-256: `836d63ffd92c3d6a30ee9f83554b2206466930436c08c5334782d46712dc1eb1`. Previous archives are preserved.
+- The saved personal skill declares 2.11; all 48 remote source files were verified. The USER/PRIVATE plugin was saved as 2.11.0, retaining identity, audience, author, prompts and icon. Inventory: 52 files; all 51 text files were read back and compared, parsing metadata semantically.
+- A synthetic forward scenario created W44/W45 summaries and a linked weekly index. It grouped a Sunday UTC timestamp into Monday in Madrid, preserved undated material as unassigned and future material as pending, and kept the original evidence record unchanged. A changed source note updated W44 to revision 2 with exact prior history; unchanged reconsultation created no writes or revisions. These are storage/behavior checks, not real learner progress.
+- Independent review found one material gap after multiweek inactivity. The old rule could leave W44 in_progress when the next visit was W48; a baseline consumer confirmed the omission. The corrected contract reconciles stale calendar states from the compact index, preserving coverage and history without empty skipped weeks; the consumer verified the changed selection and no-op follow-up logic. No actual future clock or learner session was simulated as a completed real operation.
+- Public guides explain `/week`, `/semana`, source dates, ISO weeks, scope, coverage and session-driven cadence. The scheduling choice returned no selection, so the explicitly stated session-based default was used; no autonomous job was installed.
+- Existing host limitations remain: actual cross-conversation access, real learner retention, browser rendering/CSP and mobile layout require host observations. No public OpenAI submission or approval is claimed.
+
+## Previous verified release — 2.10.0 (October 28, 2026)
+
 Source 2.10 and portable release 2.10.0 add memory visibility, a read-only bounded audit, goal-specific linked knowledge maps and a guided save/resume check. These extend the schema-2 record; no new memory authority, hosted service or automatic repair is added.
 
-## Current checks — 2.10.0
+### Checks retained from 2.10.0
 
 - 106 tests passed, including 17 inspection cases and a separate-process save/reopen/retry/report continuity case. Skill validation passed.
 - [Portable archive 2.10.0](../../dist/code-mentor-backend/code-mentor-backend-2.10.0.zip): 49 entries, one skill, no actual learner data. SHA-256: `d2a44486ad79da8cec24a705ca8184dcc26359445ea1ee843f775608de1757c2`. Older archives are preserved.
